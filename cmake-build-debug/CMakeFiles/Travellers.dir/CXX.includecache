@@ -15,18 +15,14 @@ string
 -
 user.h
 /home/bozhidar/Desktop/Travellers/user.h
+date.h
+/home/bozhidar/Desktop/Travellers/date.h
 readCSV.h
 /home/bozhidar/Desktop/Travellers/readCSV.h
 
 /home/bozhidar/Desktop/Travellers/date.h
 iostream
 -
-
-/home/bozhidar/Desktop/Travellers/destination.cpp
-destination.h
-/home/bozhidar/Desktop/Travellers/destination.h
-date.h
-/home/bozhidar/Desktop/Travellers/date.h
 
 /home/bozhidar/Desktop/Travellers/destination.h
 iostream
@@ -61,10 +57,6 @@ sstream
 -
 vector
 -
-
-/home/bozhidar/Desktop/Travellers/user.cpp
-user.h
-/home/bozhidar/Desktop/Travellers/user.h
 
 /home/bozhidar/Desktop/Travellers/user.h
 cstring

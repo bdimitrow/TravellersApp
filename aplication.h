@@ -9,6 +9,7 @@
 #include <fstream>
 #include <string>
 #include "user.h"
+#include "date.h"
 #include "readCSV.h"
 
 using namespace std;
@@ -95,29 +96,30 @@ void login() {
         login();
     } else {
         cout << "Successfully logged in!" << endl;
+
         string destinationName;
         unsigned grade;
         string comment;
         vector<string> photos;
         Destination beingAdded;
 
+        // setting destination's location
         cout << "Insert destination's location: ";
         cin.ignore();
         getline(cin, destinationName);
         beingAdded.setDestination(destinationName);
 
+        // setting period          validation da si dobavq
         cout << "When did it start? Insert DD/MM/YY ";
-        int x, y, z;
-        cin >> x >> y >> z;
-        //beingAdded.setStartDate(x, y, z);
-        Date from(x, y, z);
+        int dayF, monthF, yearF;
+        cin >> dayF >> monthF >> yearF;
         cout << "When did it end? Insert DD/MM/YY ";
-        int a, b, c;
-        cin >> a >> b >> c;
-//        to = Date(a,b,c);
-        Date to(a, b, c);
-        //beingAdded.setEndDate(a, b, c);
+        int dayT, monthT, yearT;
+        cin >> dayT >> monthT >> yearT;
+        Date from(dayF, monthF, yearF);
+        Date to(dayT, monthT, yearT);
 
+        // setting grade
         cout << "Insert rating between 1 and 5: ";
         cin >> grade;
         while (grade < 1 || grade > 5) {
@@ -126,11 +128,13 @@ void login() {
         }
         beingAdded.setGrade(grade);
 
-        cout << "Give a recommendation: ";
+        // setting comment
+        cout << "Give day recommendation: ";
         cin.ignore();
         getline(cin, comment);
         beingAdded.setComment(comment);
 
+        // setting photos
         cout << "Enter the number of photos you'd like to upload: ";
         int num;
         cin >> num;
@@ -141,24 +145,27 @@ void login() {
         switch (choice) {
             case 1:
                 for (int i = 0; i < num; ++i) {
+                    cout << "Enter the name of photo number " << i+1 << ": ";
                     cin >> name;
                     nameOfPhoto = name + ".jpeg";
                     photos.push_back(nameOfPhoto);
                     beingAdded.addPhoto(nameOfPhoto);
-                    break;
                 }
+                break;
             case 2:
                 for (int i = 0; i < num; ++i) {
+                    cout << "Enter the name of photo number " << i+1 << ": ";
                     cin >> name;
                     nameOfPhoto = name + ".png";
                     photos.push_back(nameOfPhoto);
                     beingAdded.addPhoto(nameOfPhoto);
-                    break;
                 }
+                break;
             default:
-                cout << "Invalid format for photos." << endl;
+                cout << "Invalid format of photos." << endl;
         }
 
+        // creating username.db file and saving info to it
         fstream fout;
         string fileUser = beingLogged.getUsername() + ".db";
         char *fileUserChar = const_cast<char *>(fileUser.c_str());
@@ -170,7 +177,6 @@ void login() {
              << beingAdded.getGrade() << ","
              << beingAdded.getComment() << ",";
         for (int i = 0; i < num; ++i) {
-            cout << "Enter the name of photo number " << i << ": ";
             fout << beingAdded.getPhotos().at(i) << " ";
         }
         fout << "\n";
@@ -195,7 +201,7 @@ void menu() {
     cout << "Traveller's app" << endl;
     cout << "1. Register" << endl;
     cout << "2. Login" << endl;
-    cout << "Choose an action:" << endl;
+    cout << "Choose an action: ";
     int choice;
     cin >> choice;
     switch (choice) {

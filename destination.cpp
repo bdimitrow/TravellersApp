@@ -4,12 +4,6 @@
 #include "destination.h"
 #include "date.h"
 
-//Destination::Destination(string _dest, Date d1, Date d2, unsigned _gr, string _comm, int nphotos)
-//        : destination(_dest), startDate(d1), endDate(d2), grade(_gr), comment(_comm), numPhotos(nphotos) {
-////    photos = new vector<string>(nphotos,"");
-//}
-
-
 Destination::Destination(const Destination &other) {
     destination = other.destination;
 //    startDate = other.startDate;

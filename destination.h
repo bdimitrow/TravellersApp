@@ -16,14 +16,6 @@ using namespace std;
 class Destination {
 public:
     Destination() {}
-//    Destination(string dest, Data edno, Date dve, unsigned gr, string com, int numph) {
-//        destination = dest;
-//        edno = startDate;
-//        dve = endDate;
-//        gr = grade;
-//        com = comment;
-//        numph = numPhotos;
-//    }
     Destination(const Destination &other);
     Destination &operator=(const Destination& other);
 
@@ -54,7 +46,5 @@ private:
     vector<string> photos;
     int numPhotos;
 };
-
-//friend validDate(Const Date )
 
 #endif //PROJECT7_DESTINATION_H
