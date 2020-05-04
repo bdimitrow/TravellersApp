@@ -31,7 +31,7 @@ void registration() {
     cout << "Enter a username: ";
     cin >> usernameRegister;
     beingReg.setUsername(usernameRegister);
-    if (isRegistered(beingReg.getUsername(), "usernames.txt")) {
+    while (isRegistered(beingReg.getUsername(), "usernames.txt")) {
         cout << "Username is already taken. ";
         cout << "Enter a username: ";
         cin >> usernameRegister;
@@ -45,7 +45,7 @@ void registration() {
     cout << "Enter an email: ";
     cin >> emailRegister;
     beingReg.setEmail(emailRegister);
-    if (isRegistered(beingReg.getEmail(), "emails.txt")) {
+    while (isRegistered(beingReg.getEmail(), "emails.txt")) {
         cout << "Email is already registered. ";
         cout << "Enter another one: ";
         cin >> emailRegister;
@@ -73,8 +73,8 @@ void registration() {
     string fname = beingReg.getUsername() + ".db";
     char *fnameChar = const_cast<char *>(fname.c_str());
     fuser.open(fnameChar, ios::out | ios::app);
-
     cout << "You have been successfully registered!" << endl << endl;
+    fuser.close();
     menu();
 }
 
@@ -181,6 +181,15 @@ void login() {
         }
         fout << "\n";
         fout.close();
+
+        fstream destOut;
+        destOut.open("destinations.csv", ios::in | ios::out | ios::app);
+        destOut << beingAdded.getDestination() << ","
+                << beingAdded.getGrade() << ","
+                << beingAdded.getComment() << ","
+                << beingLogged.getUsername()
+                << "\n";
+        destOut.close();
     }
 }
 
