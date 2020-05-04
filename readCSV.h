@@ -37,14 +37,12 @@ matrix readCSV( string filename ) {
 // checks whether username and password match
 bool usernameMatchesPassword(const matrix mat, string username, string password){
     for(vec row : mat) {
-        for (string s : row){
-            if(s == username) {
-                for(string p : row) {
-                    if(p == password) {
-                        return true;
-                    }
+        string s = row.at(0);
+        if(s == username) {
+                string p = row.at(1);
+                if(p == password) {
+                    return true;
                 }
-            }
         }
     }
     return false;
