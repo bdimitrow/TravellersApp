@@ -105,7 +105,7 @@
 		<Unit filename="/home/bozhidar/Desktop/Travellers/main.cpp">
 			<Option target="Travellers"/>
 		</Unit>
-		<Unit filename="/home/bozhidar/Desktop/Travellers/readCSV.h">
+		<Unit filename="/home/bozhidar/Desktop/Travellers/readFile.h">
 			<Option target="Travellers"/>
 		</Unit>
 		<Unit filename="/home/bozhidar/Desktop/Travellers/user.cpp">

@@ -13,7 +13,7 @@ CMakeFiles/Travellers.dir/main.cpp.o: ../aplication.h
 CMakeFiles/Travellers.dir/main.cpp.o: ../date.h
 CMakeFiles/Travellers.dir/main.cpp.o: ../destination.h
 CMakeFiles/Travellers.dir/main.cpp.o: ../main.cpp
-CMakeFiles/Travellers.dir/main.cpp.o: ../readCSV.h
+CMakeFiles/Travellers.dir/main.cpp.o: ../readFile.h
 CMakeFiles/Travellers.dir/main.cpp.o: ../user.h
 
 CMakeFiles/Travellers.dir/user.cpp.o: ../date.h

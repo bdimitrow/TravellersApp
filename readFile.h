@@ -2,8 +2,8 @@
 // Created by bozhidar on 5/1/20.
 //
 
-#ifndef TRAVELLERS_READCSV_H
-#define TRAVELLERS_READCSV_H
+#ifndef TRAVELLERS_READFILE_H
+#define TRAVELLERS_READFILE_H
 
 // Used to validate login operation!
 #include <iostream>
@@ -17,7 +17,7 @@ using vec = vector<string>;
 using matrix = vector<vec>;
 
 // saving the data from CSV file to a matrix of vecs
-matrix readCSV( string filename ) {
+matrix fileToMatrix(string filename ) {
     char delim = ',';
     matrix result;
     string row, item;
@@ -34,19 +34,27 @@ matrix readCSV( string filename ) {
     return result;
 }
 
+void printMatrix( const matrix &M ) {
+    for ( vec row : M ) {
+        for ( string s : row )
+            cout << setw( 12 ) << left << s << " ";    // need a variable format really
+            cout << '\n';
+    }
+}
+
 // checks whether username and password match
 bool usernameMatchesPassword(const matrix mat, string username, string password){
     for(vec row : mat) {
         string s = row.at(0);
         if(s == username) {
-                string p = row.at(1);
-                if(p == password) {
-                    return true;
-                }
+            string p = row.at(1);
+            if(p == password) {
+                return true;
+            }
         }
     }
     return false;
 }
 
 
-#endif //TRAVELLERS_READCSV_H
+#endif //TRAVELLERS_READFILE_H

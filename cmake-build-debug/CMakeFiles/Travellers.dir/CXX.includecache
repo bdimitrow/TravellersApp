@@ -17,8 +17,8 @@ user.h
 /home/bozhidar/Desktop/Travellers/user.h
 date.h
 /home/bozhidar/Desktop/Travellers/date.h
-readCSV.h
-/home/bozhidar/Desktop/Travellers/readCSV.h
+readFile.h
+/home/bozhidar/Desktop/Travellers/readFile.h
 
 /home/bozhidar/Desktop/Travellers/date.h
 iostream
@@ -46,7 +46,7 @@ user.h
 date.h
 /home/bozhidar/Desktop/Travellers/date.h
 
-/home/bozhidar/Desktop/Travellers/readCSV.h
+/home/bozhidar/Desktop/Travellers/readFile.h
 iostream
 -
 iomanip
