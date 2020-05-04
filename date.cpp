@@ -4,11 +4,11 @@
 
 #include "date.h"
 
-Date::Date(int d, int m, int y)
+Date::Date(int y, int m, int d)
 {
-    day = d;
-    month = m;
     year = y;
+    month = m;
+    day = d;
 }
 
 int Date::Day() const { return day; }
@@ -18,8 +18,8 @@ int Date::Month() const { return month; }
 int Date::Year() const { return year; }
 
 void Date::print() const {
-    cout << day << "." << month
-         << "." << year << endl;
+    cout << year << "-" << month
+         << "-" << day << endl;
 }
 
 bool Date::operator<(const Date & other) {
@@ -28,6 +28,6 @@ bool Date::operator<(const Date & other) {
 }
 
 ostream &operator<<(ostream &fout, const Date &dt) {
-    fout << dt.Day() << "." << dt.Month() << "." << dt.Year();
+    fout << dt.Year() << "-" << dt.Month() << "-" << dt.Day();
     return fout;
 }

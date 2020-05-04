@@ -110,14 +110,14 @@ void login() {
         beingAdded.setDestination(destinationName);
 
         // setting period          validation da si dobavq
-        cout << "When did it start? Insert DD/MM/YY ";
+        cout << "When did it start? Insert YY/MM/DD ";
         int dayF, monthF, yearF;
-        cin >> dayF >> monthF >> yearF;
-        cout << "When did it end? Insert DD/MM/YY ";
+        cin >> yearF >> monthF >> dayF;
+        cout << "When did it end? Insert YY/MM/DD ";
         int dayT, monthT, yearT;
-        cin >> dayT >> monthT >> yearT;
-        Date from(dayF, monthF, yearF);
-        Date to(dayT, monthT, yearT);
+        cin >> yearT >> monthT >> dayT;
+        Date from(yearF, monthF, dayF);
+        Date to(yearT, monthT, dayT);
 
         // setting grade
         cout << "Insert rating between 1 and 5: ";
