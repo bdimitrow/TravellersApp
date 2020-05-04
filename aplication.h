@@ -10,7 +10,7 @@
 #include <string>
 #include "user.h"
 #include "date.h"
-#include "readCSV.h"
+#include "readFile.h"
 
 using namespace std;
 void registration();
@@ -20,6 +20,7 @@ void login();
 bool isRegistered(string, string);
 
 void menu();
+bool isDateValid(const Date&);
 
 void registration() {
     string usernameRegister;
@@ -89,7 +90,7 @@ void login() {
     cin >> passwordLogin;
     beingLogged.setPassword(passwordLogin);
 
-    matrix users = readCSV("users.csv");
+    matrix users = fileToMatrix("users.csv");
     if (!(usernameMatchesPassword(users, beingLogged.getUsername(), beingLogged.getPassword()))) {
         cout << "Incorrect data! Please try again: " << endl;
         login();
@@ -99,8 +100,10 @@ void login() {
         cout << "Press 1 to add a trip!" << endl;
         cout << "Press 2 to see all destinations with grades and comments!" << endl;
         int menuCh; cin >> menuCh;
-        // adding trip(destination);
-        if(menuCh == 1) {
+
+        switch(menuCh) {
+            case 1: {
+                // adding trip(destination);
                 string destinationName;
                 unsigned grade;
                 string comment;
@@ -149,7 +152,7 @@ void login() {
                 switch (choice) {
                     case 1:
                         for (int i = 0; i < num; ++i) {
-                            cout << "Enter the name of photo number " << i+1 << ": ";
+                            cout << "Enter the name of photo number " << i + 1 << ": ";
                             cin >> name;
                             nameOfPhoto = name + ".jpeg";
                             photos.push_back(nameOfPhoto);
@@ -158,7 +161,7 @@ void login() {
                         break;
                     case 2:
                         for (int i = 0; i < num; ++i) {
-                            cout << "Enter the name of photo number " << i+1 << ": ";
+                            cout << "Enter the name of photo number " << i + 1 << ": ";
                             cin >> name;
                             nameOfPhoto = name + ".png";
                             photos.push_back(nameOfPhoto);
@@ -189,19 +192,40 @@ void login() {
                 fstream destOut;
                 destOut.open("destinations.csv", ios::in | ios::out | ios::app);
                 destOut << beingAdded.getDestination() << ","
+                        << beingLogged.getUsername() << ","
                         << beingAdded.getGrade() << ","
-                        << beingAdded.getComment() << ","
-                        << beingLogged.getUsername()
+                        << beingAdded.getComment()
                         << "\n";
                 destOut.close();
-
-        } else {
-            cout << "blabla";
+            }break;
+            case 2:
+                matrix destinations = fileToMatrix("destinations.csv");
+                printMatrix(destinations);
+            break;
         }
     }
 }
 
+bool isDateValid(const Date& date) {
+    if (! (1<= date.Month() && date.Month()<=12) )
+        return false;
+    if (! (1<= date.Day() && date.Day()<=31) )
+        return false;
+    if ( (date.Day() ==31) && (date.Month()==2 || date.Month()==4 || date.Month()==6 || date.Month()==9 || date.Month()==11) )
+        return false;
+    if ( (date.Day()==30) && (date.Month()==2) )
+        return false;
+    if ( (date.Month()==2) && (date.Day()==29) && (date.Year()%4!=0) )
+        return false;
+    if ( (date.Month()==2) && (date.Day()==29) && (date.Year()%400==0) )
+        return true;
+    if ( (date.Month()==2) && (date.Day()==29) && (date.Year()%100==0) )
+        return false;
+    if ( (date.Month()==2) && (date.Day()==29) && (date.Year()%4==0)  )
+        return true;
 
+    return true;
+}
 
 bool isRegistered(string word, string filename) {
     fstream fin;
