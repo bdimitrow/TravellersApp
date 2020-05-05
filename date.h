@@ -23,7 +23,7 @@ public:
 
     void print() const;
 
-    bool operator<(const Date&);
+    bool operator<(const Date&) const;
     friend ostream& operator<<(ostream& fout, const Date& dt);
 };
 

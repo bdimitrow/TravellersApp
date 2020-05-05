@@ -191,15 +191,14 @@ void menuLogged(User beingLogged) {
             cin >> yearT >> monthT >> dayT;
             Date to(yearT, monthT, dayT);
             // validation
-                while((isDateValid(from) == 0) || (isDateValid(to) == 0) ) {
-                    cout << "Invalid period! Please reenter starting date as YY/MM/DD: ";
-                    cin >> yearF >> monthF >> dayF;
-                    cout << "Please reenter ending date as YY/MM/DD: ";
-                    cin >> yearT >> monthT >> dayT;
-                    Date from(yearF,monthF,dayF);
-                    Date to(yearT, monthT, dayT);
-                }
-
+            while((isDateValid(from) == 0) || (isDateValid(to) == 0) || (!(from < (to)))) {
+                cout << "Invalid period! Please reenter starting date as YY/MM/DD: ";
+                cin >> yearF >> monthF >> dayF;
+                cout << "Please reenter ending date as YY/MM/DD: ";
+                cin >> yearT >> monthT >> dayT;
+                Date from(yearF,monthF,dayF);
+                Date to(yearT, monthT, dayT);
+            }
 
             // setting grade
             cout << "Insert rating between 1 and 5: ";

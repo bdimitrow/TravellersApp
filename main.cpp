@@ -4,7 +4,7 @@
 #include "date.h"
 
 int main() {
-   menu();
+    menu();
 //    addRecord();
 //    Date d1;
 //    Date d2(1,1,2000);
@@ -15,9 +15,9 @@ int main() {
 //    } else {
 //        cout << "false;";
 //    }
-//    Date d(2020,14,3);
-//    cout << isDateValid(d);
-
+//    Date d(2020,2,3);
+//    Date d2(2020, 2, 2);
+//    cout << (d < (d2));
 
     return 0;
 }
