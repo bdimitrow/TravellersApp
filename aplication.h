@@ -95,7 +95,7 @@ void login() {
         cout << "Incorrect data! Please try again: " << endl;
         login();
     } else {
-        cout << "Successfully logged in!" << endl;
+        cout << "Successfully logged in!" << endl << endl;
 
         menuLogged(beingLogged);
     }
@@ -161,6 +161,7 @@ void menuLogged(User beingLogged) {
     cout << "Press 1 to add a trip!" << endl;
     cout << "Press 2 to see all destinations with grades and comments!" << endl;
     cout << "Press 3 to exit" << endl;
+    cout << "Press 4 to see the average grade for a destination!" << endl;
     int menuCh; cin >> menuCh;
 
     switch (menuCh) {
@@ -279,6 +280,14 @@ void menuLogged(User beingLogged) {
         }break;
         case 3:
             cout << "End of program!" << endl;
+        break;
+        case 4:
+            cout << "Enter the destination: ";
+            string destination;
+            cin.ignore();
+            getline(cin, destination);
+            matrix dests = fileToMatrix("destinations.csv");
+            cout << "Average grade of " << destination << " is: " << averageGradeDestination(dests, destination);
     }
 }
 

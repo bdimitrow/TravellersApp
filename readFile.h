@@ -56,5 +56,21 @@ bool usernameMatchesPassword(const matrix mat, string username, string password)
     return false;
 }
 
+// average grade for a destination
+double averageGradeDestination(const matrix mat, string destination) {
+    double sum = 0, timesDest = 0;
+    for(vec row : mat) {
+        string s = row.at(0);
+        if(s == destination) {
+            string p = row.at(2);
+            stringstream ss(p);
+            int x = 0;
+            ss >> x;
+            sum += x;
+            timesDest++;
+        }
+    }
+    return sum/timesDest;
+}
 
 #endif //TRAVELLERS_READFILE_H
