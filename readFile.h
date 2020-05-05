@@ -73,4 +73,14 @@ double averageGradeDestination(const matrix mat, string destination) {
     return sum/timesDest;
 }
 
+bool addFriend(const matrix mat, string fr) {
+    for(vec row : mat){
+        string s = row.at(0);
+        if(s == fr) {
+            return true;
+        }
+    }
+    return false;
+}
+
 #endif //TRAVELLERS_READFILE_H

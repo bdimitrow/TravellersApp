@@ -160,11 +160,13 @@ void menu() {
 void menuLogged(User beingLogged) {
     cout << "Press 1 to add a trip!" << endl;
     cout << "Press 2 to see all destinations with grades and comments!" << endl;
-    cout << "Press 3 to exit" << endl;
+    cout << "Press 3 to exit!" << endl;
     cout << "Press 4 to see the average grade for a destination!" << endl;
+    cout << "Press 5 to add a friend!" << endl;
     int menuCh; cin >> menuCh;
 
     switch (menuCh) {
+            // adds destination
         case 1: {
             // adding trip(destination);
             string destinationName;
@@ -189,13 +191,14 @@ void menuLogged(User beingLogged) {
             cin >> yearT >> monthT >> dayT;
             Date to(yearT, monthT, dayT);
             // validation
-//                while((isDateValid(from) == 0) || (isDateValid(to) == 0) || (from < to) ) {
-//                    cout << "Invalid period, please reenter YY/MM/DD: ";
-//                    cin >> yearF >> monthF >> dayF;
-//                    cin >> yearT >> monthT >> dayT;
-//                    Date from(yearF,monthF,dayF);
-//                    Date to(yearT, monthT, dayT);
-//                }
+                while((isDateValid(from) == 0) || (isDateValid(to) == 0) ) {
+                    cout << "Invalid period! Please reenter starting date as YY/MM/DD: ";
+                    cin >> yearF >> monthF >> dayF;
+                    cout << "Please reenter ending date as YY/MM/DD: ";
+                    cin >> yearT >> monthT >> dayT;
+                    Date from(yearF,monthF,dayF);
+                    Date to(yearT, monthT, dayT);
+                }
 
 
             // setting grade
@@ -217,31 +220,33 @@ void menuLogged(User beingLogged) {
             cout << "Enter the number of photos you'd like to upload: ";
             int num;
             cin >> num;
-            string nameOfPhoto, name;
-            cout << "Press (1) for JPEG photos and press (2) for PNG photos. ";
-            int choice;
-            cin >> choice;
-            switch (choice) {
-                case 1:
-                    for (int i = 0; i < num; ++i) {
-                        cout << "Enter the name of photo number " << i + 1 << ": ";
-                        cin >> name;
-                        nameOfPhoto = name + ".jpeg";
-                        photos.push_back(nameOfPhoto);
-                        beingAdded.addPhoto(nameOfPhoto);
-                    }
-                    break;
-                case 2:
-                    for (int i = 0; i < num; ++i) {
-                        cout << "Enter the name of photo number " << i + 1 << ": ";
-                        cin >> name;
-                        nameOfPhoto = name + ".png";
-                        photos.push_back(nameOfPhoto);
-                        beingAdded.addPhoto(nameOfPhoto);
-                    }
-                    break;
-                default:
-                    cout << "Invalid format of photos." << endl;
+            if(num != 0) {
+                string nameOfPhoto, name;
+                cout << "Press (1) for JPEG photos and press (2) for PNG photos. ";
+                int choice;
+                cin >> choice;
+                switch (choice) {
+                    case 1:
+                        for (int i = 0; i < num; ++i) {
+                            cout << "Enter the name of photo number " << i + 1 << ": ";
+                            cin >> name;
+                            nameOfPhoto = name + ".jpeg";
+                            photos.push_back(nameOfPhoto);
+                            beingAdded.addPhoto(nameOfPhoto);
+                        }
+                        break;
+                    case 2:
+                        for (int i = 0; i < num; ++i) {
+                            cout << "Enter the name of photo number " << i + 1 << ": ";
+                            cin >> name;
+                            nameOfPhoto = name + ".png";
+                            photos.push_back(nameOfPhoto);
+                            beingAdded.addPhoto(nameOfPhoto);
+                        }
+                        break;
+                    default:
+                        cout << "Invalid format of photos." << endl;
+                }
             }
 
             // creating username.db file and saving info to it
@@ -269,25 +274,44 @@ void menuLogged(User beingLogged) {
                     << beingAdded.getComment()
                     << "\n";
             destOut.close();
+            cout << "Successfully added the entered destination!";
             cout << endl << endl;
             menuLogged(beingLogged);
         }break;
+            // displays all destinations/users/grades/comments
         case 2: {
             matrix destinations = fileToMatrix("destinations.csv");
             printMatrix(destinations);
             cout << endl << endl;
             menuLogged(beingLogged);
         }break;
-        case 3:
+            // ends the program
+        case 3:{
             cout << "End of program!" << endl;
-        break;
-        case 4:
+        }break;
+            // displays average grade for particular destination
+        case 4:{
             cout << "Enter the destination: ";
             string destination;
             cin.ignore();
             getline(cin, destination);
             matrix dests = fileToMatrix("destinations.csv");
             cout << "Average grade of " << destination << " is: " << averageGradeDestination(dests, destination);
+        }break;
+            // adds a friend
+        case 5:{
+            string friendo;
+            vector<string> mates;
+            cout << "Enter the name of the user you'd like to add as a friend: ";
+            cin.ignore(); getline(cin, friendo);
+            matrix friends = fileToMatrix("users.cvs");
+            if(addFriend(friends, friendo)) {
+                mates.push_back(friendo);
+            }
+            for(auto & mate : mates) {
+                cout << mate;
+            }
+        }break;
     }
 }
 
