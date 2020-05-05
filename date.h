@@ -15,6 +15,7 @@ private:
     int year;
 
 public:
+    Date() {}
     Date(int , int  , int );
     [[nodiscard]] int Day() const;
     [[nodiscard]] int Month() const;
