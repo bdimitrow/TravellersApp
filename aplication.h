@@ -31,7 +31,8 @@ void registration() {
     cout << "Enter a username: ";
     cin >> usernameRegister;
     beingReg.setUsername(usernameRegister);
-    while (isRegistered(beingReg.getUsername(), "usernames.txt")) {
+    matrix users = fileToMatrix("users.csv");
+    while(isRegisteredIn(users, beingReg.getUsername(), 0)){
         cout << "Username is already taken. ";
         cout << "Enter a username: ";
         cin >> usernameRegister;
@@ -45,7 +46,7 @@ void registration() {
     cout << "Enter an email: ";
     cin >> emailRegister;
     beingReg.setEmail(emailRegister);
-    while (isRegistered(beingReg.getEmail(), "emails.txt")) {
+    while(isRegisteredIn(users, beingReg.getEmail(), 2)){
         cout << "Email is already registered. ";
         cout << "Enter another one: ";
         cin >> emailRegister;
@@ -59,14 +60,6 @@ void registration() {
          << beingReg.getEmail()
          << "\n";
     fout.close();
-
-    fstream fnames;
-    fnames.open("usernames.txt", ios::out | ios::app);
-    fnames << beingReg.getUsername() << " ";
-
-    fstream femail;
-    femail.open("emails.txt", ios::out | ios::app);
-    femail << beingReg.getEmail() << " ";
 
     // creating file for each new profile
     fstream fuser;
@@ -119,20 +112,7 @@ bool isDateValid(const Date& date) {
         return false;
     if ( (date.Month()==2) && (date.Day()==29) && (date.Year()%4==0)  )
         return true;
-
     return true;
-}
-
-bool isRegistered(string word, string filename) {
-    fstream fin;
-    fin.open(filename, ios::in);
-    string temp;
-    while (fin >> temp) {
-        if (word == temp) {
-            return true;
-        }
-    }
-    return false;
 }
 
 void menu() {

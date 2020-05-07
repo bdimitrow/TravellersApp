@@ -83,4 +83,14 @@ bool addFriend(const matrix mat, string fr) {
     return false;
 }
 
+bool isRegisteredIn(const matrix mat, string check, int col) {
+    for( vec row : mat) {
+        string s = row.at(col);
+        if(s == check) {
+            return true;
+        }
+    }
+    return false;
+}
+
 #endif //TRAVELLERS_READFILE_H
