@@ -54,7 +54,7 @@ void User::addDestination(const Destination& newDest) {
     destinations.push_back(newDest);
 }
 
-void User::addFriend(const User &newFriend) {
+void User::addFriend(const string &newFriend) {
     friends.push_back(newFriend);
 }
 

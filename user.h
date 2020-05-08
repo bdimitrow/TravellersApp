@@ -24,7 +24,7 @@ public:
     void setPassword(string);
     void setEmail(string);
     void addDestination(const Destination&);
-    void addFriend(const User&);
+    void addFriend(const string&);
 
     string getUsername() const { return username; };
     string getPassword() const { return password; };
@@ -32,7 +32,7 @@ public:
     int getNumDestinations() const { return numDestinations; }
     vector<Destination> getDestinations() const { return destinations; }
     int getNumFriends() const { return numFriends; }
-    vector<User> getFriends() const { return friends; }
+    vector<string> getFriends() const { return friends; }
 
 
     friend ostream &operator<<(ostream &out, const User &user);
@@ -43,7 +43,7 @@ private:
     string email;
     vector<Destination> destinations{};
     int numDestinations;
-    vector<User> friends{};
+    vector<string> friends{};
     int numFriends;
 };
 

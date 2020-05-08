@@ -146,11 +146,12 @@ void menuLogged(User beingLogged) {
     cout << "Press 3 to exit!" << endl;
     cout << "Press 4 to see the average grade for a destination!" << endl;
     cout << "Press 5 to add a friend!" << endl;
-    cout << "Press 6 to display all your friends!" << endl;
-    int menuCh; cin >> menuCh;
+    cout << "Press 6 to display all your friends!" << endl << endl;
+    int menuCh; cout << "Enter your choice: "; cin >> menuCh;
+    // friends for logged user
+    vector<string> mates;
 
     switch (menuCh) {
-            // adds destination
         case 1: {
             // adding trip(destination);
             string destinationName;
@@ -261,40 +262,46 @@ void menuLogged(User beingLogged) {
             cout << endl << endl;
             menuLogged(beingLogged);
         }break;
-            // displays all destinations/users/grades/comments
         case 2: {
+            // displays all destinations/users/grades/comments
             matrix destinations = fileToMatrix("destinations.csv");
             printMatrix(destinations);
             cout << endl << endl;
             menuLogged(beingLogged);
         }break;
-            // ends the program
         case 3:{
-            cout << "End of program!" << endl;
+            // ends the program
+            cout << "End of program!\nThanks for using Traveller's App!" << endl;
         }break;
-            // displays average grade for particular destination
         case 4:{
+            // displays average grade for particular destination
             cout << "Enter the destination: ";
             string destination;
             cin.ignore();
             getline(cin, destination);
             matrix dests = fileToMatrix("destinations.csv");
             cout << "Average grade of " << destination << " is: " << averageGradeDestination(dests, destination);
+            menuLogged(beingLogged);
         }break;
-            // adds a friend
         case 5:{
+            // adds a friend
             string friendAdded;
-            vector<string> mates;
             cout << "Enter the name of the user you'd like to add as a friend: ";
             cin.ignore(); getline(cin, friendAdded);
             matrix friends = fileToMatrix("users.cvs");
             if(isRegisteredIn(friends, friendAdded, 0)){
                 mates.push_back(friendAdded);
+//                beingLogged.addFriend(friendAdded);
             }
+            cout << friendAdded << " has been successfully added as friend!";
+            menuLogged(beingLogged);
         }break;
-        // displays all friends of beingLogged
         case 6: {
-
+            // displays all friends of beingLogged
+            for(int i = 0; i < mates.size(); ++i) {
+                cout << i+1 << ". " << mates.at(i) << endl;
+            }
+            menuLogged(beingLogged);
         }break;
     }
 }
