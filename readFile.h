@@ -42,13 +42,6 @@ void printMatrix(const matrix &mat) {
     }
 }
 
-//display vector
-void displayVector(vector<string> vec) {
-    for(int i = 0; i < vec.size(); ++i) {
-        cout << i+1 << ". " << vec.at(i) << endl;
-    }
-}
-
 // checks whether username and password match
 bool usernameMatchesPassword(const matrix mat, string username, string password){
     for(vec row : mat) {
@@ -81,7 +74,7 @@ double averageGradeDestination(const matrix mat, string destination) {
 }
 
 
-bool isRegisteredIn(const matrix mat, string check, int col) {
+bool isExisting(const matrix mat, string check, int col) {
     for( vec row : mat) {
         string s = row.at(col);
         if(s == check) {

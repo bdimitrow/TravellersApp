@@ -29,7 +29,7 @@ void registration() {
     cin >> usernameRegister;
     beingReg.setUsername(usernameRegister);
     matrix users = fileToMatrix("users.csv");
-    while(isRegisteredIn(users, beingReg.getUsername(), 0)){
+    while(isExisting(users, beingReg.getUsername(), 0)){
         cout << "Username is already taken. ";
         cout << "Enter a username: ";
         cin >> usernameRegister;
@@ -43,7 +43,7 @@ void registration() {
     cout << "Enter an email: ";
     cin >> emailRegister;
     beingReg.setEmail(emailRegister);
-    while(isRegisteredIn(users, beingReg.getEmail(), 2)){
+    while(isExisting(users, beingReg.getEmail(), 2)){
         cout << "Email is already registered. ";
         cout << "Enter another one: ";
         cin >> emailRegister;
@@ -133,6 +133,7 @@ void menu() {
             break;
         case 3:
             cout << "Thank you for using Traveller's App!" << endl;
+            break;
         default:
             cout << "Invalid choice!";
             menu();
@@ -140,13 +141,14 @@ void menu() {
     } // end of choice
 }
 
-void menuLogged(User beingLogged) {
+void menuLogged(User loggedInUser) {
     cout << "Press 1 to add a trip!" << endl;
     cout << "Press 2 to display all destinations, user's grades and comments!" << endl;
     cout << "Press 3 to exit!" << endl;
     cout << "Press 4 to see the average grade for a destination!" << endl;
     cout << "Press 5 to add a friend!" << endl;
-    cout << "Press 6 to display all your friends!" << endl << endl;
+    cout << "Press 6 to display all your friends!" << endl;
+    cout << "Press 7 to display friend's destinations with grades and comments!" << endl;
     int menuCh; cout << "Enter your choice: "; cin >> menuCh;
     // friends for logged user
     vector<string> mates;
@@ -186,6 +188,7 @@ void menuLogged(User beingLogged) {
             }
 
             // setting grade
+            // TODO exception
             cout << "Insert rating between 1 and 5: ";
             cin >> grade;
             while (grade < 1 || grade > 5) {
@@ -235,7 +238,7 @@ void menuLogged(User beingLogged) {
 
             // creating username.db file and saving info to it
             fstream fout;
-            string fileUser = beingLogged.getUsername() + ".db";
+            string fileUser = loggedInUser.getUsername() + ".db";
             char *fileUserChar = const_cast<char *>(fileUser.c_str());
             fout.open(fileUserChar, ios::out | ios::in | ios::app);
 
@@ -253,21 +256,21 @@ void menuLogged(User beingLogged) {
             fstream destOut;
             destOut.open("destinations.csv", ios::in | ios::out | ios::app);
             destOut << beingAdded.getDestination() << ","
-                    << beingLogged.getUsername() << ","
+                    << loggedInUser.getUsername() << ","
                     << beingAdded.getGrade() << ","
                     << beingAdded.getComment()
                     << "\n";
             destOut.close();
             cout << "Successfully added the entered destination!";
             cout << endl << endl;
-            menuLogged(beingLogged);
+            menuLogged(loggedInUser);
         }break;
         case 2: {
             // displays all destinations/users/grades/comments
             matrix destinations = fileToMatrix("destinations.csv");
             printMatrix(destinations);
             cout << endl << endl;
-            menuLogged(beingLogged);
+            menuLogged(loggedInUser);
         }break;
         case 3:{
             // ends the program
@@ -280,28 +283,32 @@ void menuLogged(User beingLogged) {
             cin.ignore();
             getline(cin, destination);
             matrix dests = fileToMatrix("destinations.csv");
-            cout << "Average grade of " << destination << " is: " << averageGradeDestination(dests, destination);
-            menuLogged(beingLogged);
+            cout << "Average grade of " << destination << " is: " << averageGradeDestination(dests, destination) << endl <<endl;
+            menuLogged(loggedInUser);
         }break;
         case 5:{
             // adds a friend
-            string friendAdded;
-            cout << "Enter the name of the user you'd like to add as a friend: ";
-            cin.ignore(); getline(cin, friendAdded);
-            matrix friends = fileToMatrix("users.cvs");
-            if(isRegisteredIn(friends, friendAdded, 0)){
-                mates.push_back(friendAdded);
-//                beingLogged.addFriend(friendAdded);
+            // TODO segmentation fault
+            string friendToBeAdded;
+            cout << "Enter the username of the user you'd like to add as a friend: ";
+            cin.ignore(); getline(cin, friendToBeAdded);
+            matrix usersFile = fileToMatrix("users.csv");
+            if(isExisting(usersFile, friendToBeAdded, 0)){
+                loggedInUser.addFriend(friendToBeAdded);
+                cout << friendToBeAdded << " has been successfully added as friend!" << endl << endl;
+            } else {
+                cout << "Such a user does not exist!" << endl << endl;
             }
-            cout << friendAdded << " has been successfully added as friend!";
-            menuLogged(beingLogged);
+            menuLogged(loggedInUser);
         }break;
         case 6: {
-            // displays all friends of beingLogged
-            for(int i = 0; i < mates.size(); ++i) {
-                cout << i+1 << ". " << mates.at(i) << endl;
+            for(int i = 0; i < loggedInUser.getFriends().size(); ++i) {
+                cout << i+1 << ". " << loggedInUser.getFriends().at(i) << endl;
             }
-            menuLogged(beingLogged);
+            menuLogged(loggedInUser);
+        }break;
+        case 7: {
+
         }break;
     }
 }

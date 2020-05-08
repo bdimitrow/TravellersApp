@@ -15,11 +15,11 @@ User::User(const User &other) {
     username = other.username;
     password = other.password;
     email = other.email;
-    for(int i = 0; i < other.numDestinations; ++i) {
+    for(int i = 0; i < other.destinations.size(); ++i) {
         destinations[i] = other. destinations[i];
     }
-    for(int i = 0; i < other.numFriends; ++i) {
-        friends[i] = other.friends[i];
+    for(int i = 0; i < other.friends.size(); ++i) {
+        friends.at(i) = other.friends.at(i);
     }
 }
 
@@ -28,11 +28,11 @@ User &User::operator=(const User &other) {
         username = other.username;
         password = other.password;
         email = other.email;
-        for (int i = 0; i < other.numDestinations; ++i) {
+        for (int i = 0; i < other.destinations.size(); ++i) {
             destinations[i] = other.destinations[i];
         }
-        for (int i = 0; i < other.numFriends; ++i) {
-            friends[i] = other.friends[i];
+        for (int i = 0; i < other.friends.size(); ++i) {
+            friends.at(i) = other.friends.at(i);
         }
     }
     return *this;
