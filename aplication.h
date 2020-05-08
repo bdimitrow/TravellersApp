@@ -14,14 +14,11 @@
 
 using namespace std;
 void registration();
-
 void login();
-
-bool isRegistered(string, string);
-
 void menu();
 bool isDateValid(const Date&);
 void menuLogged(User);
+
 void registration() {
     string usernameRegister;
     string passwordRegister;
@@ -96,23 +93,26 @@ void login() {
 
 
 bool isDateValid(const Date& date) {
-    if (! (1<= date.Month() && date.Month()<=12) )
+    if(!(1 <= date.Month() && date.Month() <= 12)) {
         return false;
-    if (! (1<= date.Day() && date.Day()<=31) )
+    } else if(!(1 <= date.Day() && date.Day() <= 31)) {
         return false;
-    if ( (date.Day() ==31) && (date.Month()==2 || date.Month()==4 || date.Month()==6 || date.Month()==9 || date.Month()==11) )
+    } else if((date.Day() == 31) && (date.Month() == 2 || date.Month() == 4 ||
+                date.Month() == 6 || date.Month() == 9 || date.Month() == 11)) {
         return false;
-    if ( (date.Day()==30) && (date.Month()==2) )
+    } else if((date.Day() == 30) && (date.Month() == 2)) {
         return false;
-    if ( (date.Month()==2) && (date.Day()==29) && (date.Year()%4!=0) )
+    } else if((date.Month() == 2) && (date.Day() == 29) && (date.Year() % 4 != 0)) {
         return false;
-    if ( (date.Month()==2) && (date.Day()==29) && (date.Year()%400==0) )
+    } else if((date.Month() == 2) && (date.Day() == 29) && (date.Year() % 400 == 0)) {
         return true;
-    if ( (date.Month()==2) && (date.Day()==29) && (date.Year()%100==0) )
+    } else if((date.Month() == 2) && (date.Day() == 29) && (date.Year() % 100 == 0)) {
         return false;
-    if ( (date.Month()==2) && (date.Day()==29) && (date.Year()%4==0)  )
+    } else if((date.Month() == 2) && (date.Day() == 29) && (date.Year() % 4 == 0)) {
         return true;
-    return true;
+    } else {
+        return true;
+    }
 }
 
 void menu() {
@@ -120,6 +120,7 @@ void menu() {
     cout << "Traveller's app" << endl;
     cout << "1. Register" << endl;
     cout << "2. Login" << endl;
+    cout << "3. Exit" << endl;
     cout << "Choose an action: ";
     int choice;
     cin >> choice;
@@ -130,6 +131,8 @@ void menu() {
         case 2:
             login();
             break;
+        case 3:
+            cout << "Thank you for using Traveller's App!" << endl;
         default:
             cout << "Invalid choice!";
             menu();
@@ -139,10 +142,11 @@ void menu() {
 
 void menuLogged(User beingLogged) {
     cout << "Press 1 to add a trip!" << endl;
-    cout << "Press 2 to see all destinations with grades and comments!" << endl;
+    cout << "Press 2 to display all destinations, user's grades and comments!" << endl;
     cout << "Press 3 to exit!" << endl;
     cout << "Press 4 to see the average grade for a destination!" << endl;
     cout << "Press 5 to add a friend!" << endl;
+    cout << "Press 6 to display all your friends!" << endl;
     int menuCh; cin >> menuCh;
 
     switch (menuCh) {
@@ -166,7 +170,7 @@ void menuLogged(User beingLogged) {
             int dayF, monthF, yearF;
             cin >> yearF >> monthF >> dayF;
             Date from(yearF, monthF, dayF);
-            cout << "When did it end? Insert YY/MM/DD ";
+            cout << "When did it end? Insert YY/MM/DD: ";
             int dayT, monthT, yearT;
             cin >> yearT >> monthT >> dayT;
             Date to(yearT, monthT, dayT);
@@ -197,16 +201,16 @@ void menuLogged(User beingLogged) {
 
             // setting photos
             cout << "Enter the number of photos you'd like to upload: ";
-            int num;
-            cin >> num;
-            if(num != 0) {
+            int numPhotos;
+            cin >> numPhotos;
+            if(numPhotos != 0) {
                 string nameOfPhoto, name;
                 cout << "Press (1) for JPEG photos and press (2) for PNG photos. ";
                 int choice;
                 cin >> choice;
                 switch (choice) {
                     case 1:
-                        for (int i = 0; i < num; ++i) {
+                        for (int i = 0; i < numPhotos; ++i) {
                             cout << "Enter the name of photo number " << i + 1 << ": ";
                             cin >> name;
                             nameOfPhoto = name + ".jpeg";
@@ -215,7 +219,7 @@ void menuLogged(User beingLogged) {
                         }
                         break;
                     case 2:
-                        for (int i = 0; i < num; ++i) {
+                        for (int i = 0; i < numPhotos; ++i) {
                             cout << "Enter the name of photo number " << i + 1 << ": ";
                             cin >> name;
                             nameOfPhoto = name + ".png";
@@ -239,7 +243,7 @@ void menuLogged(User beingLogged) {
                  << to << ","
                  << beingAdded.getGrade() << ","
                  << beingAdded.getComment() << ",";
-            for (int i = 0; i < num; ++i) {
+            for (int i = 0; i < numPhotos; ++i) {
                 fout << beingAdded.getPhotos().at(i) << " ";
             }
             fout << "\n";
@@ -279,17 +283,18 @@ void menuLogged(User beingLogged) {
         }break;
             // adds a friend
         case 5:{
-            string friendo;
+            string friendAdded;
             vector<string> mates;
             cout << "Enter the name of the user you'd like to add as a friend: ";
-            cin.ignore(); getline(cin, friendo);
+            cin.ignore(); getline(cin, friendAdded);
             matrix friends = fileToMatrix("users.cvs");
-            if(addFriend(friends, friendo)) {
-                mates.push_back(friendo);
+            if(isRegisteredIn(friends, friendAdded, 0)){
+                mates.push_back(friendAdded);
             }
-            for(auto & mate : mates) {
-                cout << mate;
-            }
+        }break;
+        // displays all friends of beingLogged
+        case 6: {
+
         }break;
     }
 }

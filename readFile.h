@@ -18,7 +18,7 @@ using matrix = vector<vec>;
 
 // saving the data from CSV file to a matrix of vecs
 matrix fileToMatrix(string filename ) {
-    char delim = ',';
+    char delimiter = ',';
     matrix result;
     string row, item;
 
@@ -27,18 +27,25 @@ matrix fileToMatrix(string filename ) {
     {
         vec R;
         stringstream ss( row );
-        while ( getline (ss, item, delim ) ) R.push_back(item );
+        while ( getline (ss, item, delimiter ) ) R.push_back(item );
         result.push_back( R );
     }
     in.close();
     return result;
 }
 
-void printMatrix( const matrix &M ) {
-    for ( vec row : M ) {
-        for ( string s : row )
+void printMatrix(const matrix &mat) {
+    for (vec row : mat) {
+        for(string s : row)
             cout << setw( 12 ) << left << s << " ";    // need a variable format really
             cout << '\n';
+    }
+}
+
+//display vector
+void displayVector(vector<string> vec) {
+    for(int i = 0; i < vec.size(); ++i) {
+        cout << i+1 << ". " << vec.at(i) << endl;
     }
 }
 
@@ -73,15 +80,6 @@ double averageGradeDestination(const matrix mat, string destination) {
     return sum/timesDest;
 }
 
-bool addFriend(const matrix mat, string fr) {
-    for(vec row : mat){
-        string s = row.at(0);
-        if(s == fr) {
-            return true;
-        }
-    }
-    return false;
-}
 
 bool isRegisteredIn(const matrix mat, string check, int col) {
     for( vec row : mat) {
