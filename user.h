@@ -24,7 +24,8 @@ public:
     void setPassword(string);
     void setEmail(string);
     void addDestination(const Destination&);
-    void addFriend(const string&);
+    void addFriend(string);
+    void setNumberOfFriends(int numberOfFriends) { numFriends = numberOfFriends; }
 
     string getUsername() const { return username; };
     string getPassword() const { return password; };
@@ -43,7 +44,7 @@ private:
     string email;
     vector<Destination> destinations{};
     int numDestinations;
-    vector<string> friends{};
+    vector<string> friends;// = vector<string>();
     int numFriends;
 };
 

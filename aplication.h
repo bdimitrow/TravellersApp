@@ -71,23 +71,23 @@ void registration() {
 void login() {
     string usernameLogin;
     string passwordLogin;
-    User beingLogged;
+    User userBeingLogged;
 
     cout << "Enter your username: ";
     cin >> usernameLogin;
-    beingLogged.setUsername(usernameLogin);
+    userBeingLogged.setUsername(usernameLogin);
     cout << "Enter your password: ";
     cin >> passwordLogin;
-    beingLogged.setPassword(passwordLogin);
+    userBeingLogged.setPassword(passwordLogin);
 
     matrix users = fileToMatrix("users.csv");
-    if (!(usernameMatchesPassword(users, beingLogged.getUsername(), beingLogged.getPassword()))) {
+    if (!(usernameMatchesPassword(users, userBeingLogged.getUsername(), userBeingLogged.getPassword()))) {
         cout << "Incorrect data! Please try again: " << endl;
         login();
     } else {
         cout << "Successfully logged in!" << endl << endl;
 
-        menuLogged(beingLogged);
+        menuLogged(userBeingLogged);
     }
 }
 
@@ -150,8 +150,6 @@ void menuLogged(User loggedInUser) {
     cout << "Press 6 to display all your friends!" << endl;
     cout << "Press 7 to display friend's destinations with grades and comments!" << endl;
     int menuCh; cout << "Enter your choice: "; cin >> menuCh;
-    // friends for logged user
-    vector<string> mates;
 
     switch (menuCh) {
         case 1: {
@@ -294,6 +292,7 @@ void menuLogged(User loggedInUser) {
             cin.ignore(); getline(cin, friendToBeAdded);
             matrix usersFile = fileToMatrix("users.csv");
             if(isExisting(usersFile, friendToBeAdded, 0)){
+                loggedInUser.setNumberOfFriends(0);
                 loggedInUser.addFriend(friendToBeAdded);
                 cout << friendToBeAdded << " has been successfully added as friend!" << endl << endl;
             } else {
@@ -302,8 +301,9 @@ void menuLogged(User loggedInUser) {
             menuLogged(loggedInUser);
         }break;
         case 6: {
-            for(int i = 0; i < loggedInUser.getFriends().size(); ++i) {
+            for(int i = 0; i <= loggedInUser.getFriends().size(); ++i) {
                 cout << i+1 << ". " << loggedInUser.getFriends().at(i) << endl;
+                cout << "blabla";
             }
             menuLogged(loggedInUser);
         }break;

@@ -6,21 +6,21 @@
 
 User::User(const string& un, const string& pass, const string& em, int numDes, int numFr)
         : username(un), password(pass), email(em), numDestinations(numDes), numFriends(numFr) {
-//    vector<Destination> tempDest(numDes, 0);
-//    destinations = tempDest;
-//    friends = new vector<User>(numFr);
+    vector<string> friends = vector<string>(numFr);
 }
 
 User::User(const User &other) {
     username = other.username;
     password = other.password;
     email = other.email;
+    numDestinations = other.numDestinations;
+    numFriends = other.numFriends;
     for(int i = 0; i < other.destinations.size(); ++i) {
         destinations[i] = other. destinations[i];
     }
-    for(int i = 0; i < other.friends.size(); ++i) {
-        friends.at(i) = other.friends.at(i);
-    }
+//    for(int i = 0; i < other.friends.size(); ++i) {
+//        friends.at(i) = other.friends.at(i);
+//    }
 }
 
 User &User::operator=(const User &other) {
@@ -28,12 +28,14 @@ User &User::operator=(const User &other) {
         username = other.username;
         password = other.password;
         email = other.email;
-        for (int i = 0; i < other.destinations.size(); ++i) {
-            destinations[i] = other.destinations[i];
-        }
-        for (int i = 0; i < other.friends.size(); ++i) {
-            friends.at(i) = other.friends.at(i);
-        }
+        numDestinations = other.numDestinations;
+        numFriends = other.numFriends;
+//        for (int i = 0; i < other.destinations.size(); ++i) {
+//            destinations[i] = other.destinations[i];
+//        }
+//        for (int i = 0; i < other.numFriends; ++i) {
+//            friends[i] = other.friends[i];
+//        }
     }
     return *this;
 }
@@ -54,7 +56,8 @@ void User::addDestination(const Destination& newDest) {
     destinations.push_back(newDest);
 }
 
-void User::addFriend(const string &newFriend) {
+void User::addFriend(string newFriend) {
+    ++numFriends;
     friends.push_back(newFriend);
 }
 

@@ -6,6 +6,20 @@
 
 #IncludeRegexTransform: 
 
+/home/bozhidar/Desktop/Travellers/aplication.h
+iostream
+-
+fstream
+-
+string
+-
+user.h
+/home/bozhidar/Desktop/Travellers/user.h
+date.h
+/home/bozhidar/Desktop/Travellers/date.h
+readFile.h
+/home/bozhidar/Desktop/Travellers/readFile.h
+
 /home/bozhidar/Desktop/Travellers/date.h
 iostream
 -
@@ -22,9 +36,27 @@ user.h
 date.h
 /home/bozhidar/Desktop/Travellers/date.h
 
-/home/bozhidar/Desktop/Travellers/user.cpp
+/home/bozhidar/Desktop/Travellers/main.cpp
+iostream
+-
+aplication.h
+/home/bozhidar/Desktop/Travellers/aplication.h
 user.h
 /home/bozhidar/Desktop/Travellers/user.h
+date.h
+/home/bozhidar/Desktop/Travellers/date.h
+
+/home/bozhidar/Desktop/Travellers/readFile.h
+iostream
+-
+iomanip
+-
+fstream
+-
+sstream
+-
+vector
+-
 
 /home/bozhidar/Desktop/Travellers/user.h
 cstring
