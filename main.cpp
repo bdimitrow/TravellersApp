@@ -15,7 +15,7 @@ int main() {
 //    file.open("users.csv", ios::in | ios::out | ios::app);
 //    matrix users = fileToMatrix("users.csv");
 //    deleteRow(users,0);
-//    printMatrix(users);
-//    printMatrix(users);
+//    displayMatrix(users);
+//    displayMatrix(users);
     return 0;
 }

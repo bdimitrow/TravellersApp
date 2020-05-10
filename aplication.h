@@ -11,109 +11,13 @@
 #include "user.h"
 #include "date.h"
 #include "readFile.h"
-
 using namespace std;
+
 void registration();
 void login();
 void menu();
 bool isDateValid(const Date&);
 void menuLogged(User);
-
-void registration() {
-    string usernameRegister;
-    string passwordRegister;
-    string emailRegister;
-    User beingReg;
-
-    cout << "Enter a username: ";
-    cin >> usernameRegister;
-    beingReg.setUsername(usernameRegister);
-    matrix users = fileToMatrix("users.csv");
-    while(isExisting(users, beingReg.getUsername(), 0)){
-        cout << "Username is already taken. ";
-        cout << "Enter a username: ";
-        cin >> usernameRegister;
-        beingReg.setUsername(usernameRegister);
-    }
-
-    cout << "Enter a password: ";
-    cin >> passwordRegister;
-    beingReg.setPassword(passwordRegister);
-
-    cout << "Enter an email: ";
-    cin >> emailRegister;
-    beingReg.setEmail(emailRegister);
-    while(isExisting(users, beingReg.getEmail(), 2)){
-        cout << "Email is already registered. ";
-        cout << "Enter another one: ";
-        cin >> emailRegister;
-        beingReg.setEmail(emailRegister);
-    }
-
-    fstream fout;
-    fout.open("users.csv", ios::out | ios::app);
-    fout << beingReg.getUsername() << ";"
-         << beingReg.getPassword() << ";"
-         << beingReg.getEmail() << ";"
-         << "Friends: " << "\n";
-    fout.close();
-
-    // creating file for each new profile
-    fstream fuser;
-    string fname = beingReg.getUsername() + ".db";
-    char *fnameChar = const_cast<char *>(fname.c_str());
-    fuser.open(fnameChar, ios::out | ios::app);
-    cout << "You have been successfully registered!" << endl << endl;
-    fuser.close();
-    menu();
-}
-
-void login() {
-    string usernameLogin;
-    string passwordLogin;
-    User userBeingLogged;
-
-    cout << "Enter your username: ";
-    cin >> usernameLogin;
-    userBeingLogged.setUsername(usernameLogin);
-    cout << "Enter your password: ";
-    cin >> passwordLogin;
-    userBeingLogged.setPassword(passwordLogin);
-
-    matrix users = fileToMatrix("users.csv");
-    if (!(usernameMatchesPassword(users, userBeingLogged.getUsername(), userBeingLogged.getPassword()))) {
-        cout << "Incorrect data! Please try again: " << endl;
-        login();
-    } else {
-        cout << "Successfully logged in!" << endl << endl;
-
-        menuLogged(userBeingLogged);
-    }
-}
-
-
-bool isDateValid(const Date& date) {
-    if(!(1 <= date.Month() && date.Month() <= 12)) {
-        return false;
-    } else if(!(1 <= date.Day() && date.Day() <= 31)) {
-        return false;
-    } else if((date.Day() == 31) && (date.Month() == 2 || date.Month() == 4 ||
-                date.Month() == 6 || date.Month() == 9 || date.Month() == 11)) {
-        return false;
-    } else if((date.Day() == 30) && (date.Month() == 2)) {
-        return false;
-    } else if((date.Month() == 2) && (date.Day() == 29) && (date.Year() % 4 != 0)) {
-        return false;
-    } else if((date.Month() == 2) && (date.Day() == 29) && (date.Year() % 400 == 0)) {
-        return true;
-    } else if((date.Month() == 2) && (date.Day() == 29) && (date.Year() % 100 == 0)) {
-        return false;
-    } else if((date.Month() == 2) && (date.Day() == 29) && (date.Year() % 4 == 0)) {
-        return true;
-    } else {
-        return true;
-    }
-}
 
 void menu() {
     // choice of action
@@ -257,26 +161,31 @@ void menuLogged(User loggedInUser) {
                 }
                 fout << "\n";
                 fout.close();
+            } else {
+                cerr << "Unable to open the file!" << endl;
+            }
 
-                fstream destOut;
-                destOut.open("destinations.csv", ios::in | ios::out | ios::app);
+            fstream destOut;
+            destOut.open("destinations.csv", ios::in | ios::out | ios::app);
+            if(destOut.is_open()) {
                 destOut << beingAdded.getDestination() << ";"
                         << loggedInUser.getUsername() << ";"
                         << beingAdded.getGrade() << ";"
                         << beingAdded.getComment()
                         << "\n";
                 destOut.close();
-                cout << "Successfully added the entered destination!";
-                cout << endl << endl;
             } else {
                 cerr << "Unable to open the file!" << endl;
             }
+            cout << "Successfully added the entered destination!";
+            cout << endl << endl;
+
             menuLogged(loggedInUser);
         }break;
         case 2: {
             // displays all destinations/users/grades/comments
             matrix destinations = fileToMatrix("destinations.csv");
-            printMatrix(destinations);
+            displayMatrix(destinations);
             cout << endl << endl;
             menuLogged(loggedInUser);
         }break;
@@ -306,8 +215,6 @@ void menuLogged(User loggedInUser) {
                 if(friendToBeAdded != loggedInUser.getUsername()) {
                     // checking wether you are already friends
                     if(!(isAlreadyFriend(usersFile, friendToBeAdded, loggedInUser.getUsername()))) {
-//                matrix usersFileUpdated = fileToMatrix("users.csv");
-//                printMatrix(usersFileUpdated);
                         fstream file;
                         file.open("users.csv", ios::in | ios::out | ios::app);
                         fstream temp;
@@ -354,7 +261,7 @@ void menuLogged(User loggedInUser) {
         }break;
         case 7: {
             // displays where friends have been and their comments;
-            printFriendsDestionations(loggedInUser.getUsername());
+            displayFriendsDestionations(loggedInUser.getUsername());
             cout << endl << endl;
             menuLogged(loggedInUser);
         }break;
@@ -364,6 +271,106 @@ void menuLogged(User loggedInUser) {
         }
     }
 }
+
+void registration() {
+    string usernameRegister;
+    string passwordRegister;
+    string emailRegister;
+    User beingReg;
+
+    cout << "Enter a username: ";
+    cin >> usernameRegister;
+    beingReg.setUsername(usernameRegister);
+    matrix users = fileToMatrix("users.csv");
+    // if username is already taken, enter another
+    while(isExisting(users, beingReg.getUsername(), 0)){
+        cout << "Username is already taken. ";
+        cout << "Enter a username: ";
+        cin >> usernameRegister;
+        beingReg.setUsername(usernameRegister);
+    }
+
+    cout << "Enter a password: ";
+    cin >> passwordRegister;
+    beingReg.setPassword(passwordRegister);
+
+    cout << "Enter an email: ";
+    cin >> emailRegister;
+    beingReg.setEmail(emailRegister);
+    // if email is already registered, enter another
+    while(isExisting(users, beingReg.getEmail(), 2)){
+        cout << "Email is already registered. ";
+        cout << "Enter another one: ";
+        cin >> emailRegister;
+        beingReg.setEmail(emailRegister);
+    }
+
+    fstream fout;
+    fout.open("users.csv", ios::out | ios::app);
+    fout << beingReg.getUsername() << ";"
+         << beingReg.getPassword() << ";"
+         << beingReg.getEmail() << ";"
+         << "Friends: " << "\n";
+    fout.close();
+
+    // creating file for each new profile
+    fstream fuser;
+    string fname = beingReg.getUsername() + ".db";
+    char *fnameChar = const_cast<char *>(fname.c_str());
+    fuser.open(fnameChar, ios::out | ios::app);
+    cout << "You have been successfully registered!" << endl << endl;
+    fuser.close();
+    menu();
+}
+
+void login() {
+    string usernameLogin;
+    string passwordLogin;
+    User userBeingLogged;
+
+    cout << "Enter your username: ";
+    cin >> usernameLogin;
+    userBeingLogged.setUsername(usernameLogin);
+    cout << "Enter your password: ";
+    cin >> passwordLogin;
+    userBeingLogged.setPassword(passwordLogin);
+
+    matrix users = fileToMatrix("users.csv");
+    // checking whether username and password matches
+    if (!(usernameMatchesPassword(users, userBeingLogged.getUsername(), userBeingLogged.getPassword()))) {
+        cout << "Incorrect data! Please try again: " << endl;
+        login();
+    } else {
+        cout << "Successfully logged in!" << endl << endl;
+        menuLogged(userBeingLogged);
+    }
+}
+
+// checks whether the date is valid
+bool isDateValid(const Date& date) {
+    if(!(1 <= date.Month() && date.Month() <= 12)) {
+        return false;
+    } else if(!(1 <= date.Day() && date.Day() <= 31)) {
+        return false;
+    } else if((date.Day() == 31) && (date.Month() == 2 || date.Month() == 4 ||
+                date.Month() == 6 || date.Month() == 9 || date.Month() == 11)) {
+        return false;
+    } else if((date.Day() == 30) && (date.Month() == 2)) {
+        return false;
+    } else if((date.Month() == 2) && (date.Day() == 29) && (date.Year() % 4 != 0)) {
+        return false;
+    } else if((date.Month() == 2) && (date.Day() == 29) && (date.Year() % 400 == 0)) {
+        return true;
+    } else if((date.Month() == 2) && (date.Day() == 29) && (date.Year() % 100 == 0)) {
+        return false;
+    } else if((date.Month() == 2) && (date.Day() == 29) && (date.Year() % 4 == 0)) {
+        return true;
+    } else {
+        return true;
+    }
+}
+
+
 
 
 

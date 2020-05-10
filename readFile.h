@@ -34,7 +34,7 @@ matrix fileToMatrix(string filename ) {
     return result;
 }
 
-void printMatrix(const matrix &mat) {
+void displayMatrix(const matrix &mat) {
     for (vec row : mat) {
         for(string s : row)
             cout << setw( 20 ) << left << s << " ";    // need a variable format really
@@ -63,6 +63,7 @@ double averageGradeDestination(const matrix mat, string destination) {
         string s = row.at(0);
         if(s == destination) {
             string p = row.at(2);
+            // converting string to int ("5" = 5)
             stringstream ss(p);
             int x = 0;
             ss >> x;
@@ -104,6 +105,7 @@ int numberOfRowsInFile(const matrix mat){
     return numOfRows;
 }
 
+// displays all friends of the loggedInUser
 void displayFriends(const matrix mat, string username) {
     for(vec row : mat){
         string s = row.at(0);
@@ -113,6 +115,7 @@ void displayFriends(const matrix mat, string username) {
     }
 }
 
+// check whether friendToBeAdded is already a friend
 bool isAlreadyFriend(const matrix mat, string friendToBeAdded, string username) {
     for(vec row : mat){
         string s = row.at(0);
@@ -126,13 +129,15 @@ bool isAlreadyFriend(const matrix mat, string friendToBeAdded, string username) 
     return false;
 }
 
-void printFriendsDestionations(string loggedInUserName) {
+// displays which friends where have been and his comment of the trip
+void displayFriendsDestionations(string loggedInUserName) {
     matrix usersFile = fileToMatrix("users.csv");
+    // getting the friends of the loggedInUser
     for(vec row : usersFile) {
         string username = row.at(0);
         if(username == loggedInUserName) {
             string friends = row.at(3);
-
+            // open all destinations and print those of friends
             matrix destinationsFile = fileToMatrix("destinations.csv");
             for(vec Row : destinationsFile) {
                 string user = Row.at(1);
