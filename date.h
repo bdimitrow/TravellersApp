@@ -24,6 +24,9 @@ public:
     void print() const;
 
     bool operator<(const Date&) const;
+
+    Date operator()(int y, int m, int d);
+
     friend ostream& operator<<(ostream& fout, const Date& dt);
 };
 

@@ -31,3 +31,10 @@ ostream& operator<<(ostream &fout, const Date &dt) {
     fout << dt.Year() << "-" << dt.Month() << "-" << dt.Day();
     return fout;
 }
+
+Date Date::operator()(int y, int m, int d) {
+    this->year = y;
+    this->month = m;
+    this->day = d;
+    return *this;
+}

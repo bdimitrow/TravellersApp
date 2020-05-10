@@ -5,7 +5,6 @@
 #ifndef TRAVELLERS_READFILE_H
 #define TRAVELLERS_READFILE_H
 
-// Used to validate login operation!
 #include <iostream>
 #include <iomanip>
 #include <fstream>
@@ -18,16 +17,17 @@ using matrix = vector<vec>;
 
 // saving the data from CSV file to a matrix of vecs
 matrix fileToMatrix(string filename ) {
-    char delimiter = ',';
+    char delimiter = ';';
     matrix result;
     string row, item;
 
-    ifstream in( filename );
-    while( getline( in, row ) )
-    {
+    ifstream in(filename);
+    while(getline(in, row)) {
         vec Row;
-        stringstream ss( row );
-        while ( getline (ss, item, delimiter ) ) Row.push_back(item );
+        stringstream ss(row);
+        while (getline(ss, item, delimiter)) {
+            Row.push_back(item );
+        }
         result.push_back(Row );
     }
     in.close();
@@ -37,27 +37,9 @@ matrix fileToMatrix(string filename ) {
 void printMatrix(const matrix &mat) {
     for (vec row : mat) {
         for(string s : row)
-            cout << setw( 12 ) << left << s << " ";    // need a variable format really
+            cout << setw( 20 ) << left << s << " ";    // need a variable format really
             cout << '\n';
     }
-}
-
-void deleteRow(matrix &mat, int row) {
-    if(row < mat.size()){
-        mat.erase(mat.begin() + row);
-    }
-}
-
-void matrixToFile(const matrix mat){
-    fstream file;
-    file.open("temporary.txt", ios::in | ios::out | ios::app);
-    for (vec row : mat) {
-        for(string s : row) {
-            file << s << ',';
-        }
-        file << "\n";
-    }
-    file.close();
 }
 
 // checks whether username and password match
@@ -91,9 +73,9 @@ double averageGradeDestination(const matrix mat, string destination) {
     return sum/timesDest;
 }
 
-
+// checks the file whether an item is already there
 bool isExisting(const matrix mat, string check, int col) {
-    for( vec row : mat) {
+    for(vec row : mat) {
         string s = row.at(col);
         if(s == check) {
             return true;
@@ -102,6 +84,7 @@ bool isExisting(const matrix mat, string check, int col) {
     return false;
 }
 
+// returns the row where the given username is
 int rowOfUsername(const matrix mat, string username) {
     int rowCounter = 0;
     for(vec row : mat) {
@@ -111,6 +94,36 @@ int rowOfUsername(const matrix mat, string username) {
             return rowCounter;
         }
     }
+}
+
+int numberOfRowsInFile(const matrix mat){
+    int numOfRows = 0;
+    for(vec row : mat){
+        ++numOfRows;
+    }
+    return numOfRows;
+}
+
+void displayFriends(const matrix mat, string username) {
+    for(vec row : mat){
+        string s = row.at(0);
+        if(s == username) {
+            cout << row.at(3) << endl << endl;
+        }
+    }
+}
+
+bool isAlreadyFriend(const matrix mat, string friendToBeAdded, string username) {
+    for(vec row : mat){
+        string s = row.at(0);
+        if(s == username) {
+            string p = row.at(3);
+            if(p.find(friendToBeAdded) != string::npos){
+                return true;
+            }
+        }
+    }
+    return false;
 }
 
 
