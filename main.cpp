@@ -2,22 +2,17 @@
 #include "aplication.h"
 #include "user.h"
 #include "date.h"
+#include "readFile.h"
+#include <fstream>
 
 int main() {
     menu();
-//    addRecord();
-//    Date d1;
-//    Date d2(1,1,2000);
-//    d1.print();
-//    d2.print();
-//    if(d1 <(d2)) {
-//        cout << "True!";
-//    } else {
-//        cout << "false;";
-//    }
-//    Date d(2020,2,3);
-//    Date d2(2020, 2, 2);
-//    cout << (d < (d2));
-
+//    matrix users = fileToMatrix("users.csv");
+//    cout << rowOfUsername(users, "goshko");
+//    fstream file;
+//    file.open("users.csv", ios::in | ios::out | ios::app);
+//    matrix users = fileToMatrix("users.csv");
+//    deleteRow(users,0);
+//    printMatrix(users);
     return 0;
 }

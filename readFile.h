@@ -25,10 +25,10 @@ matrix fileToMatrix(string filename ) {
     ifstream in( filename );
     while( getline( in, row ) )
     {
-        vec R;
+        vec Row;
         stringstream ss( row );
-        while ( getline (ss, item, delimiter ) ) R.push_back(item );
-        result.push_back( R );
+        while ( getline (ss, item, delimiter ) ) Row.push_back(item );
+        result.push_back(Row );
     }
     in.close();
     return result;
@@ -40,6 +40,24 @@ void printMatrix(const matrix &mat) {
             cout << setw( 12 ) << left << s << " ";    // need a variable format really
             cout << '\n';
     }
+}
+
+void deleteRow(matrix &mat, int row) {
+    if(row < mat.size()){
+        mat.erase(mat.begin() + row);
+    }
+}
+
+void matrixToFile(const matrix mat){
+    fstream file;
+    file.open("temporary.txt", ios::in | ios::out | ios::app);
+    for (vec row : mat) {
+        for(string s : row) {
+            file << s << ',';
+        }
+        file << "\n";
+    }
+    file.close();
 }
 
 // checks whether username and password match
@@ -83,5 +101,17 @@ bool isExisting(const matrix mat, string check, int col) {
     }
     return false;
 }
+
+int rowOfUsername(const matrix mat, string username) {
+    int rowCounter = 0;
+    for(vec row : mat) {
+        string s = row.at(0);
+        ++rowCounter;
+        if(s == username) {
+            return rowCounter;
+        }
+    }
+}
+
 
 #endif //TRAVELLERS_READFILE_H

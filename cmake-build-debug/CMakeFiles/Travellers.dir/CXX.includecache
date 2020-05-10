@@ -45,6 +45,10 @@ user.h
 /home/bozhidar/Desktop/Travellers/user.h
 date.h
 /home/bozhidar/Desktop/Travellers/date.h
+readFile.h
+/home/bozhidar/Desktop/Travellers/readFile.h
+fstream
+-
 
 /home/bozhidar/Desktop/Travellers/readFile.h
 iostream

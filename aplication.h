@@ -54,7 +54,7 @@ void registration() {
     fout.open("users.csv", ios::out | ios::app);
     fout << beingReg.getUsername() << ","
          << beingReg.getPassword() << ","
-         << beingReg.getEmail()
+         << beingReg.getEmail() << ","
          << "\n";
     fout.close();
 
@@ -239,28 +239,31 @@ void menuLogged(User loggedInUser) {
             string fileUser = loggedInUser.getUsername() + ".db";
             char *fileUserChar = const_cast<char *>(fileUser.c_str());
             fout.open(fileUserChar, ios::out | ios::in | ios::app);
+            if(fout.is_open()) {
+                fout << beingAdded.getDestination() << ","
+                     << from << ","
+                     << to << ","
+                     << beingAdded.getGrade() << ","
+                     << beingAdded.getComment() << ",";
+                for (int i = 0; i < numPhotos; ++i) {
+                    fout << beingAdded.getPhotos().at(i) << " ";
+                }
+                fout << "\n";
+                fout.close();
 
-            fout << beingAdded.getDestination() << ","
-                 << from << ","
-                 << to << ","
-                 << beingAdded.getGrade() << ","
-                 << beingAdded.getComment() << ",";
-            for (int i = 0; i < numPhotos; ++i) {
-                fout << beingAdded.getPhotos().at(i) << " ";
+                fstream destOut;
+                destOut.open("destinations.csv", ios::in | ios::out | ios::app);
+                destOut << beingAdded.getDestination() << ","
+                        << loggedInUser.getUsername() << ","
+                        << beingAdded.getGrade() << ","
+                        << beingAdded.getComment()
+                        << "\n";
+                destOut.close();
+                cout << "Successfully added the entered destination!";
+                cout << endl << endl;
+            } else {
+                cerr << "Unable to open the file!" << endl;
             }
-            fout << "\n";
-            fout.close();
-
-            fstream destOut;
-            destOut.open("destinations.csv", ios::in | ios::out | ios::app);
-            destOut << beingAdded.getDestination() << ","
-                    << loggedInUser.getUsername() << ","
-                    << beingAdded.getGrade() << ","
-                    << beingAdded.getComment()
-                    << "\n";
-            destOut.close();
-            cout << "Successfully added the entered destination!";
-            cout << endl << endl;
             menuLogged(loggedInUser);
         }break;
         case 2: {
@@ -286,24 +289,61 @@ void menuLogged(User loggedInUser) {
         }break;
         case 5:{
             // adds a friend
-            // TODO segmentation fault
             string friendToBeAdded;
             cout << "Enter the username of the user you'd like to add as a friend: ";
             cin.ignore(); getline(cin, friendToBeAdded);
             matrix usersFile = fileToMatrix("users.csv");
+            // TODO open users.db
+            // finds the row hwere the username is
+            // enter the username to be added as friend
+            // checks if it exists
+            // if yes insert it to the end of the row
             if(isExisting(usersFile, friendToBeAdded, 0)){
-                loggedInUser.setNumberOfFriends(0);
-                loggedInUser.addFriend(friendToBeAdded);
-                cout << friendToBeAdded << " has been successfully added as friend!" << endl << endl;
+                fstream file;
+                file.open("users.csv", ios::in | ios::out | ios::app);
+                fstream temp;
+                temp.open("temp.txt", ios::in | ios::out | ios::trunc);
+                string line;
+                for(int row = 1; getline(file, line) && row < 10; ++row){
+                        if (row == rowOfUsername(usersFile, loggedInUser.getUsername())) {
+                            line = line + friendToBeAdded + " ";
+                            temp << line << "\n";
+                        } else {
+                            temp << line << "\n";
+                        }
+                }
+                file.close();
+                temp.close();
+                // coping temp.txt. to users.csv
+                ifstream  in;
+                ofstream out;
+                in.open("temp.txt", ios::in | ios::out);
+                out.open("users.csv", ios::in | ios::out | ios::trunc);
+                char next;
+                in.get(next);
+                while(in.eof() == 0){
+                    out.put(next);
+                    in.get(next);
+                }
             } else {
                 cout << "Such a user does not exist!" << endl << endl;
             }
             menuLogged(loggedInUser);
         }break;
         case 6: {
-            for(int i = 0; i <= loggedInUser.getFriends().size(); ++i) {
-                cout << i+1 << ". " << loggedInUser.getFriends().at(i) << endl;
-                cout << "blabla";
+            string friendToBeAdded;
+            cout << "Enter the username of the user you'd like to add as a friend: ";
+            cin.ignore(); getline(cin, friendToBeAdded);
+            matrix usersFile = fileToMatrix("users.csv");
+            if(isExisting(usersFile, friendToBeAdded, 0)){
+                fstream fout;
+                fout.open("friendships.db", ios::in | ios::out | ios::app);
+                if(fout.is_open()) {
+                    fout << loggedInUser.getUsername() << "-" << friendToBeAdded;
+                    fout.close();
+                } else {
+                    cerr << "Unable to open file!" << endl;
+                }
             }
             menuLogged(loggedInUser);
         }break;
