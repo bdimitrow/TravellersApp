@@ -117,7 +117,7 @@ bool isDateValid(const Date& date) {
 
 void menu() {
     // choice of action
-    cout << "Traveller's app" << endl;
+    cout << " Welcome to Traveller's app menu! " << endl;
     cout << "1. Register" << endl;
     cout << "2. Login" << endl;
     cout << "3. Exit" << endl;
@@ -153,7 +153,8 @@ void menuLogged(User loggedInUser) {
     cout << "Press 4 to see the average grade for a destination!" << endl;
     cout << "Press 5 to add a friend!" << endl;
     cout << "Press 6 to display all your friends!" << endl;
-    cout << "Press 7 to display friend's destinations with grades and comments!" << endl;
+    cout << "Press 7 to display where friends have been and their comments!" << endl;
+    cout << "Press 8 to log out!" << endl;
     int menuCh; cout << "Enter your choice: "; cin >> menuCh;
 
     switch (menuCh) {
@@ -193,7 +194,6 @@ void menuLogged(User loggedInUser) {
             }
 
             // setting grade
-            // TODO exception
             cout << "Insert rating between 1 and 5: ";
             cin >> grade;
             while (grade < 1 || grade > 5) {
@@ -334,6 +334,7 @@ void menuLogged(User loggedInUser) {
                             out.put(next);
                             in.get(next);
                         }
+                        cout << friendToBeAdded << " has been successfully added as friend! " << endl << endl;
                     } else {
                         cout << "You are already friends!" << endl << endl;
                     }
@@ -346,13 +347,21 @@ void menuLogged(User loggedInUser) {
             menuLogged(loggedInUser);
         }break;
         case 6: {
+            // displays the friends of the logged in user
             matrix usersFile = fileToMatrix("users.csv");
             displayFriends(usersFile, loggedInUser.getUsername());
             menuLogged(loggedInUser);
         }break;
         case 7: {
-
+            // displays where friends have been and their comments;
+            printFriendsDestionations(loggedInUser.getUsername());
+            cout << endl << endl;
+            menuLogged(loggedInUser);
         }break;
+        case 8: {
+            cout << "You have logged out!" << endl << endl;
+            menu();
+        }
     }
 }
 

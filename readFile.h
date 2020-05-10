@@ -126,5 +126,22 @@ bool isAlreadyFriend(const matrix mat, string friendToBeAdded, string username) 
     return false;
 }
 
+void printFriendsDestionations(string loggedInUserName) {
+    matrix usersFile = fileToMatrix("users.csv");
+    for(vec row : usersFile) {
+        string username = row.at(0);
+        if(username == loggedInUserName) {
+            string friends = row.at(3);
+
+            matrix destinationsFile = fileToMatrix("destinations.csv");
+            for(vec Row : destinationsFile) {
+                string user = Row.at(1);
+                if(friends.find(user)){
+                    cout << Row.at(1) << " | " << Row.at(0) << " | " << Row.at(3) << "\n";
+                }
+            }
+        }
+    }
+}
 
 #endif //TRAVELLERS_READFILE_H
