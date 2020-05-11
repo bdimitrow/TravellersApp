@@ -149,4 +149,17 @@ void displayFriendsDestionations(string loggedInUserName) {
     }
 }
 
+void displayInfoForParticularDestination(){
+    string searchedDestination;
+    cout << "Enter the destination you'd like to inform yourself: ";
+    cin.ignore(); getline(cin, searchedDestination);
+    matrix destinationsFile = fileToMatrix("destinations.csv");
+    for(vec row : destinationsFile) {
+        string destination = row.at(0);
+        if(searchedDestination == destination) {
+            cout << row.at(0) << " | " << row.at(1) << " | " << row.at(2) << endl;
+        }
+    }
+}
+
 #endif //TRAVELLERS_READFILE_H
