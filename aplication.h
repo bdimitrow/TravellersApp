@@ -123,31 +123,38 @@ void menuLogged(User loggedInUser) {
                     cin >> numPhotos;
                     if(numPhotos != 0) {
                         string nameOfPhoto, name;
-                        cout << "Press (1) for JPEG photos and press (2) for PNG photos. ";
                         int choice;
-                        cin >> choice;
-                        switch (choice) {
-                            case 1:
-                                for (int i = 0; i < numPhotos; ++i) {
-                                    cout << "Enter the name of photo number " << i + 1 << ": ";
-                                    cin >> name;
-                                    nameOfPhoto = name + ".jpeg";
-                                    photos.push_back(nameOfPhoto);
-                                    beingAdded.addPhoto(nameOfPhoto);
+                        do {
+                            cout << "Press (1) for JPEG photos and press (2) for PNG photos. ";
+                            if (!(cin >> choice)) {
+                                cout << "Invalid choice! Please enter an integer! " << endl;
+                                cin.clear();
+                                cin.ignore(10000, '\n');
+                            } else if (choice == 1 || choice == 2) {
+                                switch (choice) {
+                                    case 1: {
+                                        for (int i = 0; i < numPhotos; ++i) {
+                                            cout << "Enter the name of photo number " << i + 1 << ": ";
+                                            cin >> name;
+                                            nameOfPhoto = name + ".jpeg";
+                                            photos.push_back(nameOfPhoto);
+                                            beingAdded.addPhoto(nameOfPhoto);
+                                        }
+                                    }break;
+                                    case 2: {
+                                        for (int i = 0; i < numPhotos; ++i) {
+                                            cout << "Enter the name of photo number " << i + 1 << ": ";
+                                            cin >> name;
+                                            nameOfPhoto = name + ".png";
+                                            photos.push_back(nameOfPhoto);
+                                            beingAdded.addPhoto(nameOfPhoto);
+                                        }
+                                    }break;
                                 }
-                                break;
-                            case 2:
-                                for (int i = 0; i < numPhotos; ++i) {
-                                    cout << "Enter the name of photo number " << i + 1 << ": ";
-                                    cin >> name;
-                                    nameOfPhoto = name + ".png";
-                                    photos.push_back(nameOfPhoto);
-                                    beingAdded.addPhoto(nameOfPhoto);
-                                }
-                                break;
-                            default:
-                                cout << "Invalid format of photos." << endl;
-                        }
+                            } else {
+                                cout << "Invlaid choice!" << endl;
+                            }
+                        } while(choice != 1 && choice != 2);
                     }
 
                     // creating username.db file and saving info to it
@@ -197,6 +204,7 @@ void menuLogged(User loggedInUser) {
                 case 3: {
                     // ends the program
                     cout << "End of program!\nThanks for using Traveller's App!" << endl;
+                    return exit(0);
                 }break;
                 case 4: {
                     // displays average grade for particular destination
