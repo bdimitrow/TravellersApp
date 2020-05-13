@@ -16,21 +16,25 @@ using vec = vector<string>;
 using matrix = vector<vec>;
 
 // saving the data from CSV file to a matrix of vecs
-matrix fileToMatrix(string filename ) {
+matrix fileToMatrix(string filename) {
     char delimiter = ';';
     matrix result;
     string row, item;
 
-    ifstream in(filename);
-    while(getline(in, row)) {
-        vec Row;
-        stringstream ss(row);
-        while (getline(ss, item, delimiter)) {
-            Row.push_back(item );
+    ifstream ins(filename);
+    if(ins.is_open()) {
+        while (getline(ins, row)) {
+            vec Row;
+            stringstream ss(row);
+            while (getline(ss, item, delimiter)) {
+                Row.push_back(item);
+            }
+            result.push_back(Row);
         }
-        result.push_back(Row );
+        ins.close();
+    } else {
+        cerr << "Unable to open the file!\n";
     }
-    in.close();
     return result;
 }
 
@@ -69,6 +73,8 @@ double averageGradeDestination(const matrix mat, string destination) {
             ss >> x;
             sum += x;
             timesDest++;
+        }else{
+            cout << "Such a destination does not exist in our database!" << endl;
         }
     }
     return sum/timesDest;
@@ -110,7 +116,11 @@ void displayFriends(const matrix mat, string username) {
     for(vec row : mat){
         string s = row.at(0);
         if(s == username) {
-            cout << row.at(3) << endl << endl;
+            if(strcmp(row.at(3).c_str(), "Friends:") == 0) {
+                cout << "You don't have any friends!\n\n";
+            } else {
+                cout << row.at(3) << endl << endl;
+            }
         }
     }
 }
@@ -154,6 +164,7 @@ void displayInfoForParticularDestination(){
     cout << "Enter the destination you'd like to inform yourself: ";
     cin.ignore(); getline(cin, searchedDestination);
     matrix destinationsFile = fileToMatrix("destinations.csv");
+    cout << "Who has been to " << searchedDestination << " and their grade: \n";
     for(vec row : destinationsFile) {
         string destination = row.at(0);
         if(searchedDestination == destination) {

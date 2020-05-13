@@ -15,6 +15,8 @@ string
 -
 user.h
 /home/bozhidar/Desktop/Travellers/user.h
+destination.h
+/home/bozhidar/Desktop/Travellers/destination.h
 date.h
 /home/bozhidar/Desktop/Travellers/date.h
 readFile.h

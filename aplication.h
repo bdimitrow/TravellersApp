@@ -9,6 +9,7 @@
 #include <fstream>
 #include <string>
 #include "user.h"
+#include "destination.h"
 #include "date.h"
 #include "readFile.h"
 using namespace std;
@@ -29,8 +30,8 @@ void menu() {
         cout << "Choose an action: ";
         if(!(cin >> choice)) {
             cout << "Invalid choice! Please enter an integer! " << endl;
-            cin.clear();
-            cin.ignore(10000, '\n');
+            cin.clear();                            // reset any error flags
+            cin.ignore(10000, '\n');       // ignore any characters in the input buffer
         } else if(choice == 1 || choice == 2 || choice ==3) {
             switch (choice) {
                 case 1:
@@ -58,7 +59,8 @@ void menuLogged(User loggedInUser) {
     cout << "Press 6 to display all your friends!" << endl;
     cout << "Press 7 to display where friends have been and their comments!" << endl;
     cout << "Press 8 to log out!" << endl;
-    int menuCh; //cout << "Enter your choice: "; cin >> menuCh;
+    cout << "Press 9 to display information for particular destination!" << endl;
+    int menuCh;
     do{
         cout << "Enter your choice: ";
         if(!(cin >> menuCh)){
@@ -152,7 +154,7 @@ void menuLogged(User loggedInUser) {
                                     }break;
                                 }
                             } else {
-                                cout << "Invlaid choice!" << endl;
+                                cout << "Invalid choice!" << endl;
                             }
                         } while(choice != 1 && choice != 2);
                     }
@@ -196,6 +198,7 @@ void menuLogged(User loggedInUser) {
                 }break;
                 case 2: {
                     // displays all destinations/users/grades/comments
+                    cout << "There are all recorded destinations: \n";
                     matrix destinations = fileToMatrix("destinations.csv");
                     displayMatrix(destinations);
                     cout << endl << endl;
@@ -274,6 +277,7 @@ void menuLogged(User loggedInUser) {
                 }break;
                 case 7: {
                     // displays where friends have been and their comments;
+                    cout << "There are the destinations visited by your friends and their comment about the trip: \n";
                     displayFriendsDestionations(loggedInUser.getUsername());
                     cout << endl << endl;
                     menuLogged(loggedInUser);
@@ -285,7 +289,7 @@ void menuLogged(User loggedInUser) {
                 case 9: {
                     displayInfoForParticularDestination();
                     cout << endl << endl;
-                    menu();
+                    menuLogged(loggedInUser);
                 }break;
             }
         } else {
