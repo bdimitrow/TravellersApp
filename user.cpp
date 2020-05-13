@@ -15,7 +15,7 @@ User::User(const User &other) {
     email = other.email;
     numDestinations = other.numDestinations;
     numFriends = other.numFriends;
-    for(int i = 0; i < other.destinations.size(); ++i) {
+    for(unsigned i = 0; i < other.destinations.size(); ++i) {
         destinations[i] = other. destinations[i];
     }
 //    for(int i = 0; i < other.friends.size(); ++i) {
