@@ -45,7 +45,7 @@ void menu() {
                     break;
                 case 3:
                     cout << "Thanks for using Travellers App!" << endl;
-                    break;
+                    return exit(EXIT_SUCCESS);
             }
         }else {
             cout << "Invalid choice!" << endl;
