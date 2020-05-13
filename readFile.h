@@ -22,27 +22,23 @@ matrix fileToMatrix(string filename) {
     string row, item;
 
     ifstream ins(filename);
-    if(ins.is_open()) {
-        while (getline(ins, row)) {
-            vec Row;
-            stringstream ss(row);
-            while (getline(ss, item, delimiter)) {
-                Row.push_back(item);
-            }
-            result.push_back(Row);
+    while (getline(ins, row)) {
+        vec Row;
+        stringstream ss(row);
+        while (getline(ss, item, delimiter)) {
+            Row.push_back(item);
         }
-        ins.close();
-    } else {
-        cerr << "Unable to open the file!\n";
+        result.push_back(Row);
     }
+    ins.close();
     return result;
 }
 
 void displayMatrix(const matrix &mat) {
     for (vec row : mat) {
         for(string s : row)
-            cout << setw( 20 ) << left << s << " ";    // need a variable format really
-            cout << '\n';
+            cout << setw( 20 ) << left << s << " ";
+        cout << endl;
     }
 }
 
@@ -101,6 +97,7 @@ int rowOfUsername(const matrix mat, string username) {
             return rowCounter;
         }
     }
+    return 0;
 }
 
 int numberOfRowsInFile(const matrix mat){

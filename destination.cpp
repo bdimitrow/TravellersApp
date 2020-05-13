@@ -67,18 +67,10 @@ ostream &operator<<(ostream &out, const Destination &dest) {
 //    dest.endDate.print();
     out << "Grade: " << dest.grade << endl << "Comment: " << dest.comment << endl << "Photos: ";
 
-    for (int i = 0; i << dest.getNumPhotos(); ++i) {
+    for (int i = 0; i < dest.getNumPhotos(); ++i) {
         out << dest.photos.at(i);
     }
     out << endl;
     return out;
 }
-
-//void Destination::setStartDate(int x, int y, int z) {
-//    Date(x, y, z);
-//}
-//
-//void Destination::setEndDate(int day, int month, int year) {
-//    Date(day, month, year);
-//}
 

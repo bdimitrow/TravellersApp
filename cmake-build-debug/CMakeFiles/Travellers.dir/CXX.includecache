@@ -13,6 +13,8 @@ fstream
 -
 string
 -
+stdlib.h
+-
 user.h
 /home/bozhidar/Desktop/Travellers/user.h
 destination.h

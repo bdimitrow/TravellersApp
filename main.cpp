@@ -34,6 +34,9 @@ int main() {
 //        cout << ex << endl;
 //    }
 
+//    Date data(1800,3,2);
+//    cout << isDateValid(data);
+
 
     return 0;
 }
