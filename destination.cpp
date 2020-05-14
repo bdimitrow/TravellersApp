@@ -6,8 +6,6 @@
 
 Destination::Destination(const Destination &other) {
     destination = other.destination;
-//    startDate = other.startDate;
-//    endDate = other.endDate;
     grade = other.grade;
     comment = other.comment;
     numPhotos = other.numPhotos;
@@ -19,8 +17,6 @@ Destination::Destination(const Destination &other) {
 Destination &Destination::operator=(const Destination &other) {
     if (this != &other) {
         destination = other.destination;
-//        startDate = other.startDate;
-//        endDate = other.endDate;
         grade = other.grade;
         comment = other.comment;
         numPhotos = other.numPhotos;
@@ -45,19 +41,6 @@ void Destination::setComment(string comm) {
 
 void Destination::addPhoto(const string &newPhotos) {
     photos.push_back(newPhotos);
-}
-
-void Destination::print() const {
-    cout << "Destination: " << destination << endl << "Period: ";
-//    startDate.print();
-    cout << " - ";
-//    endDate.print();
-    cout << endl;
-    cout << "Grade: " << grade << endl << "Comment: " << comment << endl << "Photos: ";
-    for (int i = 0; i < getNumPhotos(); ++i) {
-        cout << photos.at(i);
-    }
-    cout << endl;
 }
 
 ostream &operator<<(ostream &out, const Destination &dest) {

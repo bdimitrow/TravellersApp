@@ -18,9 +18,6 @@ User::User(const User &other) {
     for(unsigned i = 0; i < other.destinations.size(); ++i) {
         destinations[i] = other. destinations[i];
     }
-//    for(int i = 0; i < other.friends.size(); ++i) {
-//        friends.at(i) = other.friends.at(i);
-//    }
 }
 
 User &User::operator=(const User &other) {
@@ -30,12 +27,9 @@ User &User::operator=(const User &other) {
         email = other.email;
         numDestinations = other.numDestinations;
         numFriends = other.numFriends;
-//        for (int i = 0; i < other.destinations.size(); ++i) {
-//            destinations[i] = other.destinations[i];
-//        }
-//        for (int i = 0; i < other.numFriends; ++i) {
-//            friends[i] = other.friends[i];
-//        }
+        for (int i = 0; i < other.destinations.size(); ++i) {
+            destinations[i] = other.destinations[i];
+        }
     }
     return *this;
 }
@@ -50,15 +44,6 @@ void User::setPassword(string pass) {
 
 void User::setEmail(string em) {
     email = em;
-}
-
-void User::addDestination(const Destination& newDest) {
-    destinations.push_back(newDest);
-}
-
-void User::addFriend(string newFriend) {
-    ++numFriends;
-    friends.push_back(newFriend);
 }
 
 ostream &operator<<(ostream &out, const User &user) {

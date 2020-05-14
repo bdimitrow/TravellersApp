@@ -13,15 +13,22 @@
 #include "destination.h"
 #include "date.h"
 #include "readFile.h"
+
 using namespace std;
 
 void registration();
+
 void login();
+
 void menu();
-bool isDateValid(const Date&);
-void menuLogged(const User&);
-void addDestination(const User&);
-void addFriend(const User&);
+
+bool isDateValid(const Date &);
+
+void menuLogged(const User &);
+
+void addDestination(const User &);
+
+void addFriend(const User &);
 
 void menu() {
     cout << " Welcome to Traveller's app menu! " << endl;
@@ -31,11 +38,11 @@ void menu() {
     int choice;
     do {
         cout << "Choose an action: ";
-        if(!(cin >> choice)) {
+        if (!(cin >> choice)) {
             cout << "Invalid choice! Please enter an integer! " << endl;
             cin.clear();                            // reset any error flags
             cin.ignore(10000, '\n');       // ignore any characters in the input buffer
-        } else if(choice == 1 || choice == 2 || choice == 3) {
+        } else if (choice == 1 || choice == 2 || choice == 3) {
             switch (choice) {
                 case 1:
                     registration();
@@ -47,13 +54,13 @@ void menu() {
                     cout << "Thanks for using Travellers App!" << endl;
                     return exit(EXIT_SUCCESS);
             }
-        }else {
+        } else {
             cout << "Invalid choice!" << endl;
         }
-    } while(choice != 3);
+    } while (choice != 3);
 }
 
-void menuLogged(const User& loggedInUser) {
+void menuLogged(const User &loggedInUser) {
     cout << "Press 1 to add a trip!" << endl;
     cout << "Press 2 to display all destinations in the format location/user/grade/comment!" << endl;
     cout << "Press 3 to exit!" << endl;
@@ -64,19 +71,20 @@ void menuLogged(const User& loggedInUser) {
     cout << "Press 8 to log out!" << endl;
     cout << "Press 9 to display information for particular destination!" << endl;
     int menuCh;
-    do{
+    do {
         cout << "Enter your choice: ";
-        if(!(cin >> menuCh)){
+        if (!(cin >> menuCh)) {
             cout << "Invalid choice! Please enter an integer!" << endl;
             cin.clear();
             cin.ignore(10000, '\n');
-        }else if(menuCh >= 1 && menuCh <= 9) {
+        } else if (menuCh >= 1 && menuCh <= 9) {
             switch (menuCh) {
                 case 1: {
                     // adding trip(destination);
                     addDestination(loggedInUser);
                     menuLogged(loggedInUser);
-                }break;
+                }
+                    break;
                 case 2: {
                     // displays all destinations/users/grades/comments
                     cout << "There are all recorded destinations: \n";
@@ -84,12 +92,14 @@ void menuLogged(const User& loggedInUser) {
                     displayMatrix(destinations);
                     cout << endl << endl;
                     menuLogged(loggedInUser);
-                }break;
+                }
+                    break;
                 case 3: {
                     // ends the program
                     cout << "End of program!\nThanks for using Traveller's App!" << endl;
                     return exit(EXIT_SUCCESS);
-                }break;
+                }
+                    break;
                 case 4: {
                     // displays average grade for particular destination
                     cout << "Enter the destination: ";
@@ -97,46 +107,53 @@ void menuLogged(const User& loggedInUser) {
                     cin.ignore();
                     getline(cin, destination);
                     matrix dests = fileToMatrix("destinations.csv");
-                    cout << "Average grade of " << destination << " is: " << averageGradeDestination(dests, destination) << endl <<endl;
+                    cout << "Average grade of " << destination << " is: " << averageGradeDestination(dests, destination)
+                         << endl << endl;
                     menuLogged(loggedInUser);
-                }break;
+                }
+                    break;
                 case 5: {
                     // adds a friend
                     addFriend(loggedInUser);
                     menuLogged(loggedInUser);
-                }break;
+                }
+                    break;
                 case 6: {
                     // displays the friends of the logged in user
                     matrix usersFile = fileToMatrix("users.csv");
                     displayFriends(usersFile, loggedInUser.getUsername());
                     menuLogged(loggedInUser);
-                }break;
+                }
+                    break;
                 case 7: {
                     // displays where friends have been and their comments;
                     cout << "There are the destinations visited by your friends and their comment about the trip: \n";
                     displayFriendsDestionations(loggedInUser.getUsername());
                     cout << endl << endl;
                     menuLogged(loggedInUser);
-                }break;
+                }
+                    break;
                 case 8: {
                     // log out
                     cout << "You have logged out!" << endl << endl;
                     menu();
-                }break;
+                }
+                    break;
                 case 9: {
                     // display user and his grade for a destination
                     displayInfoForParticularDestination();
                     cout << endl << endl;
                     menuLogged(loggedInUser);
-                }break;
+                }
+                    break;
             }
         } else {
             cout << "Invalid choice!" << endl;
         }
-    } while(menuCh != 3);
+    } while (menuCh != 3);
 }
 
-void addDestination(const User& loggedInUser) {
+void addDestination(const User &loggedInUser) {
 // adding trip(destination);
     string destinationName;
     unsigned grade;
@@ -160,14 +177,14 @@ void addDestination(const User& loggedInUser) {
     cin >> yearT >> monthT >> dayT;
     Date to(yearT, monthT, dayT);
     // validation
-    while((isDateValid(from) == 0) || (isDateValid(to) == 0) || (!(from < (to)))) {
+    while ((isDateValid(from) == 0) || (isDateValid(to) == 0) || (!(from < (to)))) {
         cout << "Invalid data or period! Please reenter starting date as YY/MM/DD: ";
         int yearF2, monthF2, dayF2;
         cin >> yearF2 >> monthF2 >> dayF2;
         cout << "Please reenter ending date as YY/MM/DD: ";
         int yearT2, monthT2, dayT2;
         cin >> yearT2 >> monthT2 >> dayT2;
-        from(yearF2,monthF2,dayF2);
+        from(yearF2, monthF2, dayF2);
         to(yearT2, monthT2, dayT2);
     }
 
@@ -190,7 +207,7 @@ void addDestination(const User& loggedInUser) {
     cout << "Enter the number of photos you'd like to upload: ";
     int numPhotos;
     cin >> numPhotos;
-    if(numPhotos != 0) {
+    if (numPhotos != 0) {
         string nameOfPhoto, name;
         int choice;
         do {
@@ -209,7 +226,8 @@ void addDestination(const User& loggedInUser) {
                             photos.push_back(nameOfPhoto);
                             beingAdded.addPhoto(nameOfPhoto);
                         }
-                    }break;
+                    }
+                        break;
                     case 2: {
                         for (int i = 0; i < numPhotos; ++i) {
                             cout << "Enter the name of photo number " << i + 1 << ": ";
@@ -218,12 +236,13 @@ void addDestination(const User& loggedInUser) {
                             photos.push_back(nameOfPhoto);
                             beingAdded.addPhoto(nameOfPhoto);
                         }
-                    }break;
+                    }
+                        break;
                 }
             } else {
                 cout << "Invalid choice!" << endl;
             }
-        } while(choice != 1 && choice != 2);
+        } while (choice != 1 && choice != 2);
     }
 
     // creating username.db file and saving info to it
@@ -231,7 +250,7 @@ void addDestination(const User& loggedInUser) {
     string fileUser = loggedInUser.getUsername() + ".db";
     char *fileUserChar = const_cast<char *>(fileUser.c_str());
     fout.open(fileUserChar, ios::out | ios::in | ios::app);
-    if(fout.is_open()) {
+    if (fout.is_open()) {
         fout << beingAdded.getDestination() << ";"
              << from << ";"
              << to << ";"
@@ -248,7 +267,7 @@ void addDestination(const User& loggedInUser) {
 
     fstream destOut;
     destOut.open("destinations.csv", ios::in | ios::out | ios::app);
-    if(destOut.is_open()) {
+    if (destOut.is_open()) {
         destOut << beingAdded.getDestination() << ";"
                 << loggedInUser.getUsername() << ";"
                 << beingAdded.getGrade() << ";"
@@ -263,17 +282,18 @@ void addDestination(const User& loggedInUser) {
 
 }
 
-void addFriend(const User& loggedInUser) {
+void addFriend(const User &loggedInUser) {
     string friendToBeAdded;
     cout << "Enter the username of the user you'd like to add as a friend: ";
-    cin.ignore(); getline(cin, friendToBeAdded);
+    cin.ignore();
+    getline(cin, friendToBeAdded);
     matrix usersFile = fileToMatrix("users.csv");
     // checking whether such a username exists
-    if(isExisting(usersFile, friendToBeAdded, 0)){
+    if (isExisting(usersFile, friendToBeAdded, 0)) {
         // ensuring you can not add yourself as friend
-        if(friendToBeAdded != loggedInUser.getUsername()) {
+        if (friendToBeAdded != loggedInUser.getUsername()) {
             // checking whether you are already friends
-            if(!(isAlreadyFriend(usersFile, friendToBeAdded, loggedInUser.getUsername()))) {
+            if (!(isAlreadyFriend(usersFile, friendToBeAdded, loggedInUser.getUsername()))) {
                 fstream file;
                 file.open("users.csv", ios::in | ios::out | ios::app);
                 fstream temp;
@@ -323,7 +343,7 @@ void registration() {
     beingReg.setUsername(usernameRegister);
     matrix users = fileToMatrix("users.csv");
     // if username is already taken, enter another
-    while(isExisting(users, beingReg.getUsername(), 0)){
+    while (isExisting(users, beingReg.getUsername(), 0)) {
         cout << "Username is already taken. ";
         cout << "Enter a username: ";
         cin >> usernameRegister;
@@ -338,7 +358,7 @@ void registration() {
     cin >> emailRegister;
     beingReg.setEmail(emailRegister);
     // if email is already registered, enter another
-    while(isExisting(users, beingReg.getEmail(), 2)){
+    while (isExisting(users, beingReg.getEmail(), 2)) {
         cout << "Email is already registered. ";
         cout << "Enter another one: ";
         cin >> emailRegister;
@@ -387,33 +407,30 @@ void login() {
 }
 
 // checks whether the date is valid
-bool isDateValid(const Date& date) {
-    if(date.Year() <= 1900 || date.Year() >= 2023) {
+bool isDateValid(const Date &date) {
+    if (date.Year() <= 1900 || date.Year() >= 2023) {
         return false;
-    }else if(!(1 <= date.Month() && date.Month() <= 12)) {
+    } else if (!(1 <= date.Month() && date.Month() <= 12)) {
         return false;
-    } else if(!(1 <= date.Day() && date.Day() <= 31)) {
+    } else if (!(1 <= date.Day() && date.Day() <= 31)) {
         return false;
-    } else if((date.Day() == 31) && (date.Month() == 2 || date.Month() == 4 ||
-                date.Month() == 6 || date.Month() == 9 || date.Month() == 11)) {
+    } else if ((date.Day() == 31) && (date.Month() == 2 || date.Month() == 4 ||
+                                      date.Month() == 6 || date.Month() == 9 || date.Month() == 11)) {
         return false;
-    } else if((date.Day() == 30) && (date.Month() == 2)) {
+    } else if ((date.Day() == 30) && (date.Month() == 2)) {
         return false;
-    } else if((date.Month() == 2) && (date.Day() == 29) && (date.Year() % 4 != 0)) {
+    } else if ((date.Month() == 2) && (date.Day() == 29) && (date.Year() % 4 != 0)) {
         return false;
-    } else if((date.Month() == 2) && (date.Day() == 29) && (date.Year() % 400 == 0)) {
+    } else if ((date.Month() == 2) && (date.Day() == 29) && (date.Year() % 400 == 0)) {
         return true;
-    } else if((date.Month() == 2) && (date.Day() == 29) && (date.Year() % 100 == 0)) {
+    } else if ((date.Month() == 2) && (date.Day() == 29) && (date.Year() % 100 == 0)) {
         return false;
-    } else if((date.Month() == 2) && (date.Day() == 29) && (date.Year() % 4 == 0)) {
+    } else if ((date.Month() == 2) && (date.Day() == 29) && (date.Year() % 4 == 0)) {
         return true;
     } else {
         return true;
     }
 }
-
-
-
 
 
 #endif //TRAVELLERS_APLICATION_H

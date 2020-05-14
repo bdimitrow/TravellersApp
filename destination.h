@@ -22,14 +22,9 @@ public:
     void setDestination(string);
     void setGrade(unsigned);
     void setComment(string);
-//    void setStartDate(int, int, int);
-//    void setEndDate(int,int,int);
     void addPhoto(const string&);
-    void print() const;
 
     string getDestination() const { return destination; }
-//    Date getStartDate() const { return startDate; }
-//    Date getEndDate() const { return endDate; }
     unsigned getGrade() const { return grade; }
     string getComment() const { return comment; }
     int getNumPhotos() const { return numPhotos; }
@@ -39,8 +34,6 @@ public:
 
 private:
     string destination;
-//    Date startDate;
-//    Date endDate = Date(0, 0, 0);
     unsigned grade;
     string comment;
     vector<string> photos;
