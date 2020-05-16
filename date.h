@@ -6,6 +6,7 @@
 #define PROJECT7_DATE_H
 
 #include <iostream>
+
 using namespace std;
 
 class Date {
@@ -16,18 +17,22 @@ private:
 
 public:
     Date() {}
-    Date(int , int  , int );
+
+    Date(int, int, int);
+
     [[nodiscard]] int Day() const;
+
     [[nodiscard]] int Month() const;
+
     [[nodiscard]] int Year() const;
 
     void print() const;
 
-    bool operator<(const Date&) const;
+    bool operator<(const Date &) const;
 
     Date operator()(int y, int m, int d);
 
-    friend ostream& operator<<(ostream& fout, const Date& dt);
+    friend ostream &operator<<(ostream &fout, const Date &dt);
 };
 
 
