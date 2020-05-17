@@ -43,6 +43,14 @@ void Destination::addPhoto(const string &newPhotos) {
     photos.push_back(newPhotos);
 }
 
+void Destination::setFromDate(Date fr) {
+    from = fr;
+}
+
+void Destination::setToDate(Date t) {
+    to = t;
+}
+
 ostream &operator<<(ostream &out, const Destination &dest) {
     out << "Destination: " << dest.destination << endl << "Period: ";
 //    dest.startDate.print();

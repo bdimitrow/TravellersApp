@@ -22,13 +22,16 @@ void login();
 
 void menu();
 
-bool isDateValid(const Date &);
-
 void menuLogged(const User &);
+
+bool isDateValid(const Date &);
 
 void addDestination(const User &);
 
+void destinationToFIle(const User &, const Destination &, int);
+
 void addFriend(const User &);
+
 
 void menu() {
     cout << " Welcome to Traveller's app menu! " << endl;
@@ -187,6 +190,8 @@ void addDestination(const User &loggedInUser) {
         from(yearF2, monthF2, dayF2);
         to(yearT2, monthT2, dayT2);
     }
+    beingAdded.setFromDate(from);
+    beingAdded.setToDate(to);
 
     // setting grade
     cout << "Insert rating between 1 and 5: ";
@@ -245,15 +250,19 @@ void addDestination(const User &loggedInUser) {
         } while (choice != 1 && choice != 2);
     }
 
-    // creating username.db file and saving info to it
+    destinationToFIle(loggedInUser, beingAdded, numPhotos);
+}
+
+// creating username.db file and saving destination to it and destinations.csv file
+void destinationToFIle(const User &loggedInUser, const Destination &beingAdded, int numPhotos) {
     fstream fout;
     string fileUser = loggedInUser.getUsername() + ".db";
     char *fileUserChar = const_cast<char *>(fileUser.c_str());
     fout.open(fileUserChar, ios::out | ios::in | ios::app);
     if (fout.is_open()) {
         fout << beingAdded.getDestination() << ";"
-             << from << ";"
-             << to << ";"
+             << beingAdded.getFromDate() << ";"
+             << beingAdded.getToDate() << ";"
              << beingAdded.getGrade() << ";"
              << beingAdded.getComment() << ";";
         for (int i = 0; i < numPhotos; ++i) {
@@ -279,7 +288,6 @@ void addDestination(const User &loggedInUser) {
     }
     cout << "Successfully added the entered destination!";
     cout << endl << endl;
-
 }
 
 void addFriend(const User &loggedInUser) {

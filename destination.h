@@ -39,7 +39,15 @@ public:
 
     vector<string> getPhotos() const { return photos; }
 
+    Date getFromDate() const { return from; }
+
+    Date getToDate() const { return to; }
+
     friend ostream &operator<<(ostream &out, const Destination &dest);
+
+    void setFromDate(Date fr);
+
+    void setToDate(Date t);
 
 private:
     string destination;
@@ -47,6 +55,8 @@ private:
     string comment;
     vector<string> photos;
     int numPhotos;
+    Date from;
+    Date to;
 };
 
 #endif //PROJECT7_DESTINATION_H
