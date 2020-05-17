@@ -8,7 +8,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-#include <stdlib.h>
+#include <cstdlib>
 #include "user.h"
 #include "destination.h"
 #include "date.h"
@@ -114,7 +114,7 @@ void menuLogged(const User &loggedInUser) {
                     break;
                 case 2: {
                     // displays all destinations/users/grades/comments
-                    cout << "There are all recorded destinations: \n";
+                    cout << "There are all recorded destinations in the format location/user/grade/comment: \n";
                     matrix destinations = fileToMatrix("destinations.csv");
                     displayMatrix(destinations);
                     cout << endl << endl;
@@ -134,8 +134,8 @@ void menuLogged(const User &loggedInUser) {
                     cin.ignore();
                     getline(cin, destination);
                     matrix dests = fileToMatrix("destinations.csv");
-                    cout << "Average grade of " << destination << " is: " << averageGradeDestination(dests, destination)
-                         << endl << endl;
+                    averageGradeDestination(dests, destination);
+
                     menuLogged(loggedInUser);
                 }
                     break;
@@ -154,7 +154,7 @@ void menuLogged(const User &loggedInUser) {
                     break;
                 case 7: {
                     // displays where friends have been and their comments;
-                    cout << "There are the destinations visited by your friends and their comment about the trip: \n";
+                    cout << "These are the destinations visited by your friends and their comment about the trip: \n";
                     displayFriendsDestionations(loggedInUser.getUsername());
                     cout << endl << endl;
                     menuLogged(loggedInUser);
