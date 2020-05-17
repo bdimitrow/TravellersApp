@@ -16,22 +16,46 @@
 
 using namespace std;
 
+// making registration
 void registration();
 
+// login when such a profile exists
 void login();
 
+// welcoming menu
 void menu();
 
+// menu when you have logged in
 void menuLogged(const User &);
 
+// checks whether the date is valid
 bool isDateValid(const Date &);
 
+// adding destination(trip)
 void addDestination(const User &);
-
-void destinationToFIle(const User &, const Destination &, int);
 
 void addFriend(const User &);
 
+// creating username.db file and saving destination to it and destinations.csv file
+void destinationToFile(const User &, const Destination &, int);
+
+// adding location(destination) of the trip
+string addLocation();
+
+// adding starting date of the trip
+Date addStartDate();
+
+// adding ending date of the trip
+Date addEndDate();
+
+// adding grade for the tirp
+unsigned addGrade();
+
+// adding comment about the trip
+string addComment();
+
+// adding photos from the trip
+vector<string> addPhotos(int);
 
 void menu() {
     cout << " Welcome to Traveller's app menu! " << endl;
@@ -157,104 +181,131 @@ void menuLogged(const User &loggedInUser) {
 }
 
 void addDestination(const User &loggedInUser) {
-// adding trip(destination);
-    string destinationName;
-    unsigned grade;
-    string comment;
-    vector<string> photos;
+    // declaration of destination
     Destination beingAdded;
 
-    // setting destination's location
-    cout << "Insert destination's location: ";
-    cin.ignore();
-    getline(cin, destinationName);
-    beingAdded.setDestination(destinationName);
+    // setting location
+    beingAdded.setDestination(addLocation());
 
     // setting period
-    cout << "When did it start? Insert YY/MM/DD: ";
-    int dayF, monthF, yearF;
-    cin >> yearF >> monthF >> dayF;
-    Date from(yearF, monthF, dayF);
-    cout << "When did it end? Insert YY/MM/DD: ";
-    int dayT, monthT, yearT;
-    cin >> yearT >> monthT >> dayT;
-    Date to(yearT, monthT, dayT);
-    // validation
+    Date from = addStartDate();
+    Date to = addEndDate();
+    // validation of period
     while ((isDateValid(from) == 0) || (isDateValid(to) == 0) || (!(from < (to)))) {
-        cout << "Invalid data or period! Please reenter starting date as YY/MM/DD: ";
-        int yearF2, monthF2, dayF2;
-        cin >> yearF2 >> monthF2 >> dayF2;
-        cout << "Please reenter ending date as YY/MM/DD: ";
-        int yearT2, monthT2, dayT2;
-        cin >> yearT2 >> monthT2 >> dayT2;
-        from(yearF2, monthF2, dayF2);
-        to(yearT2, monthT2, dayT2);
+        cout << "Invalid data or period! Please reenter!\n";
+        from = addStartDate();
+        to = addEndDate();
     }
     beingAdded.setFromDate(from);
     beingAdded.setToDate(to);
 
     // setting grade
-    cout << "Insert rating between 1 and 5: ";
-    cin >> grade;
-    while (grade < 1 || grade > 5) {
-        cout << "Invalid grade. Please reenter: ";
-        cin >> grade;
-    }
-    beingAdded.setGrade(grade);
+    beingAdded.setGrade(addGrade());
 
     // setting comment
-    cout << "Give day recommendation: ";
-    cin.ignore();
-    getline(cin, comment);
-    beingAdded.setComment(comment);
+    beingAdded.setComment(addComment());
 
     // setting photos
     cout << "Enter the number of photos you'd like to upload: ";
     int numPhotos;
     cin >> numPhotos;
     if (numPhotos != 0) {
-        string nameOfPhoto, name;
-        int choice;
-        do {
-            cout << "Press (1) for JPEG photos and press (2) for PNG photos. ";
-            if (!(cin >> choice)) {
-                cout << "Invalid choice! Please enter an integer! " << endl;
-                cin.clear();
-                cin.ignore(10000, '\n');
-            } else if (choice == 1 || choice == 2) {
-                switch (choice) {
-                    case 1: {
-                        for (int i = 0; i < numPhotos; ++i) {
-                            cout << "Enter the name of photo number " << i + 1 << ": ";
-                            cin >> name;
-                            nameOfPhoto = name + ".jpeg";
-                            photos.push_back(nameOfPhoto);
-                            beingAdded.addPhoto(nameOfPhoto);
-                        }
-                    }
-                        break;
-                    case 2: {
-                        for (int i = 0; i < numPhotos; ++i) {
-                            cout << "Enter the name of photo number " << i + 1 << ": ";
-                            cin >> name;
-                            nameOfPhoto = name + ".png";
-                            photos.push_back(nameOfPhoto);
-                            beingAdded.addPhoto(nameOfPhoto);
-                        }
-                    }
-                        break;
-                }
-            } else {
-                cout << "Invalid choice!" << endl;
-            }
-        } while (choice != 1 && choice != 2);
+        vector<string> snimki = addPhotos(numPhotos);
+        for (int i = 0; i < snimki.size(); ++i) {
+            beingAdded.addPhoto(snimki.at(i));
+        }
     }
 
-    destinationToFIle(loggedInUser, beingAdded, numPhotos);
+    // saving the destination to file
+    destinationToFile(loggedInUser, beingAdded, numPhotos);
 }
 
-// creating username.db file and saving destination to it and destinations.csv file
-void destinationToFIle(const User &loggedInUser, const Destination &beingAdded, int numPhotos) {
+string addLocation() {
+    // setting destination's location
+    string destinationName;
+    cout << "Insert destination's location: ";
+    cin.ignore();
+    getline(cin, destinationName);
+    return destinationName;
+}
+
+Date addStartDate() {
+    Date fr;
+    cout << "When did it start? Insert YY/MM/DD: ";
+    int dayF, monthF, yearF;
+    cin >> yearF >> monthF >> dayF;
+    fr(yearF, monthF, dayF);
+    return fr;
+}
+
+Date addEndDate() {
+    Date t;
+    cout << "When did it end? Insert YY/MM/DD: ";
+    int dayT, monthT, yearT;
+    cin >> yearT >> monthT >> dayT;
+    t(yearT, monthT, dayT);
+    return t;
+}
+
+unsigned addGrade() {
+    cout << "Insert rating between 1 and 5: ";
+    unsigned grade;
+    cin >> grade;
+    while (grade < 1 || grade > 5) {
+        cout << "Invalid grade. Please reenter: ";
+        cin >> grade;
+    }
+    return grade;
+}
+
+string addComment() {
+    // setting comment
+    cout << "Give day recommendation: ";
+    string comment;
+    cin.ignore();
+    getline(cin, comment);
+    return comment;
+}
+
+vector<string> addPhotos(int numPhotos) {
+    vector<string> photos;
+    string nameOfPhoto, name;
+    int choice;
+    do {
+        cout << "Press (1) for JPEG photos and press (2) for PNG photos. ";
+        if (!(cin >> choice)) {
+            cout << "Invalid choice! Please enter an integer! " << endl;
+            cin.clear();
+            cin.ignore(10000, '\n');
+        } else if (choice == 1 || choice == 2) {
+            switch (choice) {
+                case 1: {
+                    for (int i = 0; i < numPhotos; ++i) {
+                        cout << "Enter the name of photo number " << i + 1 << ": ";
+                        cin >> name;
+                        nameOfPhoto = name + ".jpeg";
+                        photos.push_back(nameOfPhoto);
+                    }
+                }
+                    break;
+                case 2: {
+                    for (int i = 0; i < numPhotos; ++i) {
+                        cout << "Enter the name of photo number " << i + 1 << ": ";
+                        cin >> name;
+                        nameOfPhoto = name + ".png";
+                        photos.push_back(nameOfPhoto);
+                    }
+                }
+                    break;
+            }
+        } else {
+            cout << "Invalid choice!" << endl;
+        }
+    } while (choice != 1 && choice != 2);
+    return photos;
+}
+
+void destinationToFile(const User &loggedInUser, const Destination &beingAdded, int numPhotos) {
     fstream fout;
     string fileUser = loggedInUser.getUsername() + ".db";
     char *fileUserChar = const_cast<char *>(fileUser.c_str());
@@ -414,7 +465,6 @@ void login() {
     }
 }
 
-// checks whether the date is valid
 bool isDateValid(const Date &date) {
     if (date.Year() <= 1900 || date.Year() >= 2023) {
         return false;
