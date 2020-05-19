@@ -147,7 +147,7 @@ void menuLogged(const User &loggedInUser) {
                     break;
                 case 6: {
                     // displays the friends of the logged in user
-                    matrix usersFile = fileToMatrix("users.csv");
+                    matrix usersFile = fileToMatrix("users.db");
                     displayFriends(usersFile, loggedInUser.getUsername());
                     menuLogged(loggedInUser);
                 }
@@ -211,7 +211,7 @@ void addDestination(const User &loggedInUser) {
     cin >> numPhotos;
     if (numPhotos != 0) {
         vector<string> snimki = addPhotos(numPhotos);
-        for (int i = 0; i < snimki.size(); ++i) {
+        for (unsigned int i = 0; i < snimki.size(); ++i) {
             beingAdded.addPhoto(snimki.at(i));
         }
     }
@@ -269,7 +269,7 @@ string addComment() {
 
 vector<string> addPhotos(int numPhotos) {
     vector<string> photos;
-    string nameOfPhoto, name;
+    string photoNameWithExtension, photoName;
     int choice;
     do {
         cout << "Press (1) for JPEG photos and press (2) for PNG photos. ";
@@ -281,19 +281,19 @@ vector<string> addPhotos(int numPhotos) {
             switch (choice) {
                 case 1: {
                     for (int i = 0; i < numPhotos; ++i) {
-                        cout << "Enter the name of photo number " << i + 1 << ": ";
-                        cin >> name;
-                        nameOfPhoto = name + ".jpeg";
-                        photos.push_back(nameOfPhoto);
+                        cout << "Enter the photoName of photo number " << i + 1 << ": ";
+                        cin >> photoName;
+                        photoNameWithExtension = photoName + ".jpeg";
+                        photos.push_back(photoNameWithExtension);
                     }
                 }
                     break;
                 case 2: {
                     for (int i = 0; i < numPhotos; ++i) {
-                        cout << "Enter the name of photo number " << i + 1 << ": ";
-                        cin >> name;
-                        nameOfPhoto = name + ".png";
-                        photos.push_back(nameOfPhoto);
+                        cout << "Enter the photoName of photo number " << i + 1 << ": ";
+                        cin >> photoName;
+                        photoNameWithExtension = photoName + ".png";
+                        photos.push_back(photoNameWithExtension);
                     }
                 }
                     break;
@@ -306,10 +306,14 @@ vector<string> addPhotos(int numPhotos) {
 }
 
 void destinationToFile(const User &loggedInUser, const Destination &beingAdded, int numPhotos) {
+    // adding the destination to the file of the loggedInUser
     fstream fout;
     string fileUser = loggedInUser.getUsername() + ".db";
     char *fileUserChar = const_cast<char *>(fileUser.c_str());
     fout.open(fileUserChar, ios::out | ios::in | ios::app);
+    if(!fout.is_open()){
+        cerr << "Unable to open file!\n";
+    }
     if (fout.is_open()) {
         fout << beingAdded.getDestination() << ";"
              << beingAdded.getFromDate() << ";"
@@ -325,8 +329,12 @@ void destinationToFile(const User &loggedInUser, const Destination &beingAdded, 
         cerr << "Unable to open the file!" << endl;
     }
 
+    // adding the destination to destinations.csv file
     fstream destOut;
     destOut.open("destinations.csv", ios::in | ios::out | ios::app);
+    if(!destOut.is_open()){
+        cerr << "Unable to open file!\n";
+    }
     if (destOut.is_open()) {
         destOut << beingAdded.getDestination() << ";"
                 << loggedInUser.getUsername() << ";"
@@ -346,7 +354,7 @@ void addFriend(const User &loggedInUser) {
     cout << "Enter the username of the user you'd like to add as a friend: ";
     cin.ignore();
     getline(cin, friendToBeAdded);
-    matrix usersFile = fileToMatrix("users.csv");
+    matrix usersFile = fileToMatrix("users.db");
     // checking whether such a username exists
     if (isExisting(usersFile, friendToBeAdded, 0)) {
         // ensuring you can not add yourself as friend
@@ -354,9 +362,15 @@ void addFriend(const User &loggedInUser) {
             // checking whether you are already friends
             if (!(isAlreadyFriend(usersFile, friendToBeAdded, loggedInUser.getUsername()))) {
                 fstream file;
-                file.open("users.csv", ios::in | ios::out | ios::app);
+                file.open("users.db", ios::in | ios::out | ios::app);
+                if(!file.is_open()){
+                    cerr << "Unable to open file!\n";
+                }
                 fstream temp;
                 temp.open("temp.txt", ios::in | ios::out | ios::trunc);
+                if(!temp.is_open()){
+                    cerr << "Unable to open file!\n";
+                }
                 string line;
                 for (int row = 1; getline(file, line) && row < numberOfRowsInFile(usersFile) + 1; ++row) {
                     if (row == rowOfUsername(usersFile, loggedInUser.getUsername())) {
@@ -368,11 +382,17 @@ void addFriend(const User &loggedInUser) {
                 }
                 file.close();
                 temp.close();
-                // coping temp.txt. to users.csv
+                // coping temp.txt. to users.db
                 ifstream in;
                 ofstream out;
-                in.open("temp.txt", ios::in | ios::out);
-                out.open("users.csv", ios::in | ios::out | ios::trunc);
+                in.open("temp.txt", ios::in);
+                if(!in.is_open()){
+                    cerr << "Unable to open file!\n";
+                }
+                out.open("users.db", ios::out | ios::trunc);
+                if(!out.is_open()){
+                    cerr << "Unable to open file!\n";
+                }
                 char next;
                 in.get(next);
                 while (in.eof() == 0) {
@@ -400,7 +420,7 @@ void registration() {
     cout << "Enter a username: ";
     cin >> usernameRegister;
     beingReg.setUsername(usernameRegister);
-    matrix users = fileToMatrix("users.csv");
+    matrix users = fileToMatrix("users.db");
     // if username is already taken, enter another
     while (isExisting(users, beingReg.getUsername(), 0)) {
         cout << "Username is already taken. ";
@@ -425,7 +445,10 @@ void registration() {
     }
 
     fstream fout;
-    fout.open("users.csv", ios::out | ios::app);
+    fout.open("users.db", ios::out | ios::app);
+    if(!fout.is_open()){
+        cerr << "Unable to open file!\n";
+    }
     fout << beingReg.getUsername() << ";"
          << beingReg.getPassword() << ";"
          << beingReg.getEmail() << ";"
@@ -437,6 +460,9 @@ void registration() {
     string fname = beingReg.getUsername() + ".db";
     char *fnameChar = const_cast<char *>(fname.c_str());
     fuser.open(fnameChar, ios::out | ios::app);
+    if(!fuser.is_open()){
+        cerr << "Unable to open file!\n";
+    }
     cout << "You have been successfully registered!" << endl << endl;
     fuser.close();
     menu();
@@ -454,7 +480,7 @@ void login() {
     cin >> passwordLogin;
     userBeingLogged.setPassword(passwordLogin);
 
-    matrix users = fileToMatrix("users.csv");
+    matrix users = fileToMatrix("users.db");
     // checking whether username and password matches
     if (!(usernameMatchesPassword(users, userBeingLogged.getUsername(), userBeingLogged.getPassword()))) {
         cout << "Incorrect data! Please try again: " << endl;

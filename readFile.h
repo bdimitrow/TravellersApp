@@ -169,7 +169,7 @@ bool isAlreadyFriend(const matrix &mat, const string &friendToBeAdded, const str
 
 void displayFriendsDestionations(const string &loggedInUsername) {
     bool found = false;
-    matrix usersFile = fileToMatrix("users.csv");
+    matrix usersFile = fileToMatrix("users.db");
     // getting the friends of the loggedInUser
     for (vec row : usersFile) {
         string username = row.at(0);

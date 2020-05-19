@@ -13,7 +13,7 @@ fstream
 -
 string
 -
-stdlib.h
+cstdlib
 -
 user.h
 /home/bozhidar/Desktop/Travellers/user.h
