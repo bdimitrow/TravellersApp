@@ -27,6 +27,10 @@ public:
 
     void setComment(string);
 
+    void setFromDate(Date fr);
+
+    void setToDate(Date t);
+
     void addPhoto(const string &);
 
     string getDestination() const { return destination; }
@@ -44,10 +48,6 @@ public:
     Date getToDate() const { return to; }
 
     friend ostream &operator<<(ostream &out, const Destination &dest);
-
-    void setFromDate(Date fr);
-
-    void setToDate(Date t);
 
 private:
     string destination;
