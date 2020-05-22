@@ -311,7 +311,7 @@ void destinationToFile(const User &loggedInUser, const Destination &beingAdded, 
     string fileUser = loggedInUser.getUsername() + ".db";
     char *fileUserChar = const_cast<char *>(fileUser.c_str());
     fout.open(fileUserChar, ios::out | ios::in | ios::app);
-    if(!fout.is_open()){
+    if (!fout.is_open()) {
         cerr << "Unable to open file!\n";
     }
     if (fout.is_open()) {
@@ -332,7 +332,7 @@ void destinationToFile(const User &loggedInUser, const Destination &beingAdded, 
     // adding the destination to destinations.csv file
     fstream destOut;
     destOut.open("destinations.csv", ios::in | ios::out | ios::app);
-    if(!destOut.is_open()){
+    if (!destOut.is_open()) {
         cerr << "Unable to open file!\n";
     }
     if (destOut.is_open()) {
@@ -363,12 +363,12 @@ void addFriend(const User &loggedInUser) {
             if (!(isAlreadyFriend(usersFile, friendToBeAdded, loggedInUser.getUsername()))) {
                 fstream file;
                 file.open("users.db", ios::in | ios::out | ios::app);
-                if(!file.is_open()){
+                if (!file.is_open()) {
                     cerr << "Unable to open file!\n";
                 }
                 fstream temp;
                 temp.open("temp.txt", ios::in | ios::out | ios::trunc);
-                if(!temp.is_open()){
+                if (!temp.is_open()) {
                     cerr << "Unable to open file!\n";
                 }
                 string line;
@@ -386,11 +386,11 @@ void addFriend(const User &loggedInUser) {
                 ifstream in;
                 ofstream out;
                 in.open("temp.txt", ios::in);
-                if(!in.is_open()){
+                if (!in.is_open()) {
                     cerr << "Unable to open file!\n";
                 }
                 out.open("users.db", ios::out | ios::trunc);
-                if(!out.is_open()){
+                if (!out.is_open()) {
                     cerr << "Unable to open file!\n";
                 }
                 char next;
@@ -446,7 +446,7 @@ void registration() {
 
     fstream fout;
     fout.open("users.db", ios::out | ios::app);
-    if(!fout.is_open()){
+    if (!fout.is_open()) {
         cerr << "Unable to open file!\n";
     }
     fout << beingReg.getUsername() << ";"
@@ -460,7 +460,7 @@ void registration() {
     string fname = beingReg.getUsername() + ".db";
     char *fnameChar = const_cast<char *>(fname.c_str());
     fuser.open(fnameChar, ios::out | ios::app);
-    if(!fuser.is_open()){
+    if (!fuser.is_open()) {
         cerr << "Unable to open file!\n";
     }
     cout << "You have been successfully registered!" << endl << endl;

@@ -28,6 +28,7 @@ public:
 
     void print() const;
 
+    // compares two dates
     bool operator<(const Date &) const;
 
     Date operator()(int y, int m, int d);

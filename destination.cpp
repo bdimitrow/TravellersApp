@@ -52,14 +52,11 @@ void Destination::setToDate(Date t) {
 }
 
 ostream &operator<<(ostream &out, const Destination &dest) {
-    out << "Destination: " << dest.destination << endl << "Period: ";
-//    dest.startDate.print();
-    out << " - ";
-//    dest.endDate.print();
-    out << "Grade: " << dest.grade << endl << "Comment: " << dest.comment << endl << "Photos: ";
-
+    out << "Destination: " << dest.destination << endl << "Period: " <<
+        dest.from << " - " << dest.to << endl << "Grade: " << dest.grade
+        << endl << "Comment: " << dest.comment << endl << "Photos: ";
     for (int i = 0; i < dest.getNumPhotos(); ++i) {
-        out << dest.photos.at(i);
+        out << dest.photos.at(i) << " ";
     }
     out << endl;
     return out;
