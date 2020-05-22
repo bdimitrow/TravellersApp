@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/bozhidar/Desktop/Travellers/aplication.h
+/home/bozhidar/Desktop/Travellers/application.h
 iostream
 -
 fstream
@@ -43,8 +43,8 @@ date.h
 /home/bozhidar/Desktop/Travellers/main.cpp
 iostream
 -
-aplication.h
-/home/bozhidar/Desktop/Travellers/aplication.h
+application.h
+/home/bozhidar/Desktop/Travellers/application.h
 user.h
 /home/bozhidar/Desktop/Travellers/user.h
 date.h

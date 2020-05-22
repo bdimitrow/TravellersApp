@@ -17,10 +17,6 @@ class Destination {
 public:
     Destination() {}
 
-    Destination(const Destination &other);
-
-    Destination &operator=(const Destination &other);
-
     void setDestination(string);
 
     void setGrade(unsigned);
@@ -39,22 +35,17 @@ public:
 
     string getComment() const { return comment; }
 
-    int getNumPhotos() const { return numPhotos; }
-
     vector<string> getPhotos() const { return photos; }
 
     Date getFromDate() const { return from; }
 
     Date getToDate() const { return to; }
 
-    friend ostream &operator<<(ostream &out, const Destination &dest);
-
 private:
     string destination;
     unsigned grade;
     string comment;
     vector<string> photos;
-    int numPhotos;
     Date from;
     Date to;
 };

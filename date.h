@@ -26,8 +26,6 @@ public:
 
     [[nodiscard]] int Year() const;
 
-    void print() const;
-
     // compares two dates
     bool operator<(const Date &) const;
 

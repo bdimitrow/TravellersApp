@@ -1,5 +1,5 @@
 #include <iostream>
-#include "aplication.h"
+#include "application.h"
 #include "user.h"
 #include "date.h"
 #include "readFile.h"
@@ -7,7 +7,6 @@
 
 int main() {
     menu();
-
     return 0;
 }
 

@@ -84,7 +84,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/bozhidar/Desktop/Travellers/aplication.h">
+		<Unit filename="/home/bozhidar/Desktop/Travellers/application.h">
 			<Option target="Travellers"/>
 		</Unit>
 		<Unit filename="/home/bozhidar/Desktop/Travellers/date.cpp">
@@ -97,9 +97,6 @@
 			<Option target="Travellers"/>
 		</Unit>
 		<Unit filename="/home/bozhidar/Desktop/Travellers/destination.h">
-			<Option target="Travellers"/>
-		</Unit>
-		<Unit filename="/home/bozhidar/Desktop/Travellers/loggedIn.h">
 			<Option target="Travellers"/>
 		</Unit>
 		<Unit filename="/home/bozhidar/Desktop/Travellers/main.cpp">

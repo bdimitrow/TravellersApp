@@ -9,7 +9,7 @@ CMakeFiles/Travellers.dir/destination.cpp.o: ../destination.cpp
 CMakeFiles/Travellers.dir/destination.cpp.o: ../destination.h
 CMakeFiles/Travellers.dir/destination.cpp.o: ../user.h
 
-CMakeFiles/Travellers.dir/main.cpp.o: ../aplication.h
+CMakeFiles/Travellers.dir/main.cpp.o: ../application.h
 CMakeFiles/Travellers.dir/main.cpp.o: ../date.h
 CMakeFiles/Travellers.dir/main.cpp.o: ../destination.h
 CMakeFiles/Travellers.dir/main.cpp.o: ../main.cpp

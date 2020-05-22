@@ -2,8 +2,8 @@
 // Created by bozhidar on 5/1/20.
 //
 
-#ifndef TRAVELLERS_APLICATION_H
-#define TRAVELLERS_APLICATION_H
+#ifndef TRAVELLERS_APPLICATION_H
+#define TRAVELLERS_APPLICATION_H
 
 #include <iostream>
 #include <fstream>
@@ -517,6 +517,6 @@ bool isDateValid(const Date &date) {
 }
 
 
-#endif //TRAVELLERS_APLICATION_H
+#endif //TRAVELLERS_APPLICATION_H
 
 

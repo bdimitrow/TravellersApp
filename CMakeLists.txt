@@ -3,4 +3,4 @@ project(Travellers)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(Travellers main.cpp user.cpp user.h destination.cpp destination.h date.cpp date.h aplication.h readFile.h loggedIn.h)
+add_executable(Travellers main.cpp user.cpp user.h destination.cpp destination.h date.cpp date.h application.h readFile.h )

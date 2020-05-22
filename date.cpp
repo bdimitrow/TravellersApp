@@ -16,11 +16,6 @@ int Date::Month() const { return month; }
 
 int Date::Year() const { return year; }
 
-void Date::print() const {
-    cout << year << "-" << month
-         << "-" << day << endl;
-}
-
 bool Date::operator<(const Date &other) const {
     return (year < other.year || (year == other.year && month < other.month) ||
             (year == other.year && month == other.month && day < other.day));
