@@ -58,7 +58,6 @@ string addComment();
 vector<string> addPhotos(int);
 
 void menu() {
-    cout << " Welcome to Traveller's app menu! " << endl;
     cout << "1. Register" << endl;
     cout << "2. Login" << endl;
     cout << "3. Exit" << endl;
@@ -481,13 +480,18 @@ void login() {
     userBeingLogged.setPassword(passwordLogin);
 
     matrix users = fileToMatrix("users.db");
-    // checking whether username and password matches
-    if (!(usernameMatchesPassword(users, userBeingLogged.getUsername(), userBeingLogged.getPassword()))) {
-        cout << "Incorrect data! Please try again: " << endl;
-        login();
+    if(isExisting(users, userBeingLogged.getUsername(), 0)) {
+        // checking whether username and password matches
+        if (!(usernameMatchesPassword(users, userBeingLogged.getUsername(), userBeingLogged.getPassword()))) {
+            cout << "Incorrect data! Please try again! " << endl;
+            menu();
+        } else {
+            cout << "Successfully logged in!" << endl << endl;
+            menuLogged(userBeingLogged);
+        }
     } else {
-        cout << "Successfully logged in!" << endl << endl;
-        menuLogged(userBeingLogged);
+        cout << "Such a user does not exist in our database! Please try again! " << endl;
+        menu();
     }
 }
 
