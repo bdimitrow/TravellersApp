@@ -1,0 +1,338 @@
+\hypertarget{application_8h}{}\section{application.\+h File Reference}
+\label{application_8h}\index{application.\+h@{application.\+h}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$cstdlib$>$}\newline
+{\ttfamily \#include \char`\"{}user.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}destination.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}date.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}read\+File.\+h\char`\"{}}\newline
+Include dependency graph for application.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{application_8h__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{application_8h_a714c83c6898e18f73621626df5bb59c3}{registration} ()
+\item 
+void \hyperlink{application_8h_af76b7b46958dabf5e4ee9a492f0ec3fa}{login} ()
+\item 
+void \hyperlink{application_8h_a2a0e843767aeea4f433a28b9c54f573a}{menu} ()
+\item 
+void \hyperlink{application_8h_a1f5d479249cf7405f3ef126b1e042d2b}{menu\+Logged} (const \hyperlink{class_user}{User} \&logged\+In\+User)
+\item 
+bool \hyperlink{application_8h_ab12d7ece8af87390978b47a41d5be563}{is\+Date\+Valid} (const \hyperlink{class_date}{Date} \&)
+\item 
+void \hyperlink{application_8h_acc3ffb5f9c459368ca3ca9815d499af2}{add\+Destination} (const \hyperlink{class_user}{User} \&)
+\item 
+void \hyperlink{application_8h_a92aba65fab778922f928e9d9bf6475d6}{add\+Friend} (const \hyperlink{class_user}{User} \&)
+\item 
+void \hyperlink{application_8h_a3ca98c5244a06fb6199d64f44b6a2fa4}{destination\+To\+File} (const \hyperlink{class_user}{User} \&, const \hyperlink{class_destination}{Destination} \&, int)
+\item 
+string \hyperlink{application_8h_a265d79751fc2100c17b58f15df75fed8}{add\+Location} ()
+\item 
+\hyperlink{class_date}{Date} \hyperlink{application_8h_a9066e8999df2f39d7ffeb81176fb14d4}{add\+Start\+Date} ()
+\item 
+\hyperlink{class_date}{Date} \hyperlink{application_8h_a6a7fe6d7e0e844cb0d599228c331b2a1}{add\+End\+Date} ()
+\item 
+unsigned \hyperlink{application_8h_a58f4936001855f43fb36be2c1dda8542}{add\+Grade} ()
+\item 
+string \hyperlink{application_8h_abd4c9e6dd42fc406bcd9eb172027f30e}{add\+Comment} ()
+\item 
+vector$<$ string $>$ \hyperlink{application_8h_a3fd32a66da2ec32c0823ad407e7d1f62}{add\+Photos} (int)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{application_8h_abd4c9e6dd42fc406bcd9eb172027f30e}\label{application_8h_abd4c9e6dd42fc406bcd9eb172027f30e}} 
+\index{application.\+h@{application.\+h}!add\+Comment@{add\+Comment}}
+\index{add\+Comment@{add\+Comment}!application.\+h@{application.\+h}}
+\subsubsection{\texorpdfstring{add\+Comment()}{addComment()}}
+{\footnotesize\ttfamily string add\+Comment (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This fucntion is asking the user to input a comment about the trip. \begin{DoxyReturn}{Returns}
+string(comment) 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{application_8h_abd4c9e6dd42fc406bcd9eb172027f30e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{application_8h_acc3ffb5f9c459368ca3ca9815d499af2}\label{application_8h_acc3ffb5f9c459368ca3ca9815d499af2}} 
+\index{application.\+h@{application.\+h}!add\+Destination@{add\+Destination}}
+\index{add\+Destination@{add\+Destination}!application.\+h@{application.\+h}}
+\subsubsection{\texorpdfstring{add\+Destination()}{addDestination()}}
+{\footnotesize\ttfamily void add\+Destination (\begin{DoxyParamCaption}\item[{const \hyperlink{class_user}{User} \&}]{logged\+In\+User }\end{DoxyParamCaption})}
+
+This function is accepting an object of type \hyperlink{class_user}{User} and is used to add a trip(destination) to the \hyperlink{class_user}{User}\textquotesingle{}s database. Firstly, the function initialize an \char`\"{}empty\char`\"{} destination and uses other functions and the setters of class \hyperlink{class_destination}{Destination} to set location, period, grade, comment and photos to the location. 
+\begin{DoxyParams}{Parameters}
+{\em const} & \hyperlink{class_user}{User}\& logged\+In\+User \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{application_8h_acc3ffb5f9c459368ca3ca9815d499af2_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{application_8h_acc3ffb5f9c459368ca3ca9815d499af2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{application_8h_a6a7fe6d7e0e844cb0d599228c331b2a1}\label{application_8h_a6a7fe6d7e0e844cb0d599228c331b2a1}} 
+\index{application.\+h@{application.\+h}!add\+End\+Date@{add\+End\+Date}}
+\index{add\+End\+Date@{add\+End\+Date}!application.\+h@{application.\+h}}
+\subsubsection{\texorpdfstring{add\+End\+Date()}{addEndDate()}}
+{\footnotesize\ttfamily \hyperlink{class_date}{Date} add\+End\+Date (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This function is asking the user to input the end date and is initializing an object of type \hyperlink{class_date}{Date}. \begin{DoxyReturn}{Returns}
+\hyperlink{class_date}{Date(end date)} 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{application_8h_a6a7fe6d7e0e844cb0d599228c331b2a1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{application_8h_a92aba65fab778922f928e9d9bf6475d6}\label{application_8h_a92aba65fab778922f928e9d9bf6475d6}} 
+\index{application.\+h@{application.\+h}!add\+Friend@{add\+Friend}}
+\index{add\+Friend@{add\+Friend}!application.\+h@{application.\+h}}
+\subsubsection{\texorpdfstring{add\+Friend()}{addFriend()}}
+{\footnotesize\ttfamily void add\+Friend (\begin{DoxyParamCaption}\item[{const \hyperlink{class_user}{User} \&}]{logged\+In\+User }\end{DoxyParamCaption})}
+
+The function accepts an object of type \hyperlink{class_user}{User} and is adding another \hyperlink{class_user}{User}\textquotesingle{}s username in the friend list of the accepted object. Some vertifications are made. Firstly, whether such a username exists in the database. Secondly, ensuring that the user is not trying to add himself as friend. Then checking whether the inputted username is already in the friend list. 
+\begin{DoxyParams}{Parameters}
+{\em const} & \hyperlink{class_user}{User}\& logged\+In\+User \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=284pt]{application_8h_a92aba65fab778922f928e9d9bf6475d6_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=247pt]{application_8h_a92aba65fab778922f928e9d9bf6475d6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{application_8h_a58f4936001855f43fb36be2c1dda8542}\label{application_8h_a58f4936001855f43fb36be2c1dda8542}} 
+\index{application.\+h@{application.\+h}!add\+Grade@{add\+Grade}}
+\index{add\+Grade@{add\+Grade}!application.\+h@{application.\+h}}
+\subsubsection{\texorpdfstring{add\+Grade()}{addGrade()}}
+{\footnotesize\ttfamily unsigned add\+Grade (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This function is asking the user to input a grade between 1-\/5 and has a validation. \begin{DoxyReturn}{Returns}
+unsigned(grade) 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{application_8h_a58f4936001855f43fb36be2c1dda8542_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{application_8h_a265d79751fc2100c17b58f15df75fed8}\label{application_8h_a265d79751fc2100c17b58f15df75fed8}} 
+\index{application.\+h@{application.\+h}!add\+Location@{add\+Location}}
+\index{add\+Location@{add\+Location}!application.\+h@{application.\+h}}
+\subsubsection{\texorpdfstring{add\+Location()}{addLocation()}}
+{\footnotesize\ttfamily string add\+Location (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This function is asking the user for the location of the trip. \begin{DoxyReturn}{Returns}
+string(location) 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{application_8h_a265d79751fc2100c17b58f15df75fed8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{application_8h_a3fd32a66da2ec32c0823ad407e7d1f62}\label{application_8h_a3fd32a66da2ec32c0823ad407e7d1f62}} 
+\index{application.\+h@{application.\+h}!add\+Photos@{add\+Photos}}
+\index{add\+Photos@{add\+Photos}!application.\+h@{application.\+h}}
+\subsubsection{\texorpdfstring{add\+Photos()}{addPhotos()}}
+{\footnotesize\ttfamily vector$<$ string $>$ add\+Photos (\begin{DoxyParamCaption}\item[{int}]{num\+Photos }\end{DoxyParamCaption})}
+
+This function is asking the user to input the name of the photos that he\textquotesingle{}d like to add to the database. Beforewards the user has to choose what the extenstions of the photos are going to be. \begin{DoxyReturn}{Returns}
+vector$<$string$>$(photos) 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em int} & num\+Photos \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{application_8h_a3fd32a66da2ec32c0823ad407e7d1f62_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{application_8h_a9066e8999df2f39d7ffeb81176fb14d4}\label{application_8h_a9066e8999df2f39d7ffeb81176fb14d4}} 
+\index{application.\+h@{application.\+h}!add\+Start\+Date@{add\+Start\+Date}}
+\index{add\+Start\+Date@{add\+Start\+Date}!application.\+h@{application.\+h}}
+\subsubsection{\texorpdfstring{add\+Start\+Date()}{addStartDate()}}
+{\footnotesize\ttfamily \hyperlink{class_date}{Date} add\+Start\+Date (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This function is asking the user to input the start date and is initializing an object of type \hyperlink{class_date}{Date}. \begin{DoxyReturn}{Returns}
+\hyperlink{class_date}{Date(start date)} 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{application_8h_a9066e8999df2f39d7ffeb81176fb14d4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{application_8h_a3ca98c5244a06fb6199d64f44b6a2fa4}\label{application_8h_a3ca98c5244a06fb6199d64f44b6a2fa4}} 
+\index{application.\+h@{application.\+h}!destination\+To\+File@{destination\+To\+File}}
+\index{destination\+To\+File@{destination\+To\+File}!application.\+h@{application.\+h}}
+\subsubsection{\texorpdfstring{destination\+To\+File()}{destinationToFile()}}
+{\footnotesize\ttfamily void destination\+To\+File (\begin{DoxyParamCaption}\item[{const \hyperlink{class_user}{User} \&}]{logged\+In\+User,  }\item[{const \hyperlink{class_destination}{Destination} \&}]{being\+Added,  }\item[{int}]{num\+Photos }\end{DoxyParamCaption})}
+
+The function accepts two object one ot type \hyperlink{class_destination}{Destination} and one of type \hyperlink{class_user}{User}. Afterwards is using the getters of class Destinaiton to save the destination to the accepted \hyperlink{class_user}{User}\textquotesingle{}s databse and to a file called \char`\"{}destinations.\+csv\char`\"{} which is used to get information about a destination. 
+\begin{DoxyParams}{Parameters}
+{\em const} & \hyperlink{class_user}{User}\& loged\+In\+User \\
+\hline
+{\em const} & \hyperlink{class_destination}{Destination}\& being\+Added \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{application_8h_a3ca98c5244a06fb6199d64f44b6a2fa4_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{application_8h_a3ca98c5244a06fb6199d64f44b6a2fa4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{application_8h_ab12d7ece8af87390978b47a41d5be563}\label{application_8h_ab12d7ece8af87390978b47a41d5be563}} 
+\index{application.\+h@{application.\+h}!is\+Date\+Valid@{is\+Date\+Valid}}
+\index{is\+Date\+Valid@{is\+Date\+Valid}!application.\+h@{application.\+h}}
+\subsubsection{\texorpdfstring{is\+Date\+Valid()}{isDateValid()}}
+{\footnotesize\ttfamily bool is\+Date\+Valid (\begin{DoxyParamCaption}\item[{const \hyperlink{class_date}{Date} \&}]{date }\end{DoxyParamCaption})}
+
+This function accepts an object ot type \hyperlink{class_date}{Date} and determines whether the date is valid(2020.\+13.\+14 is an invalid date). 
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{class_date}{Date}} & date\+To\+Be\+Checked \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true or false. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=254pt]{application_8h_ab12d7ece8af87390978b47a41d5be563_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{application_8h_ab12d7ece8af87390978b47a41d5be563_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{application_8h_af76b7b46958dabf5e4ee9a492f0ec3fa}\label{application_8h_af76b7b46958dabf5e4ee9a492f0ec3fa}} 
+\index{application.\+h@{application.\+h}!login@{login}}
+\index{login@{login}!application.\+h@{application.\+h}}
+\subsubsection{\texorpdfstring{login()}{login()}}
+{\footnotesize\ttfamily void login (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This function is used when you try to log in. The user inserts two strings(username and password). Firstly, the username is checked whether such a user exists and if it exists, then the function checkes whether the inserted password matches the inserted username. Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=255pt]{application_8h_af76b7b46958dabf5e4ee9a492f0ec3fa_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=302pt]{application_8h_af76b7b46958dabf5e4ee9a492f0ec3fa_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{application_8h_a2a0e843767aeea4f433a28b9c54f573a}\label{application_8h_a2a0e843767aeea4f433a28b9c54f573a}} 
+\index{application.\+h@{application.\+h}!menu@{menu}}
+\index{menu@{menu}!application.\+h@{application.\+h}}
+\subsubsection{\texorpdfstring{menu()}{menu()}}
+{\footnotesize\ttfamily void menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+The functions prints R\+E\+G\+I\+S\+T\+ER, L\+O\+G\+IN OR E\+X\+IT and awaits value to be inputted in order to know action to execute. Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{application_8h_a2a0e843767aeea4f433a28b9c54f573a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{application_8h_a2a0e843767aeea4f433a28b9c54f573a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{application_8h_a1f5d479249cf7405f3ef126b1e042d2b}\label{application_8h_a1f5d479249cf7405f3ef126b1e042d2b}} 
+\index{application.\+h@{application.\+h}!menu\+Logged@{menu\+Logged}}
+\index{menu\+Logged@{menu\+Logged}!application.\+h@{application.\+h}}
+\subsubsection{\texorpdfstring{menu\+Logged()}{menuLogged()}}
+{\footnotesize\ttfamily void menu\+Logged (\begin{DoxyParamCaption}\item[{const \hyperlink{class_user}{User} \&}]{logged\+In\+User }\end{DoxyParamCaption})}
+
+The function is called when the process of logging in is successful. It prints all possible functionalities of the program(adding a trip, adding a friend, displaying infromation and etc...). It also awaits input in order to know which finction to call. 
+\begin{DoxyParams}{Parameters}
+{\em const} & \hyperlink{class_user}{User}\& logged\+In\+User \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{application_8h_a1f5d479249cf7405f3ef126b1e042d2b_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{application_8h_a714c83c6898e18f73621626df5bb59c3}\label{application_8h_a714c83c6898e18f73621626df5bb59c3}} 
+\index{application.\+h@{application.\+h}!registration@{registration}}
+\index{registration@{registration}!application.\+h@{application.\+h}}
+\subsubsection{\texorpdfstring{registration()}{registration()}}
+{\footnotesize\ttfamily void registration (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This function is used to create a profile. Firstly, an object of type \hyperlink{class_user}{User} is created with default values(empty strings for username, password and email). Then asking the user to input these values and through the setters of class \hyperlink{class_user}{User} the inserted values are assigned to the object. There is a validation to prevent registering two profiles with the same username or email. Moreover two files are being opened and through the getters of class \hyperlink{class_user}{User} all the data of the object is saved into the files. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{application_8h_a714c83c6898e18f73621626df5bb59c3_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{application_8h_a714c83c6898e18f73621626df5bb59c3_icgraph}
+\end{center}
+\end{figure}

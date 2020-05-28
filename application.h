@@ -16,44 +16,133 @@
 
 using namespace std;
 
+/**
+ * \file
+ * @fn void registration()
+ * This function is used to create a profile. Firstly, an object of type User is created with default
+ * values(empty strings for username, password and email). Then asking the user to input these values and
+ * through the setters of class User the inserted values are assigned to the object. There is a validation to prevent
+ * registering two profiles with the same username or email. Moreover two files
+ * are being opened and through the getters of class User all the data of the object is saved into the files.
+ */
 // making registration
 void registration();
 
+/**
+ * @fn void login()
+ * This function is used when you try to log in. The user inserts two strings(username and password).
+ * Firstly, the username is checked whether such a user exists and if it exists, then the function checkes whether
+ * the inserted password matches the inserted username.
+ */
 // login when such a profile exists
 void login();
 
+/**
+ * @fn void menu()
+ * The functions prints REGISTER, LOGIN OR EXIT and awaits value to be inputted in order to know
+ * action to execute.
+ */
 // welcoming menu
 void menu();
 
+/**
+ * @fn void menuLogged(const User&)
+ * The function is called when the process of logging in is successful. It prints all possible
+ * functionalities of the program(adding a trip, adding a friend, displaying infromation and etc...). It also awaits
+ * input in order to know which finction to call.
+ * @param const User& loggedInUser
+ */
 // menu when you have logged in
-void menuLogged(const User &);
+void menuLogged(const User &loggedInUser);
 
+/**
+ * @fn bool isDateValid(const Date &)
+ * This function accepts an object ot type Date and determines whether the date is valid(2020.13.14 is
+ * an invalid date).
+ * @param Date dateToBeChecked
+ * @return true or false.
+ */
 // checks whether the date is valid
 bool isDateValid(const Date &);
 
+/**
+ * @fn void addDestination(const User &)
+ * This function is accepting an object of type User and is used to add a trip(destination) to the User's database.
+ * Firstly, the function initialize an "empty" destination and uses other functions and the setters of class Destination
+ * to set location, period, grade, comment and photos to the location.
+ * @param const User& loggedInUser
+ */
 // adding destination(trip)
 void addDestination(const User &);
 
+/**
+ * @fn void addFriend(const User &)
+ * The function accepts an object of type User and is adding another User's username in the friend list of the
+ * accepted object. Some vertifications are made. Firstly, whether such a username exists in the database. Secondly,
+ * ensuring that the user is not trying to add himself as friend. Then checking whether the inputted username is
+ * already in the friend list.
+ * @param const User& loggedInUser
+ */
 void addFriend(const User &);
 
+/**
+ * @fn void destinationToFile(const User &, const Destination &, int)
+ *  The function accepts two object one ot type Destination and one of type User. Afterwards is using the getters
+ *  of class Destinaiton to save the destination to the accepted User's databse and to a file called "destinations.csv"
+ *  which is used to get information about a destination.
+ *  @param const User& logedInUser
+ *  @param const Destination& beingAdded
+ */
 // creating username.db file and saving destination to it and destinations.csv file
 void destinationToFile(const User &, const Destination &, int);
 
+/**
+ * @fn string addLocation()
+ * This function is asking the user for the location of the trip.
+ * @return string(location)
+ */
 // adding location(destination) of the trip
 string addLocation();
 
+/**
+ * @fn Date addStartDate()
+ * This function is asking the user to input the start date and is initializing an object of type Date.
+ * @return Date(start date)
+ */
 // adding starting date of the trip
 Date addStartDate();
 
+/**
+ * @fn Date addEndDate()
+ * This function is asking the user to input the end date and is initializing an object of type Date.
+ * @return Date(end date)
+ */
 // adding ending date of the trip
 Date addEndDate();
 
+/**
+ * @fn unsigned addGrade()
+ * This function is asking the user to input a grade between 1-5 and has a validation.
+ * @return unsigned(grade)
+ */
 // adding grade for the tirp
 unsigned addGrade();
 
+/**
+ * @fn stirng addComment()
+ * This fucntion is asking the user to input a comment about the trip.
+ * @return string(comment)
+ */
 // adding comment about the trip
 string addComment();
 
+/**
+ * @fn vector<string> addPhotos(int)
+ * This function is asking the user to input the name of the photos that he'd like to add to the database.
+ * Beforewards the user has to choose what the extenstions of the photos are going to be.
+ * @return vector<string>(photos)
+ * @param int numPhotos
+ */
 // adding photos from the trip
 vector<string> addPhotos(int);
 
@@ -113,7 +202,7 @@ void menuLogged(const User &loggedInUser) {
                     break;
                 case 2: {
                     // displays all destinations/users/grades/comments
-                    cout << "There are all recorded destinations in the format location/user/grade/comment: \n";
+                    cout << "These are all recorded destinations in the format location/user/grade/comment: \n";
                     matrix destinations = fileToMatrix("destinations.csv");
                     displayMatrix(destinations);
                     cout << endl << endl;
@@ -480,7 +569,7 @@ void login() {
     userBeingLogged.setPassword(passwordLogin);
 
     matrix users = fileToMatrix("users.db");
-    if(isExisting(users, userBeingLogged.getUsername(), 0)) {
+    if (isExisting(users, userBeingLogged.getUsername(), 0)) {
         // checking whether username and password matches
         if (!(usernameMatchesPassword(users, userBeingLogged.getUsername(), userBeingLogged.getPassword()))) {
             cout << "Incorrect data! Please try again! " << endl;
@@ -520,7 +609,4 @@ bool isDateValid(const Date &date) {
     }
 }
 
-
 #endif //TRAVELLERS_APPLICATION_H
-
-

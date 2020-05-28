@@ -12,4 +12,15 @@ int main() {
 }
 
 
-
+/** \mainpage Traveller's App
+ *
+ *  \section Project aim
+ *
+ *
+ *
+ *  \section dadadkaldakdjaad
+ *  \subsection akd;ladkad
+ *
+ *
+ *
+ */

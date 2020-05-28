@@ -1,0 +1,9 @@
+<map id="destinationToFile" name="destinationToFile">
+<area shape="rect" id="node2" href="$class_user.html#a82e034043e04b2d750c654c8b2f2ce78" title="User::getUsername" alt="" coords="197,5,333,32"/>
+<area shape="rect" id="node3" href="$class_destination.html#a6544fb0fa820f5a6b914a38cdcc949f9" title="Destination::getDestination" alt="" coords="175,56,355,83"/>
+<area shape="rect" id="node4" href="$class_destination.html#ac6265579620a20899f5e4cf817d037c8" title="Destination::getFromDate" alt="" coords="179,107,351,133"/>
+<area shape="rect" id="node5" href="$class_destination.html#a6a98c7e1c0ffa4b821d3f7dd85cad3dd" title="Destination::getToDate" alt="" coords="186,157,343,184"/>
+<area shape="rect" id="node6" href="$class_destination.html#a34dd7a2072743078d5067d336dc3c25d" title="Destination::getGrade" alt="" coords="190,208,339,235"/>
+<area shape="rect" id="node7" href="$class_destination.html#a4d20ef4e561fa10dd81561b9cd61c55c" title="Destination::getComment" alt="" coords="179,259,350,285"/>
+<area shape="rect" id="node8" href="$class_destination.html#ade746815624a6fd5add31a3475e04b45" title="Destination::getPhotos" alt="" coords="187,309,342,336"/>
+</map>

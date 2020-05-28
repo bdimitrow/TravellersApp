@@ -1,0 +1,8 @@
+<map id="addFriend" name="addFriend">
+<area shape="rect" id="node2" href="$read_file_8h.html#a4d05aa34d631728e8dabfe1d9ddbdd69" title="fileToMatrix" alt="" coords="159,5,250,32"/>
+<area shape="rect" id="node3" href="$read_file_8h.html#ab6bce9fa2a7660f6f3ddcef5a4f7b906" title="isExisting" alt="" coords="165,56,244,83"/>
+<area shape="rect" id="node4" href="$class_user.html#a82e034043e04b2d750c654c8b2f2ce78" title="User::getUsername" alt="" coords="137,107,273,133"/>
+<area shape="rect" id="node5" href="$read_file_8h.html#a6b426552d2ff56784a167e799da87688" title="isAlreadyFriend" alt="" coords="149,157,261,184"/>
+<area shape="rect" id="node6" href="$read_file_8h.html#a4fc77629ec6e6556b5dc4dd8efa6f36c" title="numberOfRowsInFile" alt="" coords="132,208,277,235"/>
+<area shape="rect" id="node7" href="$read_file_8h.html#a331b6af63862d2ae3ad6abf71b0de381" title="rowOfUsername" alt="" coords="146,259,263,285"/>
+</map>

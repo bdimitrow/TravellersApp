@@ -1,0 +1,7 @@
+<map id="login" name="login">
+<area shape="rect" id="node2" href="$class_user.html#a453323a9766e086f1967a96d79fc8b76" title="User::setUsername" alt="" coords="103,5,239,32"/>
+<area shape="rect" id="node3" href="$class_user.html#ab8d3c965902b378fc3472b388a97d56d" title="User::setPassword" alt="" coords="103,56,238,83"/>
+<area shape="rect" id="node4" href="$read_file_8h.html#a4d05aa34d631728e8dabfe1d9ddbdd69" title="fileToMatrix" alt="" coords="125,107,216,133"/>
+<area shape="rect" id="node5" href="$read_file_8h.html#ab6bce9fa2a7660f6f3ddcef5a4f7b906" title="isExisting" alt="" coords="131,157,210,184"/>
+<area shape="rect" id="node6" href="$class_user.html#a82e034043e04b2d750c654c8b2f2ce78" title="User::getUsername" alt="" coords="103,208,239,235"/>
+</map>

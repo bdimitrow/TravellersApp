@@ -1,0 +1,285 @@
+\hypertarget{read_file_8h}{}\section{read\+File.\+h File Reference}
+\label{read_file_8h}\index{read\+File.\+h@{read\+File.\+h}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$iomanip$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+Include dependency graph for read\+File.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{read_file_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=151pt]{read_file_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{read_file_8h_ac4ba865c2f8f6f90e3c64552279f3d21}\label{read_file_8h_ac4ba865c2f8f6f90e3c64552279f3d21}} 
+using {\bfseries vec} = vector$<$ string $>$
+\item 
+\mbox{\Hypertarget{read_file_8h_a869e2a5deeb3daa4c82d6bc91cf20d92}\label{read_file_8h_a869e2a5deeb3daa4c82d6bc91cf20d92}} 
+using {\bfseries matrix} = vector$<$ vec $>$
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+matrix \hyperlink{read_file_8h_a4d05aa34d631728e8dabfe1d9ddbdd69}{file\+To\+Matrix} (const string \&filename)
+\item 
+void \hyperlink{read_file_8h_ae04ba1e32f1dfd605e53f54c39b365fd}{display\+Matrix} (const matrix \&mat)
+\item 
+\mbox{\Hypertarget{read_file_8h_a71844c343db9878de02bcddae45947dd}\label{read_file_8h_a71844c343db9878de02bcddae45947dd}} 
+bool {\bfseries username\+Matches\+Password} (const matrix \&mat, const string \&username, const string \&password)
+\item 
+void \hyperlink{read_file_8h_a3c27433c2ddbe1b8010a05a86cd21734}{average\+Grade\+Destination} (const matrix \&mat, const string \&destination)
+\item 
+bool \hyperlink{read_file_8h_ab6bce9fa2a7660f6f3ddcef5a4f7b906}{is\+Existing} (const matrix \&mat, const string \&check, int col)
+\item 
+int \hyperlink{read_file_8h_a331b6af63862d2ae3ad6abf71b0de381}{row\+Of\+Username} (const matrix \&mat, const string \&username)
+\item 
+int \hyperlink{read_file_8h_a4fc77629ec6e6556b5dc4dd8efa6f36c}{number\+Of\+Rows\+In\+File} (const matrix \&mat)
+\item 
+void \hyperlink{read_file_8h_ac9d4f6924d2d252073454cbe2dfd9895}{display\+Friends} (const matrix \&mat, const string \&username)
+\item 
+bool \hyperlink{read_file_8h_a6b426552d2ff56784a167e799da87688}{is\+Already\+Friend} (const matrix \&mat, const string \&friend\+To\+Be\+Added, const string \&username)
+\item 
+void \hyperlink{read_file_8h_af9f2aec2ef105eff0f596a9b91ae98b3}{display\+Friends\+Destionations} (const string \&logged\+In\+Username)
+\item 
+void \hyperlink{read_file_8h_a3c8596d363a098e38a811efab756aa5b}{display\+Info\+For\+Particular\+Destination} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{read_file_8h_a3c27433c2ddbe1b8010a05a86cd21734}\label{read_file_8h_a3c27433c2ddbe1b8010a05a86cd21734}} 
+\index{read\+File.\+h@{read\+File.\+h}!average\+Grade\+Destination@{average\+Grade\+Destination}}
+\index{average\+Grade\+Destination@{average\+Grade\+Destination}!read\+File.\+h@{read\+File.\+h}}
+\subsubsection{\texorpdfstring{average\+Grade\+Destination()}{averageGradeDestination()}}
+{\footnotesize\ttfamily void average\+Grade\+Destination (\begin{DoxyParamCaption}\item[{const matrix \&}]{mat,  }\item[{const string \&}]{destination }\end{DoxyParamCaption})}
+
+This function is accepting a string(destination/location) and checking in the database how many times the the location has been visited and returns the average grade from all users. 
+\begin{DoxyParams}{Parameters}
+{\em const} & matrix\& mat \\
+\hline
+{\em const} & string\& destination \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=315pt]{read_file_8h_a3c27433c2ddbe1b8010a05a86cd21734_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{read_file_8h_ac9d4f6924d2d252073454cbe2dfd9895}\label{read_file_8h_ac9d4f6924d2d252073454cbe2dfd9895}} 
+\index{read\+File.\+h@{read\+File.\+h}!display\+Friends@{display\+Friends}}
+\index{display\+Friends@{display\+Friends}!read\+File.\+h@{read\+File.\+h}}
+\subsubsection{\texorpdfstring{display\+Friends()}{displayFriends()}}
+{\footnotesize\ttfamily void display\+Friends (\begin{DoxyParamCaption}\item[{const matrix \&}]{mat,  }\item[{const string \&}]{username }\end{DoxyParamCaption})}
+
+This function is accepting a string(username) and is displaying his friends. 
+\begin{DoxyParams}{Parameters}
+{\em const} & matrix\& mat \\
+\hline
+{\em const} & string\& username \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=268pt]{read_file_8h_ac9d4f6924d2d252073454cbe2dfd9895_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{read_file_8h_af9f2aec2ef105eff0f596a9b91ae98b3}\label{read_file_8h_af9f2aec2ef105eff0f596a9b91ae98b3}} 
+\index{read\+File.\+h@{read\+File.\+h}!display\+Friends\+Destionations@{display\+Friends\+Destionations}}
+\index{display\+Friends\+Destionations@{display\+Friends\+Destionations}!read\+File.\+h@{read\+File.\+h}}
+\subsubsection{\texorpdfstring{display\+Friends\+Destionations()}{displayFriendsDestionations()}}
+{\footnotesize\ttfamily void display\+Friends\+Destionations (\begin{DoxyParamCaption}\item[{const string \&}]{logged\+In\+Username }\end{DoxyParamCaption})}
+
+Displays all places where the friends of the loggedin user have been alonside with their comments about the trip. 
+\begin{DoxyParams}{Parameters}
+{\em const} & string\& logged\+In\+Username \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{read_file_8h_af9f2aec2ef105eff0f596a9b91ae98b3_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=328pt]{read_file_8h_af9f2aec2ef105eff0f596a9b91ae98b3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{read_file_8h_a3c8596d363a098e38a811efab756aa5b}\label{read_file_8h_a3c8596d363a098e38a811efab756aa5b}} 
+\index{read\+File.\+h@{read\+File.\+h}!display\+Info\+For\+Particular\+Destination@{display\+Info\+For\+Particular\+Destination}}
+\index{display\+Info\+For\+Particular\+Destination@{display\+Info\+For\+Particular\+Destination}!read\+File.\+h@{read\+File.\+h}}
+\subsubsection{\texorpdfstring{display\+Info\+For\+Particular\+Destination()}{displayInfoForParticularDestination()}}
+{\footnotesize\ttfamily void display\+Info\+For\+Particular\+Destination (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+The function is accepting a string(location) and displays all users who have been to this location and their grade. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=303pt]{read_file_8h_a3c8596d363a098e38a811efab756aa5b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=307pt]{read_file_8h_a3c8596d363a098e38a811efab756aa5b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{read_file_8h_ae04ba1e32f1dfd605e53f54c39b365fd}\label{read_file_8h_ae04ba1e32f1dfd605e53f54c39b365fd}} 
+\index{read\+File.\+h@{read\+File.\+h}!display\+Matrix@{display\+Matrix}}
+\index{display\+Matrix@{display\+Matrix}!read\+File.\+h@{read\+File.\+h}}
+\subsubsection{\texorpdfstring{display\+Matrix()}{displayMatrix()}}
+{\footnotesize\ttfamily void display\+Matrix (\begin{DoxyParamCaption}\item[{const matrix \&}]{mat }\end{DoxyParamCaption})}
+
+This function is displaying the table(matrix). 
+\begin{DoxyParams}{Parameters}
+{\em const} & matrix\& mat \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=262pt]{read_file_8h_ae04ba1e32f1dfd605e53f54c39b365fd_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{read_file_8h_a4d05aa34d631728e8dabfe1d9ddbdd69}\label{read_file_8h_a4d05aa34d631728e8dabfe1d9ddbdd69}} 
+\index{read\+File.\+h@{read\+File.\+h}!file\+To\+Matrix@{file\+To\+Matrix}}
+\index{file\+To\+Matrix@{file\+To\+Matrix}!read\+File.\+h@{read\+File.\+h}}
+\subsubsection{\texorpdfstring{file\+To\+Matrix()}{fileToMatrix()}}
+{\footnotesize\ttfamily matrix file\+To\+Matrix (\begin{DoxyParamCaption}\item[{const string \&}]{filename }\end{DoxyParamCaption})}
+
+The functions reads the information from the file named \char`\"{}filename\char`\"{} and is storing the information to a matrix(vector$<$vector$<$stirng$>$$>$). 
+\begin{DoxyParams}{Parameters}
+{\em filename} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+matrix(vector$<$vector$<$string$>$$>$) with the information from the file \char`\"{}filename\char`\"{} 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{read_file_8h_a4d05aa34d631728e8dabfe1d9ddbdd69_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{read_file_8h_a6b426552d2ff56784a167e799da87688}\label{read_file_8h_a6b426552d2ff56784a167e799da87688}} 
+\index{read\+File.\+h@{read\+File.\+h}!is\+Already\+Friend@{is\+Already\+Friend}}
+\index{is\+Already\+Friend@{is\+Already\+Friend}!read\+File.\+h@{read\+File.\+h}}
+\subsubsection{\texorpdfstring{is\+Already\+Friend()}{isAlreadyFriend()}}
+{\footnotesize\ttfamily bool is\+Already\+Friend (\begin{DoxyParamCaption}\item[{const matrix \&}]{mat,  }\item[{const string \&}]{friend\+To\+Be\+Added,  }\item[{const string \&}]{username }\end{DoxyParamCaption})}
+
+The function is checking whether the inserted string(friend\+To\+Be\+Added) is already in the friend list. 
+\begin{DoxyParams}{Parameters}
+{\em const} & matrix\& mat \\
+\hline
+{\em const} & string\& friend\+To\+Be\+Added \\
+\hline
+{\em const} & string\&username \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true or false 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{read_file_8h_a6b426552d2ff56784a167e799da87688_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{read_file_8h_ab6bce9fa2a7660f6f3ddcef5a4f7b906}\label{read_file_8h_ab6bce9fa2a7660f6f3ddcef5a4f7b906}} 
+\index{read\+File.\+h@{read\+File.\+h}!is\+Existing@{is\+Existing}}
+\index{is\+Existing@{is\+Existing}!read\+File.\+h@{read\+File.\+h}}
+\subsubsection{\texorpdfstring{is\+Existing()}{isExisting()}}
+{\footnotesize\ttfamily bool is\+Existing (\begin{DoxyParamCaption}\item[{const matrix \&}]{mat,  }\item[{const string \&}]{check,  }\item[{int}]{col }\end{DoxyParamCaption})}
+
+This functions accepts a string and checks whether it is already in the database. The int col is used to check just a column from the matrix. This functions is used to prevent registering two profiles with the same username or email. 
+\begin{DoxyParams}{Parameters}
+{\em const} & matrix\& mat \\
+\hline
+{\em const} & string\& check \\
+\hline
+{\em int} & col \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true or false 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{read_file_8h_ab6bce9fa2a7660f6f3ddcef5a4f7b906_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{read_file_8h_a4fc77629ec6e6556b5dc4dd8efa6f36c}\label{read_file_8h_a4fc77629ec6e6556b5dc4dd8efa6f36c}} 
+\index{read\+File.\+h@{read\+File.\+h}!number\+Of\+Rows\+In\+File@{number\+Of\+Rows\+In\+File}}
+\index{number\+Of\+Rows\+In\+File@{number\+Of\+Rows\+In\+File}!read\+File.\+h@{read\+File.\+h}}
+\subsubsection{\texorpdfstring{number\+Of\+Rows\+In\+File()}{numberOfRowsInFile()}}
+{\footnotesize\ttfamily int number\+Of\+Rows\+In\+File (\begin{DoxyParamCaption}\item[{const matrix \&}]{mat }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em const} & matrix\& mat \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int(number of rows in the file) 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{read_file_8h_a4fc77629ec6e6556b5dc4dd8efa6f36c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{read_file_8h_a331b6af63862d2ae3ad6abf71b0de381}\label{read_file_8h_a331b6af63862d2ae3ad6abf71b0de381}} 
+\index{read\+File.\+h@{read\+File.\+h}!row\+Of\+Username@{row\+Of\+Username}}
+\index{row\+Of\+Username@{row\+Of\+Username}!read\+File.\+h@{read\+File.\+h}}
+\subsubsection{\texorpdfstring{row\+Of\+Username()}{rowOfUsername()}}
+{\footnotesize\ttfamily int row\+Of\+Username (\begin{DoxyParamCaption}\item[{const matrix \&}]{mat,  }\item[{const string \&}]{username }\end{DoxyParamCaption})}
+
+The function is accepting a string(username) and iterates through the file until the string is found and returns the number of the row. It is used when adding a friend in order to determine at which row should the new friend(username) be added. 
+\begin{DoxyParams}{Parameters}
+{\em const} & matrix\& mat \\
+\hline
+{\em const} & string\& username \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int(on which row in the file is the username) 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{read_file_8h_a331b6af63862d2ae3ad6abf71b0de381_icgraph}
+\end{center}
+\end{figure}

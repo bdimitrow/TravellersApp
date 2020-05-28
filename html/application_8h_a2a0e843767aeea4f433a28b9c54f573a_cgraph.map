@@ -1,0 +1,12 @@
+<map id="menu" name="menu">
+<area shape="rect" id="node2" href="$application_8h.html#a714c83c6898e18f73621626df5bb59c3" title="registration" alt="" coords="108,157,195,184"/>
+<area shape="rect" id="node11" href="$application_8h.html#af76b7b46958dabf5e4ee9a492f0ec3fa" title="login" alt="" coords="127,107,176,133"/>
+<area shape="rect" id="node3" href="$class_user.html#a453323a9766e086f1967a96d79fc8b76" title="User::setUsername" alt="" coords="243,5,379,32"/>
+<area shape="rect" id="node4" href="$read_file_8h.html#a4d05aa34d631728e8dabfe1d9ddbdd69" title="fileToMatrix" alt="" coords="265,56,356,83"/>
+<area shape="rect" id="node5" href="$read_file_8h.html#ab6bce9fa2a7660f6f3ddcef5a4f7b906" title="isExisting" alt="" coords="271,107,350,133"/>
+<area shape="rect" id="node6" href="$class_user.html#a82e034043e04b2d750c654c8b2f2ce78" title="User::getUsername" alt="" coords="243,157,379,184"/>
+<area shape="rect" id="node7" href="$class_user.html#ab8d3c965902b378fc3472b388a97d56d" title="User::setPassword" alt="" coords="243,208,378,235"/>
+<area shape="rect" id="node8" href="$class_user.html#a79486f90c900c5dfc272f0ad9a204c95" title="User::setEmail" alt="" coords="256,259,365,285"/>
+<area shape="rect" id="node9" href="$class_user.html#a4c647e583bd964f40f687776a0d185dc" title="User::getEmail" alt="" coords="256,309,365,336"/>
+<area shape="rect" id="node10" href="$class_user.html#a33429bdd1253091697a9c5c5e1448bee" title="User::getPassword" alt="" coords="243,360,378,387"/>
+</map>
