@@ -1,0 +1,176 @@
+\hypertarget{class_user}{}\section{User Class Reference}
+\label{class_user}\index{User@{User}}
+
+
+A user class.  
+
+
+
+
+{\ttfamily \#include $<$user.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_user_acefd113882ab5f80ea087401b7f9d0b4}{User} (const string \&=\char`\"{}\char`\"{}, const string \&=\char`\"{}\char`\"{}, const string \&=\char`\"{}\char`\"{}, int=0)
+\item 
+\hyperlink{class_user_aad23b10cdefd26d6ca2ca981e9f9c973}{User} (const \hyperlink{class_user}{User} \&other)
+\item 
+\hyperlink{class_user}{User} \& \hyperlink{class_user_a00fe82353b0ee8cf6abb1088d36e125b}{operator=} (const \hyperlink{class_user}{User} \&other)
+\item 
+void \hyperlink{class_user_a453323a9766e086f1967a96d79fc8b76}{set\+Username} (string)
+\item 
+void \hyperlink{class_user_ab8d3c965902b378fc3472b388a97d56d}{set\+Password} (string)
+\item 
+void \hyperlink{class_user_a79486f90c900c5dfc272f0ad9a204c95}{set\+Email} (string)
+\item 
+string \hyperlink{class_user_a82e034043e04b2d750c654c8b2f2ce78}{get\+Username} () const
+\item 
+string \hyperlink{class_user_a33429bdd1253091697a9c5c5e1448bee}{get\+Password} () const
+\item 
+string \hyperlink{class_user_a4c647e583bd964f40f687776a0d185dc}{get\+Email} () const
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \hyperlink{class_user_acf1038a8d320684dc3fbdd5e4308e062}{operator$<$$<$} (ostream \&out, const \hyperlink{class_user}{User} \&user)
+\item 
+istream \& \hyperlink{class_user_aae624f64cdd1af3b59c2443cffa82494}{operator$>$$>$} (istream \&in, \hyperlink{class_user}{User} \&user)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A user class. 
+
+This class is used to initialize a user. The user is the main structure part of the project. Every creation of a profile is initializing a new \hyperlink{class_user}{User}. In order to log in you need to access a \hyperlink{class_user}{User}. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_user_acefd113882ab5f80ea087401b7f9d0b4}\label{class_user_acefd113882ab5f80ea087401b7f9d0b4}} 
+\index{User@{User}!User@{User}}
+\index{User@{User}!User@{User}}
+\subsubsection{\texorpdfstring{User()}{User()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily User\+::\+User (\begin{DoxyParamCaption}\item[{const string \&}]{un = {\ttfamily \char`\"{}\char`\"{}},  }\item[{const string \&}]{pass = {\ttfamily \char`\"{}\char`\"{}},  }\item[{const string \&}]{em = {\ttfamily \char`\"{}\char`\"{}},  }\item[{int}]{num\+Des = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+A parametrized constructor with default vlaues. \mbox{\Hypertarget{class_user_aad23b10cdefd26d6ca2ca981e9f9c973}\label{class_user_aad23b10cdefd26d6ca2ca981e9f9c973}} 
+\index{User@{User}!User@{User}}
+\index{User@{User}!User@{User}}
+\subsubsection{\texorpdfstring{User()}{User()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily User\+::\+User (\begin{DoxyParamCaption}\item[{const \hyperlink{class_user}{User} \&}]{other }\end{DoxyParamCaption})}
+
+A copy constructor. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_user_a4c647e583bd964f40f687776a0d185dc}\label{class_user_a4c647e583bd964f40f687776a0d185dc}} 
+\index{User@{User}!get\+Email@{get\+Email}}
+\index{get\+Email@{get\+Email}!User@{User}}
+\subsubsection{\texorpdfstring{get\+Email()}{getEmail()}}
+{\footnotesize\ttfamily string User\+::get\+Email (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Getter for email. \begin{DoxyReturn}{Returns}
+string email 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_user_a4c647e583bd964f40f687776a0d185dc_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_user_a33429bdd1253091697a9c5c5e1448bee}\label{class_user_a33429bdd1253091697a9c5c5e1448bee}} 
+\index{User@{User}!get\+Password@{get\+Password}}
+\index{get\+Password@{get\+Password}!User@{User}}
+\subsubsection{\texorpdfstring{get\+Password()}{getPassword()}}
+{\footnotesize\ttfamily string User\+::get\+Password (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Getter for password. \begin{DoxyReturn}{Returns}
+string password 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_user_a33429bdd1253091697a9c5c5e1448bee_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_user_a82e034043e04b2d750c654c8b2f2ce78}\label{class_user_a82e034043e04b2d750c654c8b2f2ce78}} 
+\index{User@{User}!get\+Username@{get\+Username}}
+\index{get\+Username@{get\+Username}!User@{User}}
+\subsubsection{\texorpdfstring{get\+Username()}{getUsername()}}
+{\footnotesize\ttfamily string User\+::get\+Username (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Getter for username. \begin{DoxyReturn}{Returns}
+string username 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_user_a82e034043e04b2d750c654c8b2f2ce78_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_user_a00fe82353b0ee8cf6abb1088d36e125b}\label{class_user_a00fe82353b0ee8cf6abb1088d36e125b}} 
+\index{User@{User}!operator=@{operator=}}
+\index{operator=@{operator=}!User@{User}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \hyperlink{class_user}{User} \& User\+::operator= (\begin{DoxyParamCaption}\item[{const \hyperlink{class_user}{User} \&}]{other }\end{DoxyParamCaption})}
+
+Operator=. \mbox{\Hypertarget{class_user_a79486f90c900c5dfc272f0ad9a204c95}\label{class_user_a79486f90c900c5dfc272f0ad9a204c95}} 
+\index{User@{User}!set\+Email@{set\+Email}}
+\index{set\+Email@{set\+Email}!User@{User}}
+\subsubsection{\texorpdfstring{set\+Email()}{setEmail()}}
+{\footnotesize\ttfamily void User\+::set\+Email (\begin{DoxyParamCaption}\item[{string}]{em }\end{DoxyParamCaption})}
+
+Method setting the email. Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_user_a79486f90c900c5dfc272f0ad9a204c95_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_user_ab8d3c965902b378fc3472b388a97d56d}\label{class_user_ab8d3c965902b378fc3472b388a97d56d}} 
+\index{User@{User}!set\+Password@{set\+Password}}
+\index{set\+Password@{set\+Password}!User@{User}}
+\subsubsection{\texorpdfstring{set\+Password()}{setPassword()}}
+{\footnotesize\ttfamily void User\+::set\+Password (\begin{DoxyParamCaption}\item[{string}]{pass }\end{DoxyParamCaption})}
+
+Method setting the password. Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_user_ab8d3c965902b378fc3472b388a97d56d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_user_a453323a9766e086f1967a96d79fc8b76}\label{class_user_a453323a9766e086f1967a96d79fc8b76}} 
+\index{User@{User}!set\+Username@{set\+Username}}
+\index{set\+Username@{set\+Username}!User@{User}}
+\subsubsection{\texorpdfstring{set\+Username()}{setUsername()}}
+{\footnotesize\ttfamily void User\+::set\+Username (\begin{DoxyParamCaption}\item[{string}]{un }\end{DoxyParamCaption})}
+
+Method setting the username. Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_user_a453323a9766e086f1967a96d79fc8b76_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_user_acf1038a8d320684dc3fbdd5e4308e062}\label{class_user_acf1038a8d320684dc3fbdd5e4308e062}} 
+\index{User@{User}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!User@{User}}
+\subsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{ostream \&}]{out,  }\item[{const \hyperlink{class_user}{User} \&}]{user }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+Overloaded operator$<$$<$. \mbox{\Hypertarget{class_user_aae624f64cdd1af3b59c2443cffa82494}\label{class_user_aae624f64cdd1af3b59c2443cffa82494}} 
+\index{User@{User}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!User@{User}}
+\subsubsection{\texorpdfstring{operator$>$$>$}{operator>>}}
+{\footnotesize\ttfamily istream\& operator$>$$>$ (\begin{DoxyParamCaption}\item[{istream \&}]{in,  }\item[{\hyperlink{class_user}{User} \&}]{user }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+Overloaded operator$>$$>$. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+user.\+h\item 
+user.\+cpp\end{DoxyCompactItemize}

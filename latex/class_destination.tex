@@ -1,0 +1,252 @@
+\hypertarget{class_destination}{}\section{Destination Class Reference}
+\label{class_destination}\index{Destination@{Destination}}
+
+
+A destination class.  
+
+
+
+
+{\ttfamily \#include $<$destination.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_destination_ac23f3307b89ac7a8fa8aa8d4ff3e22a6}{Destination} ()
+\item 
+void \hyperlink{class_destination_a9cafaaf83be9ea548401caf2a2c4d839}{set\+Destination} (string)
+\item 
+void \hyperlink{class_destination_ac7f1c3be54b5223aa1e9ad4523ef6976}{set\+Grade} (unsigned)
+\item 
+void \hyperlink{class_destination_a08199ade6e0bf7488d796d85dec8cfd9}{set\+Comment} (string)
+\item 
+void \hyperlink{class_destination_a6fc539f51a5fd6844fef290facc4e887}{set\+From\+Date} (\hyperlink{class_date}{Date} fr)
+\item 
+void \hyperlink{class_destination_afec038764d48882a9005cea50e418219}{set\+To\+Date} (\hyperlink{class_date}{Date} t)
+\item 
+void \hyperlink{class_destination_a6494a9eae34083fd09861ba8f6923e92}{add\+Photo} (const string \&)
+\item 
+string \hyperlink{class_destination_a6544fb0fa820f5a6b914a38cdcc949f9}{get\+Destination} () const
+\item 
+unsigned \hyperlink{class_destination_a34dd7a2072743078d5067d336dc3c25d}{get\+Grade} () const
+\item 
+string \hyperlink{class_destination_a4d20ef4e561fa10dd81561b9cd61c55c}{get\+Comment} () const
+\item 
+vector$<$ string $>$ \hyperlink{class_destination_ade746815624a6fd5add31a3475e04b45}{get\+Photos} () const
+\item 
+\hyperlink{class_date}{Date} \hyperlink{class_destination_ac6265579620a20899f5e4cf817d037c8}{get\+From\+Date} () const
+\item 
+\hyperlink{class_date}{Date} \hyperlink{class_destination_a6a98c7e1c0ffa4b821d3f7dd85cad3dd}{get\+To\+Date} () const
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A destination class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em destination} & is type string keeping the location. \\
+\hline
+{\em from} & is type \hyperlink{class_date}{Date} keeping the start date. \\
+\hline
+{\em to} & is type \hyperlink{class_date}{Date} keeping the end date. \\
+\hline
+{\em grade} & is type unsigned. \\
+\hline
+{\em comment} & is type string. \\
+\hline
+{\em photos} & is a vector of strings.\\
+\hline
+\end{DoxyParams}
+This class is used to initialize trips. They are part of every user\textquotesingle{}s database. Every trip consists of location, start date, end date, user\textquotesingle{}s grade, user\textquotesingle{}s comment and photos. Class date is used to maintain the dates in class \hyperlink{class_destination}{Destination}. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_destination_ac23f3307b89ac7a8fa8aa8d4ff3e22a6}\label{class_destination_ac23f3307b89ac7a8fa8aa8d4ff3e22a6}} 
+\index{Destination@{Destination}!Destination@{Destination}}
+\index{Destination@{Destination}!Destination@{Destination}}
+\subsubsection{\texorpdfstring{Destination()}{Destination()}}
+{\footnotesize\ttfamily Destination\+::\+Destination (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+A default constructor. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_destination_a6494a9eae34083fd09861ba8f6923e92}\label{class_destination_a6494a9eae34083fd09861ba8f6923e92}} 
+\index{Destination@{Destination}!add\+Photo@{add\+Photo}}
+\index{add\+Photo@{add\+Photo}!Destination@{Destination}}
+\subsubsection{\texorpdfstring{add\+Photo()}{addPhoto()}}
+{\footnotesize\ttfamily void Destination\+::add\+Photo (\begin{DoxyParamCaption}\item[{const string \&}]{new\+Photos }\end{DoxyParamCaption})}
+
+Method adding a phone. Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_destination_a6494a9eae34083fd09861ba8f6923e92_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_destination_a4d20ef4e561fa10dd81561b9cd61c55c}\label{class_destination_a4d20ef4e561fa10dd81561b9cd61c55c}} 
+\index{Destination@{Destination}!get\+Comment@{get\+Comment}}
+\index{get\+Comment@{get\+Comment}!Destination@{Destination}}
+\subsubsection{\texorpdfstring{get\+Comment()}{getComment()}}
+{\footnotesize\ttfamily string Destination\+::get\+Comment (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Getter for comment. \begin{DoxyReturn}{Returns}
+string comment 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_destination_a4d20ef4e561fa10dd81561b9cd61c55c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_destination_a6544fb0fa820f5a6b914a38cdcc949f9}\label{class_destination_a6544fb0fa820f5a6b914a38cdcc949f9}} 
+\index{Destination@{Destination}!get\+Destination@{get\+Destination}}
+\index{get\+Destination@{get\+Destination}!Destination@{Destination}}
+\subsubsection{\texorpdfstring{get\+Destination()}{getDestination()}}
+{\footnotesize\ttfamily string Destination\+::get\+Destination (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Getter for destination. \begin{DoxyReturn}{Returns}
+string destination 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_destination_a6544fb0fa820f5a6b914a38cdcc949f9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_destination_ac6265579620a20899f5e4cf817d037c8}\label{class_destination_ac6265579620a20899f5e4cf817d037c8}} 
+\index{Destination@{Destination}!get\+From\+Date@{get\+From\+Date}}
+\index{get\+From\+Date@{get\+From\+Date}!Destination@{Destination}}
+\subsubsection{\texorpdfstring{get\+From\+Date()}{getFromDate()}}
+{\footnotesize\ttfamily \hyperlink{class_date}{Date} Destination\+::get\+From\+Date (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Getter for start date. \begin{DoxyReturn}{Returns}
+\hyperlink{class_date}{Date} from 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_destination_ac6265579620a20899f5e4cf817d037c8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_destination_a34dd7a2072743078d5067d336dc3c25d}\label{class_destination_a34dd7a2072743078d5067d336dc3c25d}} 
+\index{Destination@{Destination}!get\+Grade@{get\+Grade}}
+\index{get\+Grade@{get\+Grade}!Destination@{Destination}}
+\subsubsection{\texorpdfstring{get\+Grade()}{getGrade()}}
+{\footnotesize\ttfamily unsigned Destination\+::get\+Grade (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Getter for grade. \begin{DoxyReturn}{Returns}
+unsigned grade 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_destination_a34dd7a2072743078d5067d336dc3c25d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_destination_ade746815624a6fd5add31a3475e04b45}\label{class_destination_ade746815624a6fd5add31a3475e04b45}} 
+\index{Destination@{Destination}!get\+Photos@{get\+Photos}}
+\index{get\+Photos@{get\+Photos}!Destination@{Destination}}
+\subsubsection{\texorpdfstring{get\+Photos()}{getPhotos()}}
+{\footnotesize\ttfamily vector$<$string$>$ Destination\+::get\+Photos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Getter for photos. \begin{DoxyReturn}{Returns}
+vector$<$string$>$ photos 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_destination_ade746815624a6fd5add31a3475e04b45_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_destination_a6a98c7e1c0ffa4b821d3f7dd85cad3dd}\label{class_destination_a6a98c7e1c0ffa4b821d3f7dd85cad3dd}} 
+\index{Destination@{Destination}!get\+To\+Date@{get\+To\+Date}}
+\index{get\+To\+Date@{get\+To\+Date}!Destination@{Destination}}
+\subsubsection{\texorpdfstring{get\+To\+Date()}{getToDate()}}
+{\footnotesize\ttfamily \hyperlink{class_date}{Date} Destination\+::get\+To\+Date (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Getter for end date. \begin{DoxyReturn}{Returns}
+\hyperlink{class_date}{Date} to 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_destination_a6a98c7e1c0ffa4b821d3f7dd85cad3dd_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_destination_a08199ade6e0bf7488d796d85dec8cfd9}\label{class_destination_a08199ade6e0bf7488d796d85dec8cfd9}} 
+\index{Destination@{Destination}!set\+Comment@{set\+Comment}}
+\index{set\+Comment@{set\+Comment}!Destination@{Destination}}
+\subsubsection{\texorpdfstring{set\+Comment()}{setComment()}}
+{\footnotesize\ttfamily void Destination\+::set\+Comment (\begin{DoxyParamCaption}\item[{string}]{comm }\end{DoxyParamCaption})}
+
+Method setting the comment. Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_destination_a08199ade6e0bf7488d796d85dec8cfd9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_destination_a9cafaaf83be9ea548401caf2a2c4d839}\label{class_destination_a9cafaaf83be9ea548401caf2a2c4d839}} 
+\index{Destination@{Destination}!set\+Destination@{set\+Destination}}
+\index{set\+Destination@{set\+Destination}!Destination@{Destination}}
+\subsubsection{\texorpdfstring{set\+Destination()}{setDestination()}}
+{\footnotesize\ttfamily void Destination\+::set\+Destination (\begin{DoxyParamCaption}\item[{string}]{dest }\end{DoxyParamCaption})}
+
+Methood setting the destination(location). Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_destination_a9cafaaf83be9ea548401caf2a2c4d839_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_destination_a6fc539f51a5fd6844fef290facc4e887}\label{class_destination_a6fc539f51a5fd6844fef290facc4e887}} 
+\index{Destination@{Destination}!set\+From\+Date@{set\+From\+Date}}
+\index{set\+From\+Date@{set\+From\+Date}!Destination@{Destination}}
+\subsubsection{\texorpdfstring{set\+From\+Date()}{setFromDate()}}
+{\footnotesize\ttfamily void Destination\+::set\+From\+Date (\begin{DoxyParamCaption}\item[{\hyperlink{class_date}{Date}}]{fr }\end{DoxyParamCaption})}
+
+Method setting the start date. Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_destination_a6fc539f51a5fd6844fef290facc4e887_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_destination_ac7f1c3be54b5223aa1e9ad4523ef6976}\label{class_destination_ac7f1c3be54b5223aa1e9ad4523ef6976}} 
+\index{Destination@{Destination}!set\+Grade@{set\+Grade}}
+\index{set\+Grade@{set\+Grade}!Destination@{Destination}}
+\subsubsection{\texorpdfstring{set\+Grade()}{setGrade()}}
+{\footnotesize\ttfamily void Destination\+::set\+Grade (\begin{DoxyParamCaption}\item[{unsigned}]{gr }\end{DoxyParamCaption})}
+
+Method setting the grade. Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_destination_ac7f1c3be54b5223aa1e9ad4523ef6976_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_destination_afec038764d48882a9005cea50e418219}\label{class_destination_afec038764d48882a9005cea50e418219}} 
+\index{Destination@{Destination}!set\+To\+Date@{set\+To\+Date}}
+\index{set\+To\+Date@{set\+To\+Date}!Destination@{Destination}}
+\subsubsection{\texorpdfstring{set\+To\+Date()}{setToDate()}}
+{\footnotesize\ttfamily void Destination\+::set\+To\+Date (\begin{DoxyParamCaption}\item[{\hyperlink{class_date}{Date}}]{t }\end{DoxyParamCaption})}
+
+Method setting the end date. Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_destination_afec038764d48882a9005cea50e418219_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+destination.\+h\item 
+destination.\+cpp\end{DoxyCompactItemize}

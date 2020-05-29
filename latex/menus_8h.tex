@@ -1,0 +1,110 @@
+\hypertarget{menus_8h}{}\section{menus.\+h File Reference}
+\label{menus_8h}\index{menus.\+h@{menus.\+h}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$cstdlib$>$}\newline
+{\ttfamily \#include \char`\"{}user.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}destination.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}date.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}read\+File.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}application.\+h\char`\"{}}\newline
+Include dependency graph for menus.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menus_8h__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{menus_8h_a714c83c6898e18f73621626df5bb59c3}{registration} ()
+\item 
+void \hyperlink{menus_8h_af76b7b46958dabf5e4ee9a492f0ec3fa}{login} ()
+\item 
+void \hyperlink{menus_8h_a2a0e843767aeea4f433a28b9c54f573a}{menu} ()
+\item 
+void \hyperlink{menus_8h_a1f5d479249cf7405f3ef126b1e042d2b}{menu\+Logged} (const \hyperlink{class_user}{User} \&logged\+In\+User)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{menus_8h_af76b7b46958dabf5e4ee9a492f0ec3fa}\label{menus_8h_af76b7b46958dabf5e4ee9a492f0ec3fa}} 
+\index{menus.\+h@{menus.\+h}!login@{login}}
+\index{login@{login}!menus.\+h@{menus.\+h}}
+\subsubsection{\texorpdfstring{login()}{login()}}
+{\footnotesize\ttfamily void login (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This function is used when you try to log in. The user inserts two strings(username and password). Firstly, the username is checked whether such a user exists and if it exists, then the function checkes whether the inserted password matches the inserted username. Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=255pt]{menus_8h_af76b7b46958dabf5e4ee9a492f0ec3fa_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=302pt]{menus_8h_af76b7b46958dabf5e4ee9a492f0ec3fa_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{menus_8h_a2a0e843767aeea4f433a28b9c54f573a}\label{menus_8h_a2a0e843767aeea4f433a28b9c54f573a}} 
+\index{menus.\+h@{menus.\+h}!menu@{menu}}
+\index{menu@{menu}!menus.\+h@{menus.\+h}}
+\subsubsection{\texorpdfstring{menu()}{menu()}}
+{\footnotesize\ttfamily void menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+The functions prints R\+E\+G\+I\+S\+T\+ER, L\+O\+G\+IN OR E\+X\+IT and awaits value to be inputted in order to know action to execute. Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menus_8h_a2a0e843767aeea4f433a28b9c54f573a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{menus_8h_a2a0e843767aeea4f433a28b9c54f573a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{menus_8h_a1f5d479249cf7405f3ef126b1e042d2b}\label{menus_8h_a1f5d479249cf7405f3ef126b1e042d2b}} 
+\index{menus.\+h@{menus.\+h}!menu\+Logged@{menu\+Logged}}
+\index{menu\+Logged@{menu\+Logged}!menus.\+h@{menus.\+h}}
+\subsubsection{\texorpdfstring{menu\+Logged()}{menuLogged()}}
+{\footnotesize\ttfamily void menu\+Logged (\begin{DoxyParamCaption}\item[{const \hyperlink{class_user}{User} \&}]{logged\+In\+User }\end{DoxyParamCaption})}
+
+The function is called when the process of logging in is successful. It prints all possible functionalities of the program(adding a trip, adding a friend, displaying infromation and etc...). It also awaits input in order to know which finction to call. 
+\begin{DoxyParams}{Parameters}
+{\em const} & \hyperlink{class_user}{User}\& logged\+In\+User \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menus_8h_a1f5d479249cf7405f3ef126b1e042d2b_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{menus_8h_a714c83c6898e18f73621626df5bb59c3}\label{menus_8h_a714c83c6898e18f73621626df5bb59c3}} 
+\index{menus.\+h@{menus.\+h}!registration@{registration}}
+\index{registration@{registration}!menus.\+h@{menus.\+h}}
+\subsubsection{\texorpdfstring{registration()}{registration()}}
+{\footnotesize\ttfamily void registration (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This function is used to create a profile. Firstly, an object of type \hyperlink{class_user}{User} is created with default values(empty strings for username, password and email). Then asking the user to input these values and through the setters of class \hyperlink{class_user}{User} the inserted values are assigned to the object. There is a validation to prevent registering two profiles with the same username or email. Moreover two files are being opened and through the getters of class \hyperlink{class_user}{User} all the data of the object is saved into the files. Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menus_8h_a714c83c6898e18f73621626df5bb59c3_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{menus_8h_a714c83c6898e18f73621626df5bb59c3_icgraph}
+\end{center}
+\end{figure}

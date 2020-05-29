@@ -1,5 +1,5 @@
 <map id="Destination::getToDate" name="Destination::getToDate">
 <area shape="rect" id="node2" href="$application_8h.html#a3ca98c5244a06fb6199d64f44b6a2fa4" title="destinationToFile" alt="" coords="211,5,332,32"/>
 <area shape="rect" id="node3" href="$application_8h.html#acc3ffb5f9c459368ca3ca9815d499af2" title="addDestination" alt="" coords="380,5,489,32"/>
-<area shape="rect" id="node4" href="$application_8h.html#a1f5d479249cf7405f3ef126b1e042d2b" title="menuLogged" alt="" coords="537,5,633,32"/>
+<area shape="rect" id="node4" href="$menus_8h.html#a1f5d479249cf7405f3ef126b1e042d2b" title="menuLogged" alt="" coords="537,5,633,32"/>
 </map>

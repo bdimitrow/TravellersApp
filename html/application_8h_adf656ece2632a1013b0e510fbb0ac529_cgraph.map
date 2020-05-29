@@ -1,0 +1,5 @@
+<map id="userToFile" name="userToFile">
+<area shape="rect" id="node2" href="$class_user.html#a82e034043e04b2d750c654c8b2f2ce78" title="User::getUsername" alt="" coords="136,5,272,32"/>
+<area shape="rect" id="node3" href="$class_user.html#a33429bdd1253091697a9c5c5e1448bee" title="User::getPassword" alt="" coords="137,56,271,83"/>
+<area shape="rect" id="node4" href="$class_user.html#a4c647e583bd964f40f687776a0d185dc" title="User::getEmail" alt="" coords="149,107,259,133"/>
+</map>

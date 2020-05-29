@@ -1,0 +1,161 @@
+\hypertarget{class_date}{}\section{Date Class Reference}
+\label{class_date}\index{Date@{Date}}
+
+
+A date class.  
+
+
+
+
+{\ttfamily \#include $<$date.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_date_a4e59ed4ba66eec61c27460c5d09fa1bd}{Date} ()
+\item 
+\hyperlink{class_date_af80a5016fde0d599f0a15900193fc663}{Date} (int, int, int)
+\item 
+int \hyperlink{class_date_ad7f2e4e42aadc85322503dbef8484ad5}{Day} () const
+\item 
+int \hyperlink{class_date_a1c1871e2d6adcb08fd30ffae440b3803}{Month} () const
+\item 
+int \hyperlink{class_date_a284f8985596b83ad9388b464eb6b54bd}{Year} () const
+\item 
+bool \hyperlink{class_date_a08c0538091d061550b90787d9313ca61}{operator$<$} (const \hyperlink{class_date}{Date} \&) const
+\item 
+\hyperlink{class_date}{Date} \hyperlink{class_date_a425bd02efac05e6b65a8b7456317822f}{operator()} (int y, int m, int d)
+\item 
+bool \hyperlink{class_date_a2d9a87adab3ae18acdb13e027ad1d0aa}{is\+Date\+Valid} (const \hyperlink{class_date}{Date} \&)
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \hyperlink{class_date_affced1a8a8f9f0e9dd009af0a22dfe33}{operator$<$$<$} (ostream \&fout, const \hyperlink{class_date}{Date} \&dt)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A date class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em day} & is an integer \\
+\hline
+{\em month} & is an integer \\
+\hline
+{\em year} & is an integer\\
+\hline
+\end{DoxyParams}
+This class is used to initialize dates. They are required to describe the duration of a trip. We initialize a period with two dates\+: starting date and ending date. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_date_a4e59ed4ba66eec61c27460c5d09fa1bd}\label{class_date_a4e59ed4ba66eec61c27460c5d09fa1bd}} 
+\index{Date@{Date}!Date@{Date}}
+\index{Date@{Date}!Date@{Date}}
+\subsubsection{\texorpdfstring{Date()}{Date()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Date\+::\+Date (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+A default constructor. \mbox{\Hypertarget{class_date_af80a5016fde0d599f0a15900193fc663}\label{class_date_af80a5016fde0d599f0a15900193fc663}} 
+\index{Date@{Date}!Date@{Date}}
+\index{Date@{Date}!Date@{Date}}
+\subsubsection{\texorpdfstring{Date()}{Date()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Date\+::\+Date (\begin{DoxyParamCaption}\item[{int}]{y,  }\item[{int}]{m,  }\item[{int}]{d }\end{DoxyParamCaption})}
+
+A parametrized constructor. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_date_ad7f2e4e42aadc85322503dbef8484ad5}\label{class_date_ad7f2e4e42aadc85322503dbef8484ad5}} 
+\index{Date@{Date}!Day@{Day}}
+\index{Day@{Day}!Date@{Date}}
+\subsubsection{\texorpdfstring{Day()}{Day()}}
+{\footnotesize\ttfamily int Date\+::\+Day (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Method setting the day. Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_date_ad7f2e4e42aadc85322503dbef8484ad5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_date_a2d9a87adab3ae18acdb13e027ad1d0aa}\label{class_date_a2d9a87adab3ae18acdb13e027ad1d0aa}} 
+\index{Date@{Date}!is\+Date\+Valid@{is\+Date\+Valid}}
+\index{is\+Date\+Valid@{is\+Date\+Valid}!Date@{Date}}
+\subsubsection{\texorpdfstring{is\+Date\+Valid()}{isDateValid()}}
+{\footnotesize\ttfamily bool Date\+::is\+Date\+Valid (\begin{DoxyParamCaption}\item[{const \hyperlink{class_date}{Date} \&}]{date }\end{DoxyParamCaption})}
+
+This function accepts an object ot type \hyperlink{class_date}{Date} and determines whether the date is valid(2020.\+13.\+14 is an invalid date). 
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{class_date}{Date}} & date\+To\+Be\+Checked \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true or false. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=281pt]{class_date_a2d9a87adab3ae18acdb13e027ad1d0aa_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_date_a2d9a87adab3ae18acdb13e027ad1d0aa_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_date_a1c1871e2d6adcb08fd30ffae440b3803}\label{class_date_a1c1871e2d6adcb08fd30ffae440b3803}} 
+\index{Date@{Date}!Month@{Month}}
+\index{Month@{Month}!Date@{Date}}
+\subsubsection{\texorpdfstring{Month()}{Month()}}
+{\footnotesize\ttfamily int Date\+::\+Month (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Method setting the month. Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_date_a1c1871e2d6adcb08fd30ffae440b3803_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_date_a425bd02efac05e6b65a8b7456317822f}\label{class_date_a425bd02efac05e6b65a8b7456317822f}} 
+\index{Date@{Date}!operator()@{operator()}}
+\index{operator()@{operator()}!Date@{Date}}
+\subsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily \hyperlink{class_date}{Date} Date\+::operator() (\begin{DoxyParamCaption}\item[{int}]{y,  }\item[{int}]{m,  }\item[{int}]{d }\end{DoxyParamCaption})}
+
+Overloaded operator(). It is setting new date(used in date validation). \mbox{\Hypertarget{class_date_a08c0538091d061550b90787d9313ca61}\label{class_date_a08c0538091d061550b90787d9313ca61}} 
+\index{Date@{Date}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Date@{Date}}
+\subsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily bool Date\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \hyperlink{class_date}{Date} \&}]{other }\end{DoxyParamCaption}) const}
+
+A bool method comparing two dates. \mbox{\Hypertarget{class_date_a284f8985596b83ad9388b464eb6b54bd}\label{class_date_a284f8985596b83ad9388b464eb6b54bd}} 
+\index{Date@{Date}!Year@{Year}}
+\index{Year@{Year}!Date@{Date}}
+\subsubsection{\texorpdfstring{Year()}{Year()}}
+{\footnotesize\ttfamily int Date\+::\+Year (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Method setting the year. Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_date_a284f8985596b83ad9388b464eb6b54bd_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_date_affced1a8a8f9f0e9dd009af0a22dfe33}\label{class_date_affced1a8a8f9f0e9dd009af0a22dfe33}} 
+\index{Date@{Date}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Date@{Date}}
+\subsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{ostream \&}]{fout,  }\item[{const \hyperlink{class_date}{Date} \&}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+Overloaded operator$<$$<$. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+date.\+h\item 
+date.\+cpp\end{DoxyCompactItemize}

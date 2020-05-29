@@ -1,0 +1,3 @@
+bohidar;pass;bobo@;Friends: dada 
+dada;nene;da!@;Friends: bohidar 
+goshko;toshko;dada@;Friends: dada 

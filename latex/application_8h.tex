@@ -15,22 +15,23 @@ Include dependency graph for application.\+h\+:\nopagebreak
 \includegraphics[width=350pt]{application_8h__incl}
 \end{center}
 \end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=151pt]{application_8h__dep__incl}
+\end{center}
+\end{figure}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
-\item 
-void \hyperlink{application_8h_a714c83c6898e18f73621626df5bb59c3}{registration} ()
-\item 
-void \hyperlink{application_8h_af76b7b46958dabf5e4ee9a492f0ec3fa}{login} ()
-\item 
-void \hyperlink{application_8h_a2a0e843767aeea4f433a28b9c54f573a}{menu} ()
-\item 
-void \hyperlink{application_8h_a1f5d479249cf7405f3ef126b1e042d2b}{menu\+Logged} (const \hyperlink{class_user}{User} \&logged\+In\+User)
 \item 
 void \hyperlink{application_8h_acc3ffb5f9c459368ca3ca9815d499af2}{add\+Destination} (const \hyperlink{class_user}{User} \&)
 \item 
 void \hyperlink{application_8h_a92aba65fab778922f928e9d9bf6475d6}{add\+Friend} (const \hyperlink{class_user}{User} \&)
 \item 
 void \hyperlink{application_8h_a3ca98c5244a06fb6199d64f44b6a2fa4}{destination\+To\+File} (const \hyperlink{class_user}{User} \&, const \hyperlink{class_destination}{Destination} \&, int)
+\item 
+void \hyperlink{application_8h_adf656ece2632a1013b0e510fbb0ac529}{user\+To\+File} (const \hyperlink{class_user}{User} \&being\+Reg)
 \item 
 string \hyperlink{application_8h_a265d79751fc2100c17b58f15df75fed8}{add\+Location} ()
 \item 
@@ -43,6 +44,12 @@ unsigned \hyperlink{application_8h_a58f4936001855f43fb36be2c1dda8542}{add\+Grade
 string \hyperlink{application_8h_abd4c9e6dd42fc406bcd9eb172027f30e}{add\+Comment} ()
 \item 
 vector$<$ string $>$ \hyperlink{application_8h_a3fd32a66da2ec32c0823ad407e7d1f62}{add\+Photos} (int)
+\item 
+\mbox{\Hypertarget{application_8h_a2846723ff3141f7044bf9cfa3514fce9}\label{application_8h_a2846723ff3141f7044bf9cfa3514fce9}} 
+void {\bfseries copy\+File\+To\+Another\+File} ()
+\item 
+\mbox{\Hypertarget{application_8h_a56b247a576ce83fffe54cb75d85f1538}\label{application_8h_a56b247a576ce83fffe54cb75d85f1538}} 
+void {\bfseries string\+To\+Users\+DB} (const matrix \&users\+File, const \hyperlink{class_user}{User} \&logged\+In\+User, const string \&friend\+To\+Be\+Added)
 \end{DoxyCompactItemize}
 
 
@@ -119,7 +126,7 @@ Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=284pt]{application_8h_a92aba65fab778922f928e9d9bf6475d6_cgraph}
+\includegraphics[width=277pt]{application_8h_a92aba65fab778922f928e9d9bf6475d6_cgraph}
 \end{center}
 \end{figure}
 Here is the caller graph for this function\+:\nopagebreak
@@ -225,81 +232,28 @@ Here is the caller graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{application_8h_a3ca98c5244a06fb6199d64f44b6a2fa4_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{application_8h_af76b7b46958dabf5e4ee9a492f0ec3fa}\label{application_8h_af76b7b46958dabf5e4ee9a492f0ec3fa}} 
-\index{application.\+h@{application.\+h}!login@{login}}
-\index{login@{login}!application.\+h@{application.\+h}}
-\subsubsection{\texorpdfstring{login()}{login()}}
-{\footnotesize\ttfamily void login (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{application_8h_adf656ece2632a1013b0e510fbb0ac529}\label{application_8h_adf656ece2632a1013b0e510fbb0ac529}} 
+\index{application.\+h@{application.\+h}!user\+To\+File@{user\+To\+File}}
+\index{user\+To\+File@{user\+To\+File}!application.\+h@{application.\+h}}
+\subsubsection{\texorpdfstring{user\+To\+File()}{userToFile()}}
+{\footnotesize\ttfamily void user\+To\+File (\begin{DoxyParamCaption}\item[{const \hyperlink{class_user}{User} \&}]{being\+Reg }\end{DoxyParamCaption})}
 
-This function is used when you try to log in. The user inserts two strings(username and password). Firstly, the username is checked whether such a user exists and if it exists, then the function checkes whether the inserted password matches the inserted username. Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=255pt]{application_8h_af76b7b46958dabf5e4ee9a492f0ec3fa_cgraph}
-\end{center}
-\end{figure}
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=302pt]{application_8h_af76b7b46958dabf5e4ee9a492f0ec3fa_icgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{application_8h_a2a0e843767aeea4f433a28b9c54f573a}\label{application_8h_a2a0e843767aeea4f433a28b9c54f573a}} 
-\index{application.\+h@{application.\+h}!menu@{menu}}
-\index{menu@{menu}!application.\+h@{application.\+h}}
-\subsubsection{\texorpdfstring{menu()}{menu()}}
-{\footnotesize\ttfamily void menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-The functions prints R\+E\+G\+I\+S\+T\+ER, L\+O\+G\+IN OR E\+X\+IT and awaits value to be inputted in order to know action to execute. Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{application_8h_a2a0e843767aeea4f433a28b9c54f573a_cgraph}
-\end{center}
-\end{figure}
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=229pt]{application_8h_a2a0e843767aeea4f433a28b9c54f573a_icgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{application_8h_a1f5d479249cf7405f3ef126b1e042d2b}\label{application_8h_a1f5d479249cf7405f3ef126b1e042d2b}} 
-\index{application.\+h@{application.\+h}!menu\+Logged@{menu\+Logged}}
-\index{menu\+Logged@{menu\+Logged}!application.\+h@{application.\+h}}
-\subsubsection{\texorpdfstring{menu\+Logged()}{menuLogged()}}
-{\footnotesize\ttfamily void menu\+Logged (\begin{DoxyParamCaption}\item[{const \hyperlink{class_user}{User} \&}]{logged\+In\+User }\end{DoxyParamCaption})}
-
-The function is called when the process of logging in is successful. It prints all possible functionalities of the program(adding a trip, adding a friend, displaying infromation and etc...). It also awaits input in order to know which finction to call. 
+The function accepts \hyperlink{class_user}{User} and though the getter\textquotesingle{}s method is saving the user\textquotesingle{}s username, password and email to users.\+db file and creates his own database file. 
 \begin{DoxyParams}{Parameters}
-{\em const} & \hyperlink{class_user}{User}\& logged\+In\+User \\
+{\em const} & \hyperlink{class_user}{User}\& being\+Reg \\
 \hline
 \end{DoxyParams}
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=550pt]{application_8h_a1f5d479249cf7405f3ef126b1e042d2b_cgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{application_8h_a714c83c6898e18f73621626df5bb59c3}\label{application_8h_a714c83c6898e18f73621626df5bb59c3}} 
-\index{application.\+h@{application.\+h}!registration@{registration}}
-\index{registration@{registration}!application.\+h@{application.\+h}}
-\subsubsection{\texorpdfstring{registration()}{registration()}}
-{\footnotesize\ttfamily void registration (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-This function is used to create a profile. Firstly, an object of type \hyperlink{class_user}{User} is created with default values(empty strings for username, password and email). Then asking the user to input these values and through the setters of class \hyperlink{class_user}{User} the inserted values are assigned to the object. There is a validation to prevent registering two profiles with the same username or email. Moreover two files are being opened and through the getters of class \hyperlink{class_user}{User} all the data of the object is saved into the files. Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{application_8h_a714c83c6898e18f73621626df5bb59c3_cgraph}
+\includegraphics[width=280pt]{application_8h_adf656ece2632a1013b0e510fbb0ac529_cgraph}
 \end{center}
 \end{figure}
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=330pt]{application_8h_a714c83c6898e18f73621626df5bb59c3_icgraph}
+\includegraphics[width=350pt]{application_8h_adf656ece2632a1013b0e510fbb0ac529_icgraph}
 \end{center}
 \end{figure}

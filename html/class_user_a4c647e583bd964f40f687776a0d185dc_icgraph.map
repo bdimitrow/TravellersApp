@@ -1,5 +1,6 @@
 <map id="User::getEmail" name="User::getEmail">
-<area shape="rect" id="node2" href="$application_8h.html#a714c83c6898e18f73621626df5bb59c3" title="registration" alt="" coords="163,5,249,32"/>
-<area shape="rect" id="node3" href="$application_8h.html#a2a0e843767aeea4f433a28b9c54f573a" title="menu" alt="" coords="297,5,352,32"/>
-<area shape="rect" id="node4" href="$application_8h.html#a1f5d479249cf7405f3ef126b1e042d2b" title="menuLogged" alt="" coords="400,5,496,32"/>
+<area shape="rect" id="node2" href="$application_8h.html#adf656ece2632a1013b0e510fbb0ac529" title="userToFile" alt="" coords="163,5,245,32"/>
+<area shape="rect" id="node3" href="$menus_8h.html#a714c83c6898e18f73621626df5bb59c3" title="registration" alt="" coords="293,31,380,57"/>
+<area shape="rect" id="node4" href="$menus_8h.html#a2a0e843767aeea4f433a28b9c54f573a" title="menu" alt="" coords="428,31,483,57"/>
+<area shape="rect" id="node5" href="$menus_8h.html#a1f5d479249cf7405f3ef126b1e042d2b" title="menuLogged" alt="" coords="531,31,627,57"/>
 </map>
