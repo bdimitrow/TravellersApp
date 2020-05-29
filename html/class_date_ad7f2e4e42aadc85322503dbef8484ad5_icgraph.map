@@ -1,5 +1,5 @@
 <map id="Date::Day" name="Date::Day">
-<area shape="rect" id="node2" href="$application_8h.html#ab12d7ece8af87390978b47a41d5be563" title="isDateValid" alt="" coords="136,5,225,32"/>
-<area shape="rect" id="node3" href="$application_8h.html#acc3ffb5f9c459368ca3ca9815d499af2" title="addDestination" alt="" coords="273,5,383,32"/>
-<area shape="rect" id="node4" href="$application_8h.html#a1f5d479249cf7405f3ef126b1e042d2b" title="menuLogged" alt="" coords="431,5,527,32"/>
+<area shape="rect" id="node2" href="$class_date.html#a2d9a87adab3ae18acdb13e027ad1d0aa" title="Date::isDateValid" alt="" coords="136,5,261,32"/>
+<area shape="rect" id="node3" href="$application_8h.html#acc3ffb5f9c459368ca3ca9815d499af2" title="addDestination" alt="" coords="309,5,419,32"/>
+<area shape="rect" id="node4" href="$application_8h.html#a1f5d479249cf7405f3ef126b1e042d2b" title="menuLogged" alt="" coords="467,5,563,32"/>
 </map>

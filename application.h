@@ -55,15 +55,7 @@ void menu();
 // menu when you have logged in
 void menuLogged(const User &loggedInUser);
 
-/**
- * @fn bool isDateValid(const Date &)
- * This function accepts an object ot type Date and determines whether the date is valid(2020.13.14 is
- * an invalid date).
- * @param Date dateToBeChecked
- * @return true or false.
- */
-// checks whether the date is valid
-bool isDateValid(const Date &);
+
 
 /**
  * @fn void addDestination(const User &)
@@ -279,7 +271,7 @@ void addDestination(const User &loggedInUser) {
     Date from = addStartDate();
     Date to = addEndDate();
     // validation of period
-    while ((isDateValid(from) == 0) || (isDateValid(to) == 0) || (!(from < (to)))) {
+    while ((from.isDateValid(from) == 0) || (to.isDateValid(to) == 0) || (!(from < (to)))) {
         cout << "Invalid data or period! Please reenter!\n";
         from = addStartDate();
         to = addEndDate();
@@ -584,29 +576,5 @@ void login() {
     }
 }
 
-bool isDateValid(const Date &date) {
-    if (date.Year() <= 1900 || date.Year() >= 2023) {
-        return false;
-    } else if (!(1 <= date.Month() && date.Month() <= 12)) {
-        return false;
-    } else if (!(1 <= date.Day() && date.Day() <= 31)) {
-        return false;
-    } else if ((date.Day() == 31) && (date.Month() == 2 || date.Month() == 4 ||
-                                      date.Month() == 6 || date.Month() == 9 || date.Month() == 11)) {
-        return false;
-    } else if ((date.Day() == 30) && (date.Month() == 2)) {
-        return false;
-    } else if ((date.Month() == 2) && (date.Day() == 29) && (date.Year() % 4 != 0)) {
-        return false;
-    } else if ((date.Month() == 2) && (date.Day() == 29) && (date.Year() % 400 == 0)) {
-        return true;
-    } else if ((date.Month() == 2) && (date.Day() == 29) && (date.Year() % 100 == 0)) {
-        return false;
-    } else if ((date.Month() == 2) && (date.Day() == 29) && (date.Year() % 4 == 0)) {
-        return true;
-    } else {
-        return true;
-    }
-}
 
 #endif //TRAVELLERS_APPLICATION_H

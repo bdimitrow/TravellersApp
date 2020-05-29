@@ -61,6 +61,14 @@ public:
  * Overloaded operator<<.
  */
     friend ostream &operator<<(ostream &fout, const Date &dt);
+/**
+ * @fn bool isDateValid(const Date &)
+ * This function accepts an object ot type Date and determines whether the date is valid(2020.13.14 is
+ * an invalid date).
+ * @param Date dateToBeChecked
+ * @return true or false.
+ */
+    bool isDateValid(const Date &);
 };
 
 #endif //PROJECT7_DATE_H
