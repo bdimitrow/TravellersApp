@@ -17,6 +17,7 @@
 using namespace std;
 
 /**
+ * @file
  * @fn void addDestination(const User &)
  * This function is accepting an object of type User and is used to add a trip(destination) to the User's database.
  * Firstly, the function initialize an "empty" destination and uses other functions and the setters of class Destination
