@@ -24,19 +24,9 @@ date.h
 readFile.h
 /home/bozhidar/Desktop/Travellers/readFile.h
 
-/home/bozhidar/Desktop/Travellers/date.cpp
-date.h
-/home/bozhidar/Desktop/Travellers/date.h
-
 /home/bozhidar/Desktop/Travellers/date.h
 iostream
 -
-
-/home/bozhidar/Desktop/Travellers/destination.cpp
-destination.h
-/home/bozhidar/Desktop/Travellers/destination.h
-date.h
-/home/bozhidar/Desktop/Travellers/date.h
 
 /home/bozhidar/Desktop/Travellers/destination.h
 iostream
@@ -61,8 +51,30 @@ date.h
 /home/bozhidar/Desktop/Travellers/date.h
 readFile.h
 /home/bozhidar/Desktop/Travellers/readFile.h
+menus.h
+/home/bozhidar/Desktop/Travellers/menus.h
 fstream
 -
+
+/home/bozhidar/Desktop/Travellers/menus.h
+iostream
+-
+fstream
+-
+string
+-
+cstdlib
+-
+user.h
+/home/bozhidar/Desktop/Travellers/user.h
+destination.h
+/home/bozhidar/Desktop/Travellers/destination.h
+date.h
+/home/bozhidar/Desktop/Travellers/date.h
+readFile.h
+/home/bozhidar/Desktop/Travellers/readFile.h
+application.h
+/home/bozhidar/Desktop/Travellers/application.h
 
 /home/bozhidar/Desktop/Travellers/readFile.h
 iostream
@@ -75,10 +87,6 @@ sstream
 -
 vector
 -
-
-/home/bozhidar/Desktop/Travellers/user.cpp
-user.h
-/home/bozhidar/Desktop/Travellers/user.h
 
 /home/bozhidar/Desktop/Travellers/user.h
 cstring

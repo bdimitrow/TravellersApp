@@ -3,6 +3,7 @@
 #include "user.h"
 #include "date.h"
 #include "readFile.h"
+#include "menus.h"
 #include <fstream>
 
 int main() {
@@ -23,5 +24,8 @@ int main() {
  *   information. Moreover he can see where his friends have been and what was their impression of the trip(grade and
  *   comment).
  *
+ *  \subsection Github
+ *  https://github.com/bdimitrow/TravellersApp
  *
+ *  \section Second Happy path
  */
