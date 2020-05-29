@@ -55,8 +55,6 @@ void menu();
 // menu when you have logged in
 void menuLogged(const User &loggedInUser);
 
-
-
 /**
  * @fn void addDestination(const User &)
  * This function is accepting an object of type User and is used to add a trip(destination) to the User's database.

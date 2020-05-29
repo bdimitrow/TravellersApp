@@ -60,16 +60,19 @@ public:
 
 /**
  * Getter for username.
+ * @return string username
  */
     string getUsername() const { return username; };
 
 /**
  * Getter for password.
+ * @return string password
  */
     string getPassword() const { return password; };
 
 /**
  * Getter for email.
+ * @return string email
  */
     string getEmail() const { return email; };
 

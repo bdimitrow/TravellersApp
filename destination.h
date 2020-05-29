@@ -67,31 +67,37 @@ public:
 
 /**
  * Getter for destination.
+ * @return string destination
  */
     string getDestination() const { return destination; }
 
 /**
  * Getter for grade.
+ * @return unsigned grade
  */
     unsigned getGrade() const { return grade; }
 
 /**
  * Getter for comment.
+ * @return string comment
  */
     string getComment() const { return comment; }
 
 /**
  * Getter for photos.
+ * @return vector<string> photos
  */
     vector<string> getPhotos() const { return photos; }
 
 /**
  * Getter for start date.
+ * @return Date from
  */
     Date getFromDate() const { return from; }
 
 /**
  * Getter for end date.
+ * @return Date to
  */
     Date getToDate() const { return to; }
 

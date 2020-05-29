@@ -12,7 +12,7 @@ int main() {
 }
 
 
-/** \mainpage Traveller's App
+/** \mainpage About Project
  *
  *   \section First Project's aim
  *    The air of this project is to create an application to save information for different trips.

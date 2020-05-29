@@ -1,7 +1,3 @@
-//
-// Created by bozhidar on 5/1/20.
-//
-
 #ifndef TRAVELLERS_READFILE_H
 #define TRAVELLERS_READFILE_H
 
