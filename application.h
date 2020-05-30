@@ -180,7 +180,7 @@ unsigned addGrade() {
 
 string addComment() {
     // setting comment
-    cout << "Give day recommendation: ";
+    cout << "Give a recommendation: ";
     string comment;
     cin.ignore();
     getline(cin, comment);
@@ -201,7 +201,7 @@ vector<string> addPhotos(int numPhotos) {
             switch (choice) {
                 case 1: {
                     for (int i = 0; i < numPhotos; ++i) {
-                        cout << "Enter the photoName of photo number " << i + 1 << ": ";
+                        cout << "Enter the name of photo number " << i + 1 << ": ";
                         cin >> photoName;
                         photoNameWithExtension = photoName + ".jpeg";
                         photos.push_back(photoNameWithExtension);
@@ -210,7 +210,7 @@ vector<string> addPhotos(int numPhotos) {
                     break;
                 case 2: {
                     for (int i = 0; i < numPhotos; ++i) {
-                        cout << "Enter the photoName of photo number " << i + 1 << ": ";
+                        cout << "Enter the name of photo number " << i + 1 << ": ";
                         cin >> photoName;
                         photoNameWithExtension = photoName + ".png";
                         photos.push_back(photoNameWithExtension);

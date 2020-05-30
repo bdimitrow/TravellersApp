@@ -30,6 +30,7 @@ int main() {
  *  \section Second Happy path
  *   *  The "create a profile" scenario happens just in case the username and the email are not already taken. <br>
  *   *  The "logging in" scenario happens only when existing username and matching it password are entered. <br>
+ *   *  The "adding a location" scenario happens when the user has successfully logged in and has choose option 1 from the menu.<br>
  *  \subsection running Run the program
  *  Output: Welcome to Traveller's Аpp!
             1. Register
@@ -54,5 +55,29 @@ int main() {
    Input: parolatae43 <br>
    Output: Successfully logged in! <br>
    <br> The menuLogged is displayed now! <br>
+
+    \subsection locadd Adding a location
+    Output: Insert destination's location:<br>
+    Input: Gorna Malina<br>
+    Output: When did it start? Insert YY/MM/DD:<br>
+    Input: 2020 2 3<br>
+    Output: When did it end? Insert YY/MM/DD:<br>
+    Input: 2020 2 5<br>
+    Ouput: Insert rating between 1 and 5:<br>
+    Input: 3<br>
+    Ouput: Give a recommendation:<br>
+    Input: Everything was perfect! However on the way back home we had an accident.<br>
+    Output: Enter the number of photos you'd like to upload: <br>
+    Input: 2<br>
+    Output: Press (1) for JPEG photos and press (2) for PNG photos. <br>
+    Input: 2<br>
+    Output: Enter the photoName of photo number 1: <br>
+    Input: hotel<br>
+    Output: Enter the photoName of photo number 2: <br>
+    Input: bikes<br>
+    Output: Successfully added the entered destination!<br>
+
+    The following has been added to the logged in user's database: <br>
+    Gorna Malina;2020-2-3;2020-2-5;3;Everything was perfect! However on the way back home we had an accident.;hotel.png bikes.png <br>
 
  */

@@ -6,6 +6,8 @@ The air of this project is to create an application to save information for diff
 \item The \char`\"{}create a profile\char`\"{} scenario happens just in case the username and the email are not already taken. ~\newline
 
 \item The \char`\"{}logging in\char`\"{} scenario happens only when existing username and matching it password are entered. ~\newline
+
+\item The \char`\"{}adding a location\char`\"{} scenario happens when the user has successfully logged in and has choose option 1 from the menu.~\newline
  
 \end{DoxyItemize}\hypertarget{index_running}{}\subsection{Run the program}\label{index_running}
 Output\+: Welcome to Traveller\textquotesingle{}s Аpp!
@@ -31,4 +33,28 @@ Input\+: 2~\newline
  Output\+: Successfully logged in! ~\newline
  ~\newline
  The menu\+Logged is displayed now! ~\newline
+\hypertarget{index_locadd}{}\subsection{Adding a location}\label{index_locadd}
+Output\+: Insert destination\textquotesingle{}s location\+:~\newline
+ Input\+: Gorna Malina~\newline
+ Output\+: When did it start? Insert Y\+Y/\+M\+M/\+DD\+:~\newline
+ Input\+: 2020 2 3~\newline
+ Output\+: When did it end? Insert Y\+Y/\+M\+M/\+DD\+:~\newline
+ Input\+: 2020 2 5~\newline
+ Ouput\+: Insert rating between 1 and 5\+:~\newline
+ Input\+: 3~\newline
+ Ouput\+: Give a recommendation\+:~\newline
+ Input\+: Everything was perfect! However on the way back home we had an accident.~\newline
+ Output\+: Enter the number of photos you\textquotesingle{}d like to upload\+: ~\newline
+ Input\+: 2~\newline
+ Output\+: Press (1) for J\+P\+EG photos and press (2) for P\+NG photos. ~\newline
+ Input\+: 2~\newline
+ Output\+: Enter the photo\+Name of photo number 1\+: ~\newline
+ Input\+: hotel~\newline
+ Output\+: Enter the photo\+Name of photo number 2\+: ~\newline
+ Input\+: bikes~\newline
+ Output\+: Successfully added the entered destination!~\newline
+
+
+The following has been added to the logged in user\textquotesingle{}s database\+: ~\newline
+ Gorna Malina;2020-\/2-\/3;2020-\/2-\/5;3;Everything was perfect! However on the way back home we had an accident.;hotel.\+png bikes.\+png ~\newline
  
