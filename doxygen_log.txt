@@ -21,6 +21,8 @@ Preprocessing /home/bozhidar/Desktop/Travellers/destination.h...
 Parsing file /home/bozhidar/Desktop/Travellers/destination.h...
 Preprocessing /home/bozhidar/Desktop/Travellers/main.cpp...
 Parsing file /home/bozhidar/Desktop/Travellers/main.cpp...
+Preprocessing /home/bozhidar/Desktop/Travellers/menus.h...
+Parsing file /home/bozhidar/Desktop/Travellers/menus.h...
 Preprocessing /home/bozhidar/Desktop/Travellers/readFile.h...
 Parsing file /home/bozhidar/Desktop/Travellers/readFile.h...
 Preprocessing /home/bozhidar/Desktop/Travellers/user.cpp...
@@ -85,112 +87,119 @@ Generating code for file date.h...
 Parsing code for file destination.cpp...
 Generating code for file destination.h...
 Parsing code for file main.cpp...
+Generating code for file menus.h...
 Generating code for file readFile.h...
 Parsing code for file user.cpp...
 Generating code for file user.h...
 Generating file documentation...
 Generating docs for file application.h...
+/home/bozhidar/Desktop/Travellers/application.h:294: warning: Member copyFileToAnotherFile() (function) of file application.h is not documented.
+/home/bozhidar/Desktop/Travellers/application.h:314: warning: Member stringToUsersDB(const matrix &usersFile, const User &loggedInUser, const string &friendToBeAdded) (function) of file application.h is not documented.
 Generating caller graph for function addComment
-/home/bozhidar/Desktop/Travellers/application.h:70: warning: argument 'const' of command @param is not found in the argument list of addDestination(const User &loggedInUser)
-/home/bozhidar/Desktop/Travellers/application.h:76: warning: The following parameters of addDestination(const User &loggedInUser) are not documented:
+/home/bozhidar/Desktop/Travellers/application.h:22: warning: argument 'const' of command @param is not found in the argument list of addDestination(const User &loggedInUser)
+/home/bozhidar/Desktop/Travellers/application.h:28: warning: The following parameters of addDestination(const User &loggedInUser) are not documented:
   parameter 'loggedInUser'
 Generating call graph for function addDestination
 Generating caller graph for function addDestination
 Generating caller graph for function addEndDate
-/home/bozhidar/Desktop/Travellers/application.h:80: warning: argument 'const' of command @param is not found in the argument list of addFriend(const User &loggedInUser)
-/home/bozhidar/Desktop/Travellers/application.h:86: warning: The following parameters of addFriend(const User &loggedInUser) are not documented:
+/home/bozhidar/Desktop/Travellers/application.h:32: warning: argument 'const' of command @param is not found in the argument list of addFriend(const User &loggedInUser)
+/home/bozhidar/Desktop/Travellers/application.h:38: warning: The following parameters of addFriend(const User &loggedInUser) are not documented:
   parameter 'loggedInUser'
 Generating call graph for function addFriend
 Generating caller graph for function addFriend
 Generating caller graph for function addGrade
 Generating caller graph for function addLocation
-/home/bozhidar/Desktop/Travellers/application.h:141: warning: argument 'int' of command @param is not found in the argument list of addPhotos(int numPhotos)
-/home/bozhidar/Desktop/Travellers/application.h:147: warning: The following parameters of addPhotos(int numPhotos) are not documented:
+/home/bozhidar/Desktop/Travellers/application.h:102: warning: argument 'int' of command @param is not found in the argument list of addPhotos(int numPhotos)
+/home/bozhidar/Desktop/Travellers/application.h:108: warning: The following parameters of addPhotos(int numPhotos) are not documented:
   parameter 'numPhotos'
 Generating caller graph for function addPhotos
 Generating caller graph for function addStartDate
-/home/bozhidar/Desktop/Travellers/application.h:90: warning: argument 'const' of command @param is not found in the argument list of destinationToFile(const User &loggedInUser, const Destination &beingAdded, int numPhotos)
-/home/bozhidar/Desktop/Travellers/application.h:90: warning: argument 'const' of command @param is not found in the argument list of destinationToFile(const User &loggedInUser, const Destination &beingAdded, int numPhotos)
-/home/bozhidar/Desktop/Travellers/application.h:97: warning: The following parameters of destinationToFile(const User &loggedInUser, const Destination &beingAdded, int numPhotos) are not documented:
+/home/bozhidar/Desktop/Travellers/application.h:42: warning: argument 'const' of command @param is not found in the argument list of destinationToFile(const User &loggedInUser, const Destination &beingAdded, int numPhotos)
+/home/bozhidar/Desktop/Travellers/application.h:42: warning: argument 'const' of command @param is not found in the argument list of destinationToFile(const User &loggedInUser, const Destination &beingAdded, int numPhotos)
+/home/bozhidar/Desktop/Travellers/application.h:49: warning: The following parameters of destinationToFile(const User &loggedInUser, const Destination &beingAdded, int numPhotos) are not documented:
   parameter 'loggedInUser'
   parameter 'beingAdded'
   parameter 'numPhotos'
 Generating call graph for function destinationToFile
 Generating caller graph for function destinationToFile
-/home/bozhidar/Desktop/Travellers/application.h:60: warning: argument 'Date' of command @param is not found in the argument list of isDateValid(const Date &date)
-/home/bozhidar/Desktop/Travellers/application.h:66: warning: The following parameters of isDateValid(const Date &date) are not documented:
-  parameter 'date'
-Generating call graph for function isDateValid
-Generating caller graph for function isDateValid
+/home/bozhidar/Desktop/Travellers/application.h:53: warning: argument 'const' of command @param is not found in the argument list of userToFile(const User &beingReg)
+/home/bozhidar/Desktop/Travellers/application.h:58: warning: The following parameters of userToFile(const User &beingReg) are not documented:
+  parameter 'beingReg'
+Generating call graph for function userToFile
+Generating caller graph for function userToFile
+Generating docs for file menus.h...
 Generating call graph for function login
 Generating caller graph for function login
 Generating call graph for function menu
 Generating caller graph for function menu
-/home/bozhidar/Desktop/Travellers/application.h:50: warning: argument 'const' of command @param is not found in the argument list of menuLogged(const User &loggedInUser)
-/home/bozhidar/Desktop/Travellers/application.h:56: warning: The following parameters of menuLogged(const User &loggedInUser) are not documented:
+/home/bozhidar/Desktop/Travellers/menus.h:47: warning: argument 'const' of command @param is not found in the argument list of menuLogged(const User &loggedInUser)
+/home/bozhidar/Desktop/Travellers/menus.h:53: warning: The following parameters of menuLogged(const User &loggedInUser) are not documented:
   parameter 'loggedInUser'
 Generating call graph for function menuLogged
 Generating call graph for function registration
 Generating caller graph for function registration
 Generating docs for file readFile.h...
-/home/bozhidar/Desktop/Travellers/readFile.h:16: warning: Member vec (typedef) of file readFile.h is not documented.
-/home/bozhidar/Desktop/Travellers/readFile.h:17: warning: Member matrix (typedef) of file readFile.h is not documented.
-/home/bozhidar/Desktop/Travellers/readFile.h:47: warning: Member usernameMatchesPassword(const matrix &mat, const string &username, const string &password) (function) of file readFile.h is not documented.
-/home/bozhidar/Desktop/Travellers/readFile.h:51: warning: argument 'const' of command @param is not found in the argument list of averageGradeDestination(const matrix &mat, const string &destination)
-/home/bozhidar/Desktop/Travellers/readFile.h:51: warning: argument 'const' of command @param is not found in the argument list of averageGradeDestination(const matrix &mat, const string &destination)
-/home/bozhidar/Desktop/Travellers/readFile.h:57: warning: The following parameters of averageGradeDestination(const matrix &mat, const string &destination) are not documented:
+/home/bozhidar/Desktop/Travellers/readFile.h:12: warning: Member vec (typedef) of file readFile.h is not documented.
+/home/bozhidar/Desktop/Travellers/readFile.h:13: warning: Member matrix (typedef) of file readFile.h is not documented.
+/home/bozhidar/Desktop/Travellers/readFile.h:43: warning: Member usernameMatchesPassword(const matrix &mat, const string &username, const string &password) (function) of file readFile.h is not documented.
+/home/bozhidar/Desktop/Travellers/readFile.h:47: warning: argument 'const' of command @param is not found in the argument list of averageGradeDestination(const matrix &mat, const string &destination)
+/home/bozhidar/Desktop/Travellers/readFile.h:47: warning: argument 'const' of command @param is not found in the argument list of averageGradeDestination(const matrix &mat, const string &destination)
+/home/bozhidar/Desktop/Travellers/readFile.h:53: warning: The following parameters of averageGradeDestination(const matrix &mat, const string &destination) are not documented:
   parameter 'mat'
   parameter 'destination'
 Generating caller graph for function averageGradeDestination
-/home/bozhidar/Desktop/Travellers/readFile.h:94: warning: argument 'const' of command @param is not found in the argument list of displayFriends(const matrix &mat, const string &username)
-/home/bozhidar/Desktop/Travellers/readFile.h:94: warning: argument 'const' of command @param is not found in the argument list of displayFriends(const matrix &mat, const string &username)
-/home/bozhidar/Desktop/Travellers/readFile.h:99: warning: The following parameters of displayFriends(const matrix &mat, const string &username) are not documented:
+/home/bozhidar/Desktop/Travellers/readFile.h:90: warning: argument 'const' of command @param is not found in the argument list of displayFriends(const matrix &mat, const string &username)
+/home/bozhidar/Desktop/Travellers/readFile.h:90: warning: argument 'const' of command @param is not found in the argument list of displayFriends(const matrix &mat, const string &username)
+/home/bozhidar/Desktop/Travellers/readFile.h:95: warning: The following parameters of displayFriends(const matrix &mat, const string &username) are not documented:
   parameter 'mat'
   parameter 'username'
 Generating caller graph for function displayFriends
-/home/bozhidar/Desktop/Travellers/readFile.h:114: warning: argument 'const' of command @param is not found in the argument list of displayFriendsDestionations(const string &loggedInUsername)
-/home/bozhidar/Desktop/Travellers/readFile.h:119: warning: The following parameters of displayFriendsDestionations(const string &loggedInUsername) are not documented:
+/home/bozhidar/Desktop/Travellers/readFile.h:110: warning: argument 'const' of command @param is not found in the argument list of displayFriendsDestionations(const string &loggedInUsername)
+/home/bozhidar/Desktop/Travellers/readFile.h:115: warning: The following parameters of displayFriendsDestionations(const string &loggedInUsername) are not documented:
   parameter 'loggedInUsername'
 Generating call graph for function displayFriendsDestionations
 Generating caller graph for function displayFriendsDestionations
 Generating call graph for function displayInfoForParticularDestination
 Generating caller graph for function displayInfoForParticularDestination
-/home/bozhidar/Desktop/Travellers/readFile.h:32: warning: argument 'const' of command @param is not found in the argument list of displayMatrix(const matrix &mat)
-/home/bozhidar/Desktop/Travellers/readFile.h:36: warning: The following parameters of displayMatrix(const matrix &mat) are not documented:
+/home/bozhidar/Desktop/Travellers/readFile.h:28: warning: argument 'const' of command @param is not found in the argument list of displayMatrix(const matrix &mat)
+/home/bozhidar/Desktop/Travellers/readFile.h:32: warning: The following parameters of displayMatrix(const matrix &mat) are not documented:
   parameter 'mat'
 Generating caller graph for function displayMatrix
 Generating caller graph for function fileToMatrix
-/home/bozhidar/Desktop/Travellers/readFile.h:103: warning: argument 'const' of command @param is not found in the argument list of isAlreadyFriend(const matrix &mat, const string &friendToBeAdded, const string &username)
-/home/bozhidar/Desktop/Travellers/readFile.h:103: warning: argument 'const' of command @param is not found in the argument list of isAlreadyFriend(const matrix &mat, const string &friendToBeAdded, const string &username)
-/home/bozhidar/Desktop/Travellers/readFile.h:103: warning: argument 'const' of command @param is not found in the argument list of isAlreadyFriend(const matrix &mat, const string &friendToBeAdded, const string &username)
-/home/bozhidar/Desktop/Travellers/readFile.h:110: warning: The following parameters of isAlreadyFriend(const matrix &mat, const string &friendToBeAdded, const string &username) are not documented:
+/home/bozhidar/Desktop/Travellers/readFile.h:99: warning: argument 'const' of command @param is not found in the argument list of isAlreadyFriend(const matrix &mat, const string &friendToBeAdded, const string &username)
+/home/bozhidar/Desktop/Travellers/readFile.h:99: warning: argument 'const' of command @param is not found in the argument list of isAlreadyFriend(const matrix &mat, const string &friendToBeAdded, const string &username)
+/home/bozhidar/Desktop/Travellers/readFile.h:99: warning: argument 'const' of command @param is not found in the argument list of isAlreadyFriend(const matrix &mat, const string &friendToBeAdded, const string &username)
+/home/bozhidar/Desktop/Travellers/readFile.h:106: warning: The following parameters of isAlreadyFriend(const matrix &mat, const string &friendToBeAdded, const string &username) are not documented:
   parameter 'mat'
   parameter 'friendToBeAdded'
   parameter 'username'
 Generating caller graph for function isAlreadyFriend
-/home/bozhidar/Desktop/Travellers/readFile.h:61: warning: argument 'const' of command @param is not found in the argument list of isExisting(const matrix &mat, const string &check, int col)
-/home/bozhidar/Desktop/Travellers/readFile.h:61: warning: argument 'const' of command @param is not found in the argument list of isExisting(const matrix &mat, const string &check, int col)
-/home/bozhidar/Desktop/Travellers/readFile.h:61: warning: argument 'int' of command @param is not found in the argument list of isExisting(const matrix &mat, const string &check, int col)
-/home/bozhidar/Desktop/Travellers/readFile.h:70: warning: The following parameters of isExisting(const matrix &mat, const string &check, int col) are not documented:
+/home/bozhidar/Desktop/Travellers/readFile.h:57: warning: argument 'const' of command @param is not found in the argument list of isExisting(const matrix &mat, const string &check, int col)
+/home/bozhidar/Desktop/Travellers/readFile.h:57: warning: argument 'const' of command @param is not found in the argument list of isExisting(const matrix &mat, const string &check, int col)
+/home/bozhidar/Desktop/Travellers/readFile.h:57: warning: argument 'int' of command @param is not found in the argument list of isExisting(const matrix &mat, const string &check, int col)
+/home/bozhidar/Desktop/Travellers/readFile.h:66: warning: The following parameters of isExisting(const matrix &mat, const string &check, int col) are not documented:
   parameter 'mat'
   parameter 'check'
   parameter 'col'
 Generating caller graph for function isExisting
-/home/bozhidar/Desktop/Travellers/readFile.h:86: warning: argument 'const' of command @param is not found in the argument list of numberOfRowsInFile(const matrix &mat)
-/home/bozhidar/Desktop/Travellers/readFile.h:90: warning: The following parameters of numberOfRowsInFile(const matrix &mat) are not documented:
+/home/bozhidar/Desktop/Travellers/readFile.h:82: warning: argument 'const' of command @param is not found in the argument list of numberOfRowsInFile(const matrix &mat)
+/home/bozhidar/Desktop/Travellers/readFile.h:86: warning: The following parameters of numberOfRowsInFile(const matrix &mat) are not documented:
   parameter 'mat'
-Generating caller graph for function numberOfRowsInFile
-/home/bozhidar/Desktop/Travellers/readFile.h:74: warning: argument 'const' of command @param is not found in the argument list of rowOfUsername(const matrix &mat, const string &username)
-/home/bozhidar/Desktop/Travellers/readFile.h:74: warning: argument 'const' of command @param is not found in the argument list of rowOfUsername(const matrix &mat, const string &username)
-/home/bozhidar/Desktop/Travellers/readFile.h:82: warning: The following parameters of rowOfUsername(const matrix &mat, const string &username) are not documented:
+/home/bozhidar/Desktop/Travellers/readFile.h:70: warning: argument 'const' of command @param is not found in the argument list of rowOfUsername(const matrix &mat, const string &username)
+/home/bozhidar/Desktop/Travellers/readFile.h:70: warning: argument 'const' of command @param is not found in the argument list of rowOfUsername(const matrix &mat, const string &username)
+/home/bozhidar/Desktop/Travellers/readFile.h:78: warning: The following parameters of rowOfUsername(const matrix &mat, const string &username) are not documented:
   parameter 'mat'
   parameter 'username'
-Generating caller graph for function rowOfUsername
 Generating page documentation...
 Generating group documentation...
 Generating class documentation...
 Generating docs for compound Date...
 Generating caller graph for function Date::Day
+/home/bozhidar/Desktop/Travellers/date.h:66: warning: argument 'Date' of command @param is not found in the argument list of Date::isDateValid(const Date &date)
+/home/bozhidar/Desktop/Travellers/date.h:71: warning: The following parameters of Date::isDateValid(const Date &date) are not documented:
+  parameter 'date'
+Generating call graph for function Date::isDateValid
+Generating caller graph for function Date::isDateValid
 Generating caller graph for function Date::Month
 Generating caller graph for function Date::Year
 Generating docs for compound Destination...
@@ -232,6 +241,6 @@ Generating example index...
 finalizing index lists...
 writing tag file...
 Running dot...
-lookup cache used 148/65536 hits=871 misses=153
+lookup cache used 157/65536 hits=903 misses=162
 finished...
 *** Doxygen has finished
