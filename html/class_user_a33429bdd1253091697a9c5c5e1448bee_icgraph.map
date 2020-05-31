@@ -1,6 +1,8 @@
 <map id="User::getPassword" name="User::getPassword">
-<area shape="rect" id="node2" href="$application_8h.html#adf656ece2632a1013b0e510fbb0ac529" title="userToFile" alt="" coords="188,5,271,32"/>
-<area shape="rect" id="node3" href="$menus_8h.html#a714c83c6898e18f73621626df5bb59c3" title="registration" alt="" coords="319,5,405,32"/>
-<area shape="rect" id="node4" href="$menus_8h.html#a2a0e843767aeea4f433a28b9c54f573a" title="menu" alt="" coords="453,5,508,32"/>
-<area shape="rect" id="node5" href="$menus_8h.html#a1f5d479249cf7405f3ef126b1e042d2b" title="menuLogged" alt="" coords="556,5,652,32"/>
+<area shape="rect" id="node2" href="$application_8h.html#adf656ece2632a1013b0e510fbb0ac529" title="userToFile" alt="" coords="188,96,271,123"/>
+<area shape="rect" id="node6" href="$menus_8h.html#af76b7b46958dabf5e4ee9a492f0ec3fa" title="login" alt="" coords="700,100,749,127"/>
+<area shape="rect" id="node3" href="$menus_8h.html#a714c83c6898e18f73621626df5bb59c3" title="registration" alt="" coords="319,68,405,95"/>
+<area shape="rect" id="node4" href="$menus_8h.html#a2a0e843767aeea4f433a28b9c54f573a" title="menu" alt="" coords="453,68,508,95"/>
+<area shape="rect" id="node5" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="579,5,629,32"/>
+<area shape="rect" id="node7" href="$menus_8h.html#a1f5d479249cf7405f3ef126b1e042d2b" title="menuLogged" alt="" coords="556,131,652,157"/>
 </map>

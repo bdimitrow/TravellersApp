@@ -168,14 +168,19 @@ Date addEndDate() {
 }
 
 unsigned addGrade() {
-    cout << "Insert rating between 1 and 5: ";
     unsigned grade;
-    cin >> grade;
-    while (grade < 1 || grade > 5) {
-        cout << "Invalid grade. Please reenter: ";
-        cin >> grade;
-    }
-    return grade;
+    cout << "Insert rating between 1 and 5: ";
+    do {
+        if (!(cin >> grade)) {
+            cout << "Invalid choice! Please enter a whole number: ";
+            cin.clear();                            // reset any error flags
+            cin.ignore(10000, '\n');       // ignore any characters in the input buffer
+        } else if (grade >= 1 && grade <= 5) {
+            return grade;
+        } else {
+            cout << "Invalid range! Please reenter: ";
+        }
+    } while (grade < 1 || grade > 5);
 }
 
 string addComment() {
@@ -311,6 +316,7 @@ void copyFileToAnotherFile() {
     }
 }
 
+// used when adding a friend to add it in the file
 void stringToUsersDB(const matrix &usersFile, const User &loggedInUser, const string &friendToBeAdded) {
     fstream file;
     file.open("users.db", ios::in | ios::out | ios::app);

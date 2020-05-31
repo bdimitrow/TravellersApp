@@ -141,8 +141,8 @@ matrix fileToMatrix(const string &filename) {
 }
 
 void displayMatrix(const matrix &mat) {
-    for (vec row : mat) {
-        for (string s : row)
+    for (const vec& row : mat) {
+        for (const string& s : row)
             cout << setw(20) << left << s << " ";
         cout << endl;
     }

@@ -1,11 +1,8 @@
 var searchData=
 [
-  ['setcomment',['setComment',['../class_destination.html#a08199ade6e0bf7488d796d85dec8cfd9',1,'Destination']]],
-  ['setdestination',['setDestination',['../class_destination.html#a9cafaaf83be9ea548401caf2a2c4d839',1,'Destination']]],
-  ['setemail',['setEmail',['../class_user.html#a79486f90c900c5dfc272f0ad9a204c95',1,'User']]],
-  ['setfromdate',['setFromDate',['../class_destination.html#a6fc539f51a5fd6844fef290facc4e887',1,'Destination']]],
-  ['setgrade',['setGrade',['../class_destination.html#ac7f1c3be54b5223aa1e9ad4523ef6976',1,'Destination']]],
-  ['setpassword',['setPassword',['../class_user.html#ab8d3c965902b378fc3472b388a97d56d',1,'User']]],
-  ['settodate',['setToDate',['../class_destination.html#afec038764d48882a9005cea50e418219',1,'Destination']]],
-  ['setusername',['setUsername',['../class_user.html#a453323a9766e086f1967a96d79fc8b76',1,'User']]]
+  ['operator_28_29',['operator()',['../class_date.html#a425bd02efac05e6b65a8b7456317822f',1,'Date']]],
+  ['operator_3c',['operator&lt;',['../class_date.html#a08c0538091d061550b90787d9313ca61',1,'Date']]],
+  ['operator_3c_3c',['operator&lt;&lt;',['../class_date.html#affced1a8a8f9f0e9dd009af0a22dfe33',1,'Date::operator&lt;&lt;()'],['../class_user.html#acf1038a8d320684dc3fbdd5e4308e062',1,'User::operator&lt;&lt;()'],['../date_8cpp.html#affced1a8a8f9f0e9dd009af0a22dfe33',1,'operator&lt;&lt;(ostream &amp;fout, const Date &amp;dt):&#160;date.cpp'],['../user_8cpp.html#acf1038a8d320684dc3fbdd5e4308e062',1,'operator&lt;&lt;(ostream &amp;out, const User &amp;user):&#160;user.cpp']]],
+  ['operator_3d',['operator=',['../class_user.html#a00fe82353b0ee8cf6abb1088d36e125b',1,'User']]],
+  ['operator_3e_3e',['operator&gt;&gt;',['../class_user.html#aae624f64cdd1af3b59c2443cffa82494',1,'User::operator&gt;&gt;()'],['../user_8cpp.html#aae624f64cdd1af3b59c2443cffa82494',1,'operator&gt;&gt;():&#160;user.cpp']]]
 ];

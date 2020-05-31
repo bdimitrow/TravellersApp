@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['readfile_2eh',['readFile.h',['../read_file_8h.html',1,'']]],
-  ['registration',['registration',['../menus_8h.html#a714c83c6898e18f73621626df5bb59c3',1,'menus.h']]],
-  ['rowofusername',['rowOfUsername',['../read_file_8h.html#a331b6af63862d2ae3ad6abf71b0de381',1,'readFile.h']]]
+  ['numberofrowsinfile',['numberOfRowsInFile',['../read_file_8h.html#a4fc77629ec6e6556b5dc4dd8efa6f36c',1,'readFile.h']]],
+  ['numdestinations',['numDestinations',['../class_user.html#a86e12420fb10daa28b68ee2f0c3caa00',1,'User']]]
 ];

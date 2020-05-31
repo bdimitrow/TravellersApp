@@ -1,6 +1,10 @@
 <map id="addFriend" name="addFriend">
-<area shape="rect" id="node2" href="$read_file_8h.html#a4d05aa34d631728e8dabfe1d9ddbdd69" title="fileToMatrix" alt="" coords="155,5,245,32"/>
-<area shape="rect" id="node3" href="$read_file_8h.html#ab6bce9fa2a7660f6f3ddcef5a4f7b906" title="isExisting" alt="" coords="161,56,239,83"/>
-<area shape="rect" id="node4" href="$class_user.html#a82e034043e04b2d750c654c8b2f2ce78" title="User::getUsername" alt="" coords="132,107,268,133"/>
-<area shape="rect" id="node5" href="$read_file_8h.html#a6b426552d2ff56784a167e799da87688" title="isAlreadyFriend" alt="" coords="144,157,256,184"/>
+<area shape="rect" id="node2" href="$read_file_8h.html#a4d05aa34d631728e8dabfe1d9ddbdd69" title="fileToMatrix" alt="" coords="163,5,253,32"/>
+<area shape="rect" id="node3" href="$read_file_8h.html#ab6bce9fa2a7660f6f3ddcef5a4f7b906" title="isExisting" alt="" coords="169,56,247,83"/>
+<area shape="rect" id="node4" href="$class_user.html#a82e034043e04b2d750c654c8b2f2ce78" title="User::getUsername" alt="" coords="337,120,473,147"/>
+<area shape="rect" id="node5" href="$read_file_8h.html#a6b426552d2ff56784a167e799da87688" title="isAlreadyFriend" alt="" coords="152,157,264,184"/>
+<area shape="rect" id="node6" href="$application_8h.html#a56b247a576ce83fffe54cb75d85f1538" title="stringToUsersDB" alt="" coords="147,208,269,235"/>
+<area shape="rect" id="node9" href="$application_8h.html#a2846723ff3141f7044bf9cfa3514fce9" title="copyFileToAnotherFile" alt="" coords="132,259,284,285"/>
+<area shape="rect" id="node7" href="$read_file_8h.html#a4fc77629ec6e6556b5dc4dd8efa6f36c" title="numberOfRowsInFile" alt="" coords="332,183,477,209"/>
+<area shape="rect" id="node8" href="$read_file_8h.html#a331b6af63862d2ae3ad6abf71b0de381" title="rowOfUsername" alt="" coords="346,233,463,260"/>
 </map>

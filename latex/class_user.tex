@@ -9,6 +9,15 @@ A user class.
 
 {\ttfamily \#include $<$user.\+h$>$}
 
+
+
+Collaboration diagram for User\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=176pt]{class_user__coll__graph}
+\end{center}
+\end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -29,6 +38,19 @@ string \hyperlink{class_user_a82e034043e04b2d750c654c8b2f2ce78}{get\+Username} (
 string \hyperlink{class_user_a33429bdd1253091697a9c5c5e1448bee}{get\+Password} () const
 \item 
 string \hyperlink{class_user_a4c647e583bd964f40f687776a0d185dc}{get\+Email} () const
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{class_user_ad1f3276105af51c570f5434e516ee30f}{username}
+\item 
+string \hyperlink{class_user_ab537b9a55bc7d7fcafcdf8e53d085e67}{password}
+\item 
+string \hyperlink{class_user_a2d678acd22b533660b4b7d8404961f14}{email}
+\item 
+vector$<$ \hyperlink{class_destination}{Destination} $>$ \hyperlink{class_user_ab150b363696aa72f8bec27714961c37e}{destinations} \{\}
+\item 
+int \hyperlink{class_user_a86e12420fb10daa28b68ee2f0c3caa00}{num\+Destinations}
 \end{DoxyCompactItemize}
 \subsection*{Friends}
 \begin{DoxyCompactItemize}
@@ -69,6 +91,13 @@ A copy constructor.
 Getter for email. \begin{DoxyReturn}{Returns}
 string email 
 \end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_user_a4c647e583bd964f40f687776a0d185dc_cgraph}
+\end{center}
+\end{figure}
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -170,7 +199,40 @@ Overloaded operator$<$$<$. \mbox{\Hypertarget{class_user_aae624f64cdd1af3b59c244
 
 Overloaded operator$>$$>$. 
 
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_user_ab150b363696aa72f8bec27714961c37e}\label{class_user_ab150b363696aa72f8bec27714961c37e}} 
+\index{User@{User}!destinations@{destinations}}
+\index{destinations@{destinations}!User@{User}}
+\subsubsection{\texorpdfstring{destinations}{destinations}}
+{\footnotesize\ttfamily vector$<$\hyperlink{class_destination}{Destination}$>$ User\+::destinations \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+Variable for destinations. \mbox{\Hypertarget{class_user_a2d678acd22b533660b4b7d8404961f14}\label{class_user_a2d678acd22b533660b4b7d8404961f14}} 
+\index{User@{User}!email@{email}}
+\index{email@{email}!User@{User}}
+\subsubsection{\texorpdfstring{email}{email}}
+{\footnotesize\ttfamily string User\+::email\hspace{0.3cm}{\ttfamily [private]}}
+
+Variable for email. \mbox{\Hypertarget{class_user_a86e12420fb10daa28b68ee2f0c3caa00}\label{class_user_a86e12420fb10daa28b68ee2f0c3caa00}} 
+\index{User@{User}!num\+Destinations@{num\+Destinations}}
+\index{num\+Destinations@{num\+Destinations}!User@{User}}
+\subsubsection{\texorpdfstring{num\+Destinations}{numDestinations}}
+{\footnotesize\ttfamily int User\+::num\+Destinations\hspace{0.3cm}{\ttfamily [private]}}
+
+Variable for the number of destinations. \mbox{\Hypertarget{class_user_ab537b9a55bc7d7fcafcdf8e53d085e67}\label{class_user_ab537b9a55bc7d7fcafcdf8e53d085e67}} 
+\index{User@{User}!password@{password}}
+\index{password@{password}!User@{User}}
+\subsubsection{\texorpdfstring{password}{password}}
+{\footnotesize\ttfamily string User\+::password\hspace{0.3cm}{\ttfamily [private]}}
+
+Variable for password. \mbox{\Hypertarget{class_user_ad1f3276105af51c570f5434e516ee30f}\label{class_user_ad1f3276105af51c570f5434e516ee30f}} 
+\index{User@{User}!username@{username}}
+\index{username@{username}!User@{User}}
+\subsubsection{\texorpdfstring{username}{username}}
+{\footnotesize\ttfamily string User\+::username\hspace{0.3cm}{\ttfamily [private]}}
+
+Variable for username. 
+
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-user.\+h\item 
-user.\+cpp\end{DoxyCompactItemize}
+\hyperlink{user_8h}{user.\+h}\item 
+\hyperlink{user_8cpp}{user.\+cpp}\end{DoxyCompactItemize}

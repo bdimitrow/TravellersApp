@@ -21,16 +21,12 @@ using namespace std;
  * @param year is an integer
  */
 class Date {
-private:
-    int day;       /**< Variable for day. */
-    int month;     /**< Variable for month */
-    int year;      /**< Variable for year */
-
 public:
 /**
  * A default constructor.
  */
     Date() {}
+
 /**
  * A parametrized constructor.
  */
@@ -40,10 +36,12 @@ public:
  *  Method setting the day.
  */
     [[nodiscard]] int Day() const;
+
 /**
  *  Method setting the month.
  */
     [[nodiscard]] int Month() const;
+
 /**
  *  Method setting the year.
  */
@@ -53,14 +51,17 @@ public:
  */
     // compares two dates
     bool operator<(const Date &) const;
+
 /**
  * Overloaded operator(). It is setting new date(used in date validation).
  */
     Date operator()(int y, int m, int d);
+
 /**
  * Overloaded operator<<.
  */
     friend ostream &operator<<(ostream &fout, const Date &dt);
+
 /**
  * @fn bool isDateValid(const Date &)
  * This function accepts an object ot type Date and determines whether the date is valid(2020.13.14 is
@@ -69,6 +70,11 @@ public:
  * @return true or false.
  */
     bool isDateValid(const Date &);
+
+private:
+    int day;       /**< Variable for day. */
+    int month;     /**< Variable for month */
+    int year;      /**< Variable for year */
 };
 
 #endif //PROJECT7_DATE_H

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Traveller&#39;s App: readFile.h File Reference</title>
+<title>Traveller&#39;s app: readFile.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Traveller&#39;s App
+   <div id="projectname">Traveller&#39;s app
    </div>
   </td>
  </tr>
@@ -82,6 +82,7 @@ This graph shows which files directly or indirectly include this file:</div>
 <map name="read_file_8hdep" id="read_file_8hdep">
 <area shape="rect" id="node2" href="application_8h.html" title="application.h" alt="" coords="5,80,100,107"/>
 <area shape="rect" id="node3" href="menus_8h.html" title="menus.h" alt="" coords="59,155,131,181"/>
+<area shape="rect" id="node4" href="main_8cpp.html" title="main.cpp" alt="" coords="58,229,133,256"/>
 </map>
 </div>
 </div>
@@ -89,39 +90,65 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:ac4ba865c2f8f6f90e3c64552279f3d21"><td class="memItemLeft" align="right" valign="top"><a id="ac4ba865c2f8f6f90e3c64552279f3d21"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>vec</b> = vector&lt; string &gt;</td></tr>
+<tr class="memitem:ac4ba865c2f8f6f90e3c64552279f3d21"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="read_file_8h.html#ac4ba865c2f8f6f90e3c64552279f3d21">vec</a> = vector&lt; string &gt;</td></tr>
 <tr class="separator:ac4ba865c2f8f6f90e3c64552279f3d21"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a869e2a5deeb3daa4c82d6bc91cf20d92"><td class="memItemLeft" align="right" valign="top"><a id="a869e2a5deeb3daa4c82d6bc91cf20d92"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>matrix</b> = vector&lt; vec &gt;</td></tr>
+<tr class="memitem:a869e2a5deeb3daa4c82d6bc91cf20d92"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="read_file_8h.html#a869e2a5deeb3daa4c82d6bc91cf20d92">matrix</a> = vector&lt; <a class="el" href="read_file_8h.html#ac4ba865c2f8f6f90e3c64552279f3d21">vec</a> &gt;</td></tr>
 <tr class="separator:a869e2a5deeb3daa4c82d6bc91cf20d92"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a4d05aa34d631728e8dabfe1d9ddbdd69"><td class="memItemLeft" align="right" valign="top">matrix&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="read_file_8h.html#a4d05aa34d631728e8dabfe1d9ddbdd69">fileToMatrix</a> (const string &amp;filename)</td></tr>
+<tr class="memitem:a4d05aa34d631728e8dabfe1d9ddbdd69"><td class="memItemLeft" align="right" valign="top"><a class="el" href="read_file_8h.html#a869e2a5deeb3daa4c82d6bc91cf20d92">matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="read_file_8h.html#a4d05aa34d631728e8dabfe1d9ddbdd69">fileToMatrix</a> (const string &amp;filename)</td></tr>
 <tr class="separator:a4d05aa34d631728e8dabfe1d9ddbdd69"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae04ba1e32f1dfd605e53f54c39b365fd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="read_file_8h.html#ae04ba1e32f1dfd605e53f54c39b365fd">displayMatrix</a> (const matrix &amp;mat)</td></tr>
+<tr class="memitem:ae04ba1e32f1dfd605e53f54c39b365fd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="read_file_8h.html#ae04ba1e32f1dfd605e53f54c39b365fd">displayMatrix</a> (const <a class="el" href="read_file_8h.html#a869e2a5deeb3daa4c82d6bc91cf20d92">matrix</a> &amp;mat)</td></tr>
 <tr class="separator:ae04ba1e32f1dfd605e53f54c39b365fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a71844c343db9878de02bcddae45947dd"><td class="memItemLeft" align="right" valign="top"><a id="a71844c343db9878de02bcddae45947dd"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>usernameMatchesPassword</b> (const matrix &amp;mat, const string &amp;username, const string &amp;password)</td></tr>
+<tr class="memitem:a71844c343db9878de02bcddae45947dd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="read_file_8h.html#a71844c343db9878de02bcddae45947dd">usernameMatchesPassword</a> (const <a class="el" href="read_file_8h.html#a869e2a5deeb3daa4c82d6bc91cf20d92">matrix</a> &amp;mat, const string &amp;username, const string &amp;password)</td></tr>
 <tr class="separator:a71844c343db9878de02bcddae45947dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3c27433c2ddbe1b8010a05a86cd21734"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="read_file_8h.html#a3c27433c2ddbe1b8010a05a86cd21734">averageGradeDestination</a> (const matrix &amp;mat, const string &amp;destination)</td></tr>
+<tr class="memitem:a3c27433c2ddbe1b8010a05a86cd21734"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="read_file_8h.html#a3c27433c2ddbe1b8010a05a86cd21734">averageGradeDestination</a> (const <a class="el" href="read_file_8h.html#a869e2a5deeb3daa4c82d6bc91cf20d92">matrix</a> &amp;mat, const string &amp;destination)</td></tr>
 <tr class="separator:a3c27433c2ddbe1b8010a05a86cd21734"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab6bce9fa2a7660f6f3ddcef5a4f7b906"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="read_file_8h.html#ab6bce9fa2a7660f6f3ddcef5a4f7b906">isExisting</a> (const matrix &amp;mat, const string &amp;check, int col)</td></tr>
+<tr class="memitem:ab6bce9fa2a7660f6f3ddcef5a4f7b906"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="read_file_8h.html#ab6bce9fa2a7660f6f3ddcef5a4f7b906">isExisting</a> (const <a class="el" href="read_file_8h.html#a869e2a5deeb3daa4c82d6bc91cf20d92">matrix</a> &amp;mat, const string &amp;check, int col)</td></tr>
 <tr class="separator:ab6bce9fa2a7660f6f3ddcef5a4f7b906"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a331b6af63862d2ae3ad6abf71b0de381"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="read_file_8h.html#a331b6af63862d2ae3ad6abf71b0de381">rowOfUsername</a> (const matrix &amp;mat, const string &amp;username)</td></tr>
+<tr class="memitem:a331b6af63862d2ae3ad6abf71b0de381"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="read_file_8h.html#a331b6af63862d2ae3ad6abf71b0de381">rowOfUsername</a> (const <a class="el" href="read_file_8h.html#a869e2a5deeb3daa4c82d6bc91cf20d92">matrix</a> &amp;mat, const string &amp;username)</td></tr>
 <tr class="separator:a331b6af63862d2ae3ad6abf71b0de381"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4fc77629ec6e6556b5dc4dd8efa6f36c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="read_file_8h.html#a4fc77629ec6e6556b5dc4dd8efa6f36c">numberOfRowsInFile</a> (const matrix &amp;mat)</td></tr>
+<tr class="memitem:a4fc77629ec6e6556b5dc4dd8efa6f36c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="read_file_8h.html#a4fc77629ec6e6556b5dc4dd8efa6f36c">numberOfRowsInFile</a> (const <a class="el" href="read_file_8h.html#a869e2a5deeb3daa4c82d6bc91cf20d92">matrix</a> &amp;mat)</td></tr>
 <tr class="separator:a4fc77629ec6e6556b5dc4dd8efa6f36c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac9d4f6924d2d252073454cbe2dfd9895"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="read_file_8h.html#ac9d4f6924d2d252073454cbe2dfd9895">displayFriends</a> (const matrix &amp;mat, const string &amp;username)</td></tr>
+<tr class="memitem:ac9d4f6924d2d252073454cbe2dfd9895"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="read_file_8h.html#ac9d4f6924d2d252073454cbe2dfd9895">displayFriends</a> (const <a class="el" href="read_file_8h.html#a869e2a5deeb3daa4c82d6bc91cf20d92">matrix</a> &amp;mat, const string &amp;username)</td></tr>
 <tr class="separator:ac9d4f6924d2d252073454cbe2dfd9895"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6b426552d2ff56784a167e799da87688"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="read_file_8h.html#a6b426552d2ff56784a167e799da87688">isAlreadyFriend</a> (const matrix &amp;mat, const string &amp;friendToBeAdded, const string &amp;username)</td></tr>
+<tr class="memitem:a6b426552d2ff56784a167e799da87688"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="read_file_8h.html#a6b426552d2ff56784a167e799da87688">isAlreadyFriend</a> (const <a class="el" href="read_file_8h.html#a869e2a5deeb3daa4c82d6bc91cf20d92">matrix</a> &amp;mat, const string &amp;friendToBeAdded, const string &amp;username)</td></tr>
 <tr class="separator:a6b426552d2ff56784a167e799da87688"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af9f2aec2ef105eff0f596a9b91ae98b3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="read_file_8h.html#af9f2aec2ef105eff0f596a9b91ae98b3">displayFriendsDestionations</a> (const string &amp;loggedInUsername)</td></tr>
 <tr class="separator:af9f2aec2ef105eff0f596a9b91ae98b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c8596d363a098e38a811efab756aa5b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="read_file_8h.html#a3c8596d363a098e38a811efab756aa5b">displayInfoForParticularDestination</a> ()</td></tr>
 <tr class="separator:a3c8596d363a098e38a811efab756aa5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="a869e2a5deeb3daa4c82d6bc91cf20d92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a869e2a5deeb3daa4c82d6bc91cf20d92">&#9670;&nbsp;</a></span>matrix</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="read_file_8h.html#a869e2a5deeb3daa4c82d6bc91cf20d92">matrix</a> =  vector&lt;<a class="el" href="read_file_8h.html#ac4ba865c2f8f6f90e3c64552279f3d21">vec</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac4ba865c2f8f6f90e3c64552279f3d21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4ba865c2f8f6f90e3c64552279f3d21">&#9670;&nbsp;</a></span>vec</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="read_file_8h.html#ac4ba865c2f8f6f90e3c64552279f3d21">vec</a> =  vector&lt;string&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a3c27433c2ddbe1b8010a05a86cd21734"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3c27433c2ddbe1b8010a05a86cd21734">&#9670;&nbsp;</a></span>averageGradeDestination()</h2>
@@ -132,7 +159,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>usernameMatchesPasswo
         <tr>
           <td class="memname">void averageGradeDestination </td>
           <td>(</td>
-          <td class="paramtype">const matrix &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="read_file_8h.html#a869e2a5deeb3daa4c82d6bc91cf20d92">matrix</a> &amp;&#160;</td>
           <td class="paramname"><em>mat</em>, </td>
         </tr>
         <tr>
@@ -160,7 +187,11 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="read_file_8h_a3c27433c2ddbe1b8010a05a86cd21734_icgraph.png" border="0" usemap="#read_file_8h_a3c27433c2ddbe1b8010a05a86cd21734_icgraph" alt=""/></div>
 <map name="read_file_8h_a3c27433c2ddbe1b8010a05a86cd21734_icgraph" id="read_file_8h_a3c27433c2ddbe1b8010a05a86cd21734_icgraph">
-<area shape="rect" id="node2" href="menus_8h.html#a1f5d479249cf7405f3ef126b1e042d2b" title="menuLogged" alt="" coords="223,5,319,32"/>
+<area shape="rect" id="node2" href="menus_8h.html#a1f5d479249cf7405f3ef126b1e042d2b" title="menuLogged" alt="" coords="223,81,319,108"/>
+<area shape="rect" id="node3" href="menus_8h.html#af76b7b46958dabf5e4ee9a492f0ec3fa" title="login" alt="" coords="367,56,416,83"/>
+<area shape="rect" id="node4" href="menus_8h.html#a2a0e843767aeea4f433a28b9c54f573a" title="menu" alt="" coords="464,56,519,83"/>
+<area shape="rect" id="node5" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="585,5,635,32"/>
+<area shape="rect" id="node6" href="menus_8h.html#a714c83c6898e18f73621626df5bb59c3" title="registration" alt="" coords="567,56,653,83"/>
 </map>
 </div>
 
@@ -175,7 +206,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">void displayFriends </td>
           <td>(</td>
-          <td class="paramtype">const matrix &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="read_file_8h.html#a869e2a5deeb3daa4c82d6bc91cf20d92">matrix</a> &amp;&#160;</td>
           <td class="paramname"><em>mat</em>, </td>
         </tr>
         <tr>
@@ -203,7 +234,11 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="read_file_8h_ac9d4f6924d2d252073454cbe2dfd9895_icgraph.png" border="0" usemap="#read_file_8h_ac9d4f6924d2d252073454cbe2dfd9895_icgraph" alt=""/></div>
 <map name="read_file_8h_ac9d4f6924d2d252073454cbe2dfd9895_icgraph" id="read_file_8h_ac9d4f6924d2d252073454cbe2dfd9895_icgraph">
-<area shape="rect" id="node2" href="menus_8h.html#a1f5d479249cf7405f3ef126b1e042d2b" title="menuLogged" alt="" coords="160,5,256,32"/>
+<area shape="rect" id="node2" href="menus_8h.html#a1f5d479249cf7405f3ef126b1e042d2b" title="menuLogged" alt="" coords="160,81,256,108"/>
+<area shape="rect" id="node3" href="menus_8h.html#af76b7b46958dabf5e4ee9a492f0ec3fa" title="login" alt="" coords="304,56,353,83"/>
+<area shape="rect" id="node4" href="menus_8h.html#a2a0e843767aeea4f433a28b9c54f573a" title="menu" alt="" coords="401,56,456,83"/>
+<area shape="rect" id="node5" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="522,5,573,32"/>
+<area shape="rect" id="node6" href="menus_8h.html#a714c83c6898e18f73621626df5bb59c3" title="registration" alt="" coords="504,56,591,83"/>
 </map>
 </div>
 
@@ -243,7 +278,11 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="read_file_8h_af9f2aec2ef105eff0f596a9b91ae98b3_icgraph.png" border="0" usemap="#read_file_8h_af9f2aec2ef105eff0f596a9b91ae98b3_icgraph" alt=""/></div>
 <map name="read_file_8h_af9f2aec2ef105eff0f596a9b91ae98b3_icgraph" id="read_file_8h_af9f2aec2ef105eff0f596a9b91ae98b3_icgraph">
-<area shape="rect" id="node2" href="menus_8h.html#a1f5d479249cf7405f3ef126b1e042d2b" title="menuLogged" alt="" coords="240,5,336,32"/>
+<area shape="rect" id="node2" href="menus_8h.html#a1f5d479249cf7405f3ef126b1e042d2b" title="menuLogged" alt="" coords="240,81,336,108"/>
+<area shape="rect" id="node3" href="menus_8h.html#af76b7b46958dabf5e4ee9a492f0ec3fa" title="login" alt="" coords="384,56,433,83"/>
+<area shape="rect" id="node4" href="menus_8h.html#a2a0e843767aeea4f433a28b9c54f573a" title="menu" alt="" coords="481,56,536,83"/>
+<area shape="rect" id="node5" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="602,5,653,32"/>
+<area shape="rect" id="node6" href="menus_8h.html#a714c83c6898e18f73621626df5bb59c3" title="registration" alt="" coords="584,56,671,83"/>
 </map>
 </div>
 
@@ -278,7 +317,11 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="read_file_8h_a3c8596d363a098e38a811efab756aa5b_icgraph.png" border="0" usemap="#read_file_8h_a3c8596d363a098e38a811efab756aa5b_icgraph" alt=""/></div>
 <map name="read_file_8h_a3c8596d363a098e38a811efab756aa5b_icgraph" id="read_file_8h_a3c8596d363a098e38a811efab756aa5b_icgraph">
-<area shape="rect" id="node2" href="menus_8h.html#a1f5d479249cf7405f3ef126b1e042d2b" title="menuLogged" alt="" coords="212,13,308,39"/>
+<area shape="rect" id="node2" href="menus_8h.html#a1f5d479249cf7405f3ef126b1e042d2b" title="menuLogged" alt="" coords="212,81,308,108"/>
+<area shape="rect" id="node3" href="menus_8h.html#af76b7b46958dabf5e4ee9a492f0ec3fa" title="login" alt="" coords="356,56,405,83"/>
+<area shape="rect" id="node4" href="menus_8h.html#a2a0e843767aeea4f433a28b9c54f573a" title="menu" alt="" coords="453,56,508,83"/>
+<area shape="rect" id="node5" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="574,5,625,32"/>
+<area shape="rect" id="node6" href="menus_8h.html#a714c83c6898e18f73621626df5bb59c3" title="registration" alt="" coords="556,56,643,83"/>
 </map>
 </div>
 
@@ -293,7 +336,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">void displayMatrix </td>
           <td>(</td>
-          <td class="paramtype">const matrix &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="read_file_8h.html#a869e2a5deeb3daa4c82d6bc91cf20d92">matrix</a> &amp;&#160;</td>
           <td class="paramname"><em>mat</em></td><td>)</td>
           <td></td>
         </tr>
@@ -310,7 +353,11 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="read_file_8h_ae04ba1e32f1dfd605e53f54c39b365fd_icgraph.png" border="0" usemap="#read_file_8h_ae04ba1e32f1dfd605e53f54c39b365fd_icgraph" alt=""/></div>
 <map name="read_file_8h_ae04ba1e32f1dfd605e53f54c39b365fd_icgraph" id="read_file_8h_ae04ba1e32f1dfd605e53f54c39b365fd_icgraph">
-<area shape="rect" id="node2" href="menus_8h.html#a1f5d479249cf7405f3ef126b1e042d2b" title="menuLogged" alt="" coords="152,5,248,32"/>
+<area shape="rect" id="node2" href="menus_8h.html#a1f5d479249cf7405f3ef126b1e042d2b" title="menuLogged" alt="" coords="152,81,248,108"/>
+<area shape="rect" id="node3" href="menus_8h.html#af76b7b46958dabf5e4ee9a492f0ec3fa" title="login" alt="" coords="296,56,345,83"/>
+<area shape="rect" id="node4" href="menus_8h.html#a2a0e843767aeea4f433a28b9c54f573a" title="menu" alt="" coords="393,56,448,83"/>
+<area shape="rect" id="node5" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="514,5,565,32"/>
+<area shape="rect" id="node6" href="menus_8h.html#a714c83c6898e18f73621626df5bb59c3" title="registration" alt="" coords="496,56,583,83"/>
 </map>
 </div>
 
@@ -323,7 +370,7 @@ Here is the caller graph for this function:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">matrix fileToMatrix </td>
+          <td class="memname"><a class="el" href="read_file_8h.html#a869e2a5deeb3daa4c82d6bc91cf20d92">matrix</a> fileToMatrix </td>
           <td>(</td>
           <td class="paramtype">const string &amp;&#160;</td>
           <td class="paramname"><em>filename</em></td><td>)</td>
@@ -343,13 +390,14 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="read_file_8h_a4d05aa34d631728e8dabfe1d9ddbdd69_icgraph.png" border="0" usemap="#read_file_8h_a4d05aa34d631728e8dabfe1d9ddbdd69_icgraph" alt=""/></div>
 <map name="read_file_8h_a4d05aa34d631728e8dabfe1d9ddbdd69_icgraph" id="read_file_8h_a4d05aa34d631728e8dabfe1d9ddbdd69_icgraph">
-<area shape="rect" id="node2" href="application_8h.html#a92aba65fab778922f928e9d9bf6475d6" title="addFriend" alt="" coords="405,5,483,32"/>
-<area shape="rect" id="node3" href="menus_8h.html#a1f5d479249cf7405f3ef126b1e042d2b" title="menuLogged" alt="" coords="585,107,681,133"/>
-<area shape="rect" id="node4" href="menus_8h.html#a714c83c6898e18f73621626df5bb59c3" title="registration" alt="" coords="180,107,267,133"/>
-<area shape="rect" id="node6" href="menus_8h.html#af76b7b46958dabf5e4ee9a492f0ec3fa" title="login" alt="" coords="199,157,248,184"/>
-<area shape="rect" id="node7" href="read_file_8h.html#af9f2aec2ef105eff0f596a9b91ae98b3" title="displayFriendsDestionations" alt="" coords="351,172,537,199"/>
-<area shape="rect" id="node8" href="read_file_8h.html#a3c8596d363a098e38a811efab756aa5b" title="displayInfoForParticular\lDestination" alt="" coords="144,259,303,301"/>
-<area shape="rect" id="node5" href="menus_8h.html#a2a0e843767aeea4f433a28b9c54f573a" title="menu" alt="" coords="417,107,471,133"/>
+<area shape="rect" id="node2" href="application_8h.html#a92aba65fab778922f928e9d9bf6475d6" title="addFriend" alt="" coords="198,5,277,32"/>
+<area shape="rect" id="node3" href="menus_8h.html#a1f5d479249cf7405f3ef126b1e042d2b" title="menuLogged" alt="" coords="379,136,475,163"/>
+<area shape="rect" id="node4" href="menus_8h.html#af76b7b46958dabf5e4ee9a492f0ec3fa" title="login" alt="" coords="523,207,572,233"/>
+<area shape="rect" id="node7" href="menus_8h.html#a714c83c6898e18f73621626df5bb59c3" title="registration" alt="" coords="723,232,809,259"/>
+<area shape="rect" id="node8" href="read_file_8h.html#af9f2aec2ef105eff0f596a9b91ae98b3" title="displayFriendsDestionations" alt="" coords="144,107,331,133"/>
+<area shape="rect" id="node9" href="read_file_8h.html#a3c8596d363a098e38a811efab756aa5b" title="displayInfoForParticular\lDestination" alt="" coords="158,158,317,199"/>
+<area shape="rect" id="node5" href="menus_8h.html#a2a0e843767aeea4f433a28b9c54f573a" title="menu" alt="" coords="620,207,675,233"/>
+<area shape="rect" id="node6" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="741,181,791,208"/>
 </map>
 </div>
 
@@ -364,7 +412,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">bool isAlreadyFriend </td>
           <td>(</td>
-          <td class="paramtype">const matrix &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="read_file_8h.html#a869e2a5deeb3daa4c82d6bc91cf20d92">matrix</a> &amp;&#160;</td>
           <td class="paramname"><em>mat</em>, </td>
         </tr>
         <tr>
@@ -400,8 +448,12 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="read_file_8h_a6b426552d2ff56784a167e799da87688_icgraph.png" border="0" usemap="#read_file_8h_a6b426552d2ff56784a167e799da87688_icgraph" alt=""/></div>
 <map name="read_file_8h_a6b426552d2ff56784a167e799da87688_icgraph" id="read_file_8h_a6b426552d2ff56784a167e799da87688_icgraph">
-<area shape="rect" id="node2" href="application_8h.html#a92aba65fab778922f928e9d9bf6475d6" title="addFriend" alt="" coords="165,5,244,32"/>
-<area shape="rect" id="node3" href="menus_8h.html#a1f5d479249cf7405f3ef126b1e042d2b" title="menuLogged" alt="" coords="292,5,388,32"/>
+<area shape="rect" id="node2" href="application_8h.html#a92aba65fab778922f928e9d9bf6475d6" title="addFriend" alt="" coords="165,81,244,108"/>
+<area shape="rect" id="node3" href="menus_8h.html#a1f5d479249cf7405f3ef126b1e042d2b" title="menuLogged" alt="" coords="292,81,388,108"/>
+<area shape="rect" id="node4" href="menus_8h.html#af76b7b46958dabf5e4ee9a492f0ec3fa" title="login" alt="" coords="436,56,485,83"/>
+<area shape="rect" id="node5" href="menus_8h.html#a2a0e843767aeea4f433a28b9c54f573a" title="menu" alt="" coords="533,56,588,83"/>
+<area shape="rect" id="node6" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="654,5,705,32"/>
+<area shape="rect" id="node7" href="menus_8h.html#a714c83c6898e18f73621626df5bb59c3" title="registration" alt="" coords="636,56,723,83"/>
 </map>
 </div>
 
@@ -416,7 +468,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">bool isExisting </td>
           <td>(</td>
-          <td class="paramtype">const matrix &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="read_file_8h.html#a869e2a5deeb3daa4c82d6bc91cf20d92">matrix</a> &amp;&#160;</td>
           <td class="paramname"><em>mat</em>, </td>
         </tr>
         <tr>
@@ -452,12 +504,13 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="read_file_8h_ab6bce9fa2a7660f6f3ddcef5a4f7b906_icgraph.png" border="0" usemap="#read_file_8h_ab6bce9fa2a7660f6f3ddcef5a4f7b906_icgraph" alt=""/></div>
 <map name="read_file_8h_ab6bce9fa2a7660f6f3ddcef5a4f7b906_icgraph" id="read_file_8h_ab6bce9fa2a7660f6f3ddcef5a4f7b906_icgraph">
-<area shape="rect" id="node2" href="application_8h.html#a92aba65fab778922f928e9d9bf6475d6" title="addFriend" alt="" coords="307,5,385,32"/>
-<area shape="rect" id="node4" href="menus_8h.html#a714c83c6898e18f73621626df5bb59c3" title="registration" alt="" coords="132,56,219,83"/>
-<area shape="rect" id="node6" href="menus_8h.html#af76b7b46958dabf5e4ee9a492f0ec3fa" title="login" alt="" coords="151,107,200,133"/>
-<area shape="rect" id="node7" href="read_file_8h.html#a3c8596d363a098e38a811efab756aa5b" title="displayInfoForParticular\lDestination" alt="" coords="267,129,425,170"/>
-<area shape="rect" id="node3" href="menus_8h.html#a1f5d479249cf7405f3ef126b1e042d2b" title="menuLogged" alt="" coords="473,56,569,83"/>
-<area shape="rect" id="node5" href="menus_8h.html#a2a0e843767aeea4f433a28b9c54f573a" title="menu" alt="" coords="319,56,373,83"/>
+<area shape="rect" id="node2" href="application_8h.html#a92aba65fab778922f928e9d9bf6475d6" title="addFriend" alt="" coords="172,5,251,32"/>
+<area shape="rect" id="node4" href="menus_8h.html#af76b7b46958dabf5e4ee9a492f0ec3fa" title="login" alt="" coords="483,119,532,145"/>
+<area shape="rect" id="node7" href="menus_8h.html#a714c83c6898e18f73621626df5bb59c3" title="registration" alt="" coords="683,148,769,175"/>
+<area shape="rect" id="node8" href="read_file_8h.html#a3c8596d363a098e38a811efab756aa5b" title="displayInfoForParticular\lDestination" alt="" coords="132,57,291,98"/>
+<area shape="rect" id="node3" href="menus_8h.html#a1f5d479249cf7405f3ef126b1e042d2b" title="menuLogged" alt="" coords="339,65,435,92"/>
+<area shape="rect" id="node5" href="menus_8h.html#a2a0e843767aeea4f433a28b9c54f573a" title="menu" alt="" coords="580,119,635,145"/>
+<area shape="rect" id="node6" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="701,97,751,124"/>
 </map>
 </div>
 
@@ -472,7 +525,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">int numberOfRowsInFile </td>
           <td>(</td>
-          <td class="paramtype">const matrix &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="read_file_8h.html#a869e2a5deeb3daa4c82d6bc91cf20d92">matrix</a> &amp;&#160;</td>
           <td class="paramname"><em>mat</em></td><td>)</td>
           <td></td>
         </tr>
@@ -485,6 +538,20 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>int(number of rows in the file) </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="read_file_8h_a4fc77629ec6e6556b5dc4dd8efa6f36c_icgraph.png" border="0" usemap="#read_file_8h_a4fc77629ec6e6556b5dc4dd8efa6f36c_icgraph" alt=""/></div>
+<map name="read_file_8h_a4fc77629ec6e6556b5dc4dd8efa6f36c_icgraph" id="read_file_8h_a4fc77629ec6e6556b5dc4dd8efa6f36c_icgraph">
+<area shape="rect" id="node2" href="application_8h.html#a56b247a576ce83fffe54cb75d85f1538" title="stringToUsersDB" alt="" coords="199,81,321,108"/>
+<area shape="rect" id="node3" href="application_8h.html#a92aba65fab778922f928e9d9bf6475d6" title="addFriend" alt="" coords="369,81,448,108"/>
+<area shape="rect" id="node4" href="menus_8h.html#a1f5d479249cf7405f3ef126b1e042d2b" title="menuLogged" alt="" coords="496,81,592,108"/>
+<area shape="rect" id="node5" href="menus_8h.html#af76b7b46958dabf5e4ee9a492f0ec3fa" title="login" alt="" coords="640,56,689,83"/>
+<area shape="rect" id="node6" href="menus_8h.html#a2a0e843767aeea4f433a28b9c54f573a" title="menu" alt="" coords="737,56,792,83"/>
+<area shape="rect" id="node7" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="858,5,909,32"/>
+<area shape="rect" id="node8" href="menus_8h.html#a714c83c6898e18f73621626df5bb59c3" title="registration" alt="" coords="840,56,927,83"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -497,7 +564,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">int rowOfUsername </td>
           <td>(</td>
-          <td class="paramtype">const matrix &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="read_file_8h.html#a869e2a5deeb3daa4c82d6bc91cf20d92">matrix</a> &amp;&#160;</td>
           <td class="paramname"><em>mat</em>, </td>
         </tr>
         <tr>
@@ -521,6 +588,66 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>int(on which row in the file is the username) </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="read_file_8h_a331b6af63862d2ae3ad6abf71b0de381_icgraph.png" border="0" usemap="#read_file_8h_a331b6af63862d2ae3ad6abf71b0de381_icgraph" alt=""/></div>
+<map name="read_file_8h_a331b6af63862d2ae3ad6abf71b0de381_icgraph" id="read_file_8h_a331b6af63862d2ae3ad6abf71b0de381_icgraph">
+<area shape="rect" id="node2" href="application_8h.html#a56b247a576ce83fffe54cb75d85f1538" title="stringToUsersDB" alt="" coords="171,81,293,108"/>
+<area shape="rect" id="node3" href="application_8h.html#a92aba65fab778922f928e9d9bf6475d6" title="addFriend" alt="" coords="341,81,420,108"/>
+<area shape="rect" id="node4" href="menus_8h.html#a1f5d479249cf7405f3ef126b1e042d2b" title="menuLogged" alt="" coords="468,81,564,108"/>
+<area shape="rect" id="node5" href="menus_8h.html#af76b7b46958dabf5e4ee9a492f0ec3fa" title="login" alt="" coords="612,56,661,83"/>
+<area shape="rect" id="node6" href="menus_8h.html#a2a0e843767aeea4f433a28b9c54f573a" title="menu" alt="" coords="709,56,764,83"/>
+<area shape="rect" id="node7" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="830,5,881,32"/>
+<area shape="rect" id="node8" href="menus_8h.html#a714c83c6898e18f73621626df5bb59c3" title="registration" alt="" coords="812,56,899,83"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a71844c343db9878de02bcddae45947dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71844c343db9878de02bcddae45947dd">&#9670;&nbsp;</a></span>usernameMatchesPassword()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool usernameMatchesPassword </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="read_file_8h.html#a869e2a5deeb3daa4c82d6bc91cf20d92">matrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>mat</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>password</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="read_file_8h_a71844c343db9878de02bcddae45947dd_icgraph.png" border="0" usemap="#read_file_8h_a71844c343db9878de02bcddae45947dd_icgraph" alt=""/></div>
+<map name="read_file_8h_a71844c343db9878de02bcddae45947dd_icgraph" id="read_file_8h_a71844c343db9878de02bcddae45947dd_icgraph">
+<area shape="rect" id="node2" href="menus_8h.html#af76b7b46958dabf5e4ee9a492f0ec3fa" title="login" alt="" coords="240,56,289,83"/>
+<area shape="rect" id="node3" href="menus_8h.html#a2a0e843767aeea4f433a28b9c54f573a" title="menu" alt="" coords="337,56,392,83"/>
+<area shape="rect" id="node4" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="463,5,513,32"/>
+<area shape="rect" id="node5" href="menus_8h.html#a714c83c6898e18f73621626df5bb59c3" title="registration" alt="" coords="445,56,531,83"/>
+<area shape="rect" id="node6" href="menus_8h.html#a1f5d479249cf7405f3ef126b1e042d2b" title="menuLogged" alt="" coords="440,107,536,133"/>
+</map>
+</div>
 
 </div>
 </div>

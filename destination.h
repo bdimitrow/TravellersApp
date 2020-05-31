@@ -102,12 +102,12 @@ public:
     Date getToDate() const { return to; }
 
 private:
-    string destination;
-    unsigned grade;
-    string comment;
-    vector<string> photos;
-    Date from;
-    Date to;
+    string destination;         /**< Variable for destination(location). */
+    Date from;                  /**< Variable for start date. */
+    Date to;                    /**< Variable for end date. */
+    unsigned grade;             /**< Variable for grade. */
+    string comment;             /**< Variable for comment. */
+    vector<string> photos;      /**< Variable for photos. */
 };
 
 #endif //PROJECT7_DESTINATION_H

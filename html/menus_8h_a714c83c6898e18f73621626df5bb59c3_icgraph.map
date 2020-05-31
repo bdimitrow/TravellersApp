@@ -1,4 +1,6 @@
 <map id="registration" name="registration">
-<area shape="rect" id="node2" href="$menus_8h.html#a2a0e843767aeea4f433a28b9c54f573a" title="menu" alt="" coords="140,5,195,32"/>
-<area shape="rect" id="node3" href="$menus_8h.html#a1f5d479249cf7405f3ef126b1e042d2b" title="menuLogged" alt="" coords="243,5,339,32"/>
+<area shape="rect" id="node2" href="$menus_8h.html#a2a0e843767aeea4f433a28b9c54f573a" title="menu" alt="" coords="140,68,195,95"/>
+<area shape="rect" id="node3" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="265,5,316,32"/>
+<area shape="rect" id="node4" href="$menus_8h.html#af76b7b46958dabf5e4ee9a492f0ec3fa" title="login" alt="" coords="387,68,436,95"/>
+<area shape="rect" id="node5" href="$menus_8h.html#a1f5d479249cf7405f3ef126b1e042d2b" title="menuLogged" alt="" coords="243,131,339,157"/>
 </map>

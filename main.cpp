@@ -1,10 +1,5 @@
 #include <iostream>
-#include "application.h"
-#include "user.h"
-#include "date.h"
-#include "readFile.h"
 #include "menus.h"
-#include <fstream>
 
 int main() {
     cout << "Welcome to Traveller's Аpp! " << endl;
@@ -16,7 +11,7 @@ int main() {
 /** \mainpage About Project
  *
  *   \section First Project's aim
- *    The air of this project is to create an application to save information for different trips.
+ *    The aim of this project is to create an application to save information for different trips.
  *   In order to use the application every user should create his own profile by registering[saving his
  *   personal data(username, password and email) to a database]. After registering a personal database
  *   must be created where all trips of the user will be saved. Every trip should have a destination(location),
@@ -77,7 +72,7 @@ int main() {
     Input: bikes<br>
     Output: Successfully added the entered destination!<br>
 
-    The following has been added to the logged in user's database: <br>
+    The following row has been added to the logged in user's database: <br>
     Gorna Malina;2020-2-3;2020-2-5;3;Everything was perfect! However on the way back home we had an accident.;hotel.png bikes.png <br>
 
  */

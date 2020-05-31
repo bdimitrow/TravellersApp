@@ -1,4 +1,8 @@
 <map id="addComment" name="addComment">
-<area shape="rect" id="node2" href="$application_8h.html#acc3ffb5f9c459368ca3ca9815d499af2" title="addDestination" alt="" coords="153,5,263,32"/>
-<area shape="rect" id="node3" href="$menus_8h.html#a1f5d479249cf7405f3ef126b1e042d2b" title="menuLogged" alt="" coords="311,5,407,32"/>
+<area shape="rect" id="node2" href="$application_8h.html#acc3ffb5f9c459368ca3ca9815d499af2" title="addDestination" alt="" coords="153,81,263,108"/>
+<area shape="rect" id="node3" href="$menus_8h.html#a1f5d479249cf7405f3ef126b1e042d2b" title="menuLogged" alt="" coords="311,81,407,108"/>
+<area shape="rect" id="node4" href="$menus_8h.html#af76b7b46958dabf5e4ee9a492f0ec3fa" title="login" alt="" coords="455,56,504,83"/>
+<area shape="rect" id="node5" href="$menus_8h.html#a2a0e843767aeea4f433a28b9c54f573a" title="menu" alt="" coords="552,56,607,83"/>
+<area shape="rect" id="node6" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="673,5,723,32"/>
+<area shape="rect" id="node7" href="$menus_8h.html#a714c83c6898e18f73621626df5bb59c3" title="registration" alt="" coords="655,56,741,83"/>
 </map>

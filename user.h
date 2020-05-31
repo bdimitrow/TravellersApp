@@ -23,7 +23,6 @@ using namespace std;
  * @param password is type string.
  * @param email is type string.
  */
-
 class Destination;
 
 class User {
@@ -87,11 +86,11 @@ public:
     friend istream &operator>>(istream &in, User &user);
 
 private:
-    string username;
-    string password;
-    string email;
-    vector<Destination> destinations{};
-    int numDestinations;
+    string username;                    /**< Variable for username. */
+    string password;                    /**< Variable for password. */
+    string email;                       /**< Variable for email. */
+    vector<Destination> destinations{}; /**< Variable for destinations. */
+    int numDestinations;                /**< Variable for the number of destinations. */
 };
 
 #endif //PROJECT7_USER_H

@@ -1,5 +1,13 @@
 <map id="Date::Year" name="Date::Year">
-<area shape="rect" id="node2" href="$class_date.html#a2d9a87adab3ae18acdb13e027ad1d0aa" title="Date::isDateValid" alt="" coords="139,5,264,32"/>
-<area shape="rect" id="node3" href="$application_8h.html#acc3ffb5f9c459368ca3ca9815d499af2" title="addDestination" alt="" coords="312,5,421,32"/>
-<area shape="rect" id="node4" href="$menus_8h.html#a1f5d479249cf7405f3ef126b1e042d2b" title="menuLogged" alt="" coords="469,5,565,32"/>
+<area shape="rect" id="node2" href="$date_8cpp.html#affced1a8a8f9f0e9dd009af0a22dfe33" title="operator\&lt;\&lt;" alt="" coords="159,80,244,107"/>
+<area shape="rect" id="node11" href="$class_date.html#a2d9a87adab3ae18acdb13e027ad1d0aa" title="Date::isDateValid" alt="" coords="139,131,264,157"/>
+<area shape="rect" id="node3" href="$class_date.html#a4e59ed4ba66eec61c27460c5d09fa1bd" title="Date::Date" alt="" coords="323,29,410,56"/>
+<area shape="rect" id="node4" href="$class_user.html#a4c647e583bd964f40f687776a0d185dc" title="User::getEmail" alt="" coords="312,80,421,107"/>
+<area shape="rect" id="node5" href="$application_8h.html#adf656ece2632a1013b0e510fbb0ac529" title="userToFile" alt="" coords="483,29,565,56"/>
+<area shape="rect" id="node6" href="$menus_8h.html#a714c83c6898e18f73621626df5bb59c3" title="registration" alt="" coords="627,68,713,95"/>
+<area shape="rect" id="node7" href="$menus_8h.html#a2a0e843767aeea4f433a28b9c54f573a" title="menu" alt="" coords="761,68,816,95"/>
+<area shape="rect" id="node8" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="887,5,937,32"/>
+<area shape="rect" id="node9" href="$menus_8h.html#af76b7b46958dabf5e4ee9a492f0ec3fa" title="login" alt="" coords="1008,68,1057,95"/>
+<area shape="rect" id="node10" href="$menus_8h.html#a1f5d479249cf7405f3ef126b1e042d2b" title="menuLogged" alt="" coords="864,131,960,157"/>
+<area shape="rect" id="node12" href="$application_8h.html#acc3ffb5f9c459368ca3ca9815d499af2" title="addDestination" alt="" coords="469,131,579,157"/>
 </map>

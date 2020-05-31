@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['isalreadyfriend',['isAlreadyFriend',['../read_file_8h.html#a6b426552d2ff56784a167e799da87688',1,'readFile.h']]],
-  ['isdatevalid',['isDateValid',['../class_date.html#a2d9a87adab3ae18acdb13e027ad1d0aa',1,'Date']]],
-  ['isexisting',['isExisting',['../read_file_8h.html#ab6bce9fa2a7660f6f3ddcef5a4f7b906',1,'readFile.h']]]
+  ['filetomatrix',['fileToMatrix',['../read_file_8h.html#a4d05aa34d631728e8dabfe1d9ddbdd69',1,'readFile.h']]],
+  ['from',['from',['../class_destination.html#a0dea129cf2457e922c57b7fb5996509a',1,'Destination']]]
 ];

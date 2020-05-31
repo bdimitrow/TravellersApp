@@ -9,6 +9,15 @@ A date class.
 
 {\ttfamily \#include $<$date.\+h$>$}
 
+
+
+Collaboration diagram for Date\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=162pt]{class_date__coll__graph}
+\end{center}
+\end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -27,6 +36,15 @@ bool \hyperlink{class_date_a08c0538091d061550b90787d9313ca61}{operator$<$} (cons
 \hyperlink{class_date}{Date} \hyperlink{class_date_a425bd02efac05e6b65a8b7456317822f}{operator()} (int y, int m, int d)
 \item 
 bool \hyperlink{class_date_a2d9a87adab3ae18acdb13e027ad1d0aa}{is\+Date\+Valid} (const \hyperlink{class_date}{Date} \&)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_date_a5b192adcabf2b2871e3f0b76c1ec1601}{day}
+\item 
+int \hyperlink{class_date_a533843e07c6ac8d19fee9b16f5336ba2}{month}
+\item 
+int \hyperlink{class_date_a3eeced2ed56bc95d56782b9e738db8ea}{year}
 \end{DoxyCompactItemize}
 \subsection*{Friends}
 \begin{DoxyCompactItemize}
@@ -56,7 +74,14 @@ This class is used to initialize dates. They are required to describe the durati
 \subsubsection{\texorpdfstring{Date()}{Date()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily Date\+::\+Date (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-A default constructor. \mbox{\Hypertarget{class_date_af80a5016fde0d599f0a15900193fc663}\label{class_date_af80a5016fde0d599f0a15900193fc663}} 
+A default constructor. Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_date_a4e59ed4ba66eec61c27460c5d09fa1bd_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_date_af80a5016fde0d599f0a15900193fc663}\label{class_date_af80a5016fde0d599f0a15900193fc663}} 
 \index{Date@{Date}!Date@{Date}}
 \index{Date@{Date}!Date@{Date}}
 \subsubsection{\texorpdfstring{Date()}{Date()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
@@ -155,7 +180,28 @@ Method setting the year. Here is the caller graph for this function\+:\nopagebre
 
 Overloaded operator$<$$<$. 
 
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_date_a5b192adcabf2b2871e3f0b76c1ec1601}\label{class_date_a5b192adcabf2b2871e3f0b76c1ec1601}} 
+\index{Date@{Date}!day@{day}}
+\index{day@{day}!Date@{Date}}
+\subsubsection{\texorpdfstring{day}{day}}
+{\footnotesize\ttfamily int Date\+::day\hspace{0.3cm}{\ttfamily [private]}}
+
+Variable for day. \mbox{\Hypertarget{class_date_a533843e07c6ac8d19fee9b16f5336ba2}\label{class_date_a533843e07c6ac8d19fee9b16f5336ba2}} 
+\index{Date@{Date}!month@{month}}
+\index{month@{month}!Date@{Date}}
+\subsubsection{\texorpdfstring{month}{month}}
+{\footnotesize\ttfamily int Date\+::month\hspace{0.3cm}{\ttfamily [private]}}
+
+Variable for month \mbox{\Hypertarget{class_date_a3eeced2ed56bc95d56782b9e738db8ea}\label{class_date_a3eeced2ed56bc95d56782b9e738db8ea}} 
+\index{Date@{Date}!year@{year}}
+\index{year@{year}!Date@{Date}}
+\subsubsection{\texorpdfstring{year}{year}}
+{\footnotesize\ttfamily int Date\+::year\hspace{0.3cm}{\ttfamily [private]}}
+
+Variable for year 
+
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-date.\+h\item 
-date.\+cpp\end{DoxyCompactItemize}
+\hyperlink{date_8h}{date.\+h}\item 
+\hyperlink{date_8cpp}{date.\+cpp}\end{DoxyCompactItemize}

@@ -1,4 +1,8 @@
 <map id="Destination::setDestination" name="Destination::setDestination">
-<area shape="rect" id="node2" href="$application_8h.html#acc3ffb5f9c459368ca3ca9815d499af2" title="addDestination" alt="" coords="233,5,343,32"/>
-<area shape="rect" id="node3" href="$menus_8h.html#a1f5d479249cf7405f3ef126b1e042d2b" title="menuLogged" alt="" coords="391,5,487,32"/>
+<area shape="rect" id="node2" href="$application_8h.html#acc3ffb5f9c459368ca3ca9815d499af2" title="addDestination" alt="" coords="233,81,343,108"/>
+<area shape="rect" id="node3" href="$menus_8h.html#a1f5d479249cf7405f3ef126b1e042d2b" title="menuLogged" alt="" coords="391,81,487,108"/>
+<area shape="rect" id="node4" href="$menus_8h.html#af76b7b46958dabf5e4ee9a492f0ec3fa" title="login" alt="" coords="535,56,584,83"/>
+<area shape="rect" id="node5" href="$menus_8h.html#a2a0e843767aeea4f433a28b9c54f573a" title="menu" alt="" coords="632,56,687,83"/>
+<area shape="rect" id="node6" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="753,5,803,32"/>
+<area shape="rect" id="node7" href="$menus_8h.html#a714c83c6898e18f73621626df5bb59c3" title="registration" alt="" coords="735,56,821,83"/>
 </map>

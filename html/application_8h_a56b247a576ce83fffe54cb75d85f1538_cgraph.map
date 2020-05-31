@@ -1,0 +1,5 @@
+<map id="stringToUsersDB" name="stringToUsersDB">
+<area shape="rect" id="node2" href="$read_file_8h.html#a4fc77629ec6e6556b5dc4dd8efa6f36c" title="numberOfRowsInFile" alt="" coords="176,5,321,32"/>
+<area shape="rect" id="node3" href="$read_file_8h.html#a331b6af63862d2ae3ad6abf71b0de381" title="rowOfUsername" alt="" coords="190,56,307,83"/>
+<area shape="rect" id="node4" href="$class_user.html#a82e034043e04b2d750c654c8b2f2ce78" title="User::getUsername" alt="" coords="181,107,317,133"/>
+</map>

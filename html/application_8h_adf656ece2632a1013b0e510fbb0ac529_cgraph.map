@@ -2,4 +2,9 @@
 <area shape="rect" id="node2" href="$class_user.html#a82e034043e04b2d750c654c8b2f2ce78" title="User::getUsername" alt="" coords="136,5,272,32"/>
 <area shape="rect" id="node3" href="$class_user.html#a33429bdd1253091697a9c5c5e1448bee" title="User::getPassword" alt="" coords="137,56,271,83"/>
 <area shape="rect" id="node4" href="$class_user.html#a4c647e583bd964f40f687776a0d185dc" title="User::getEmail" alt="" coords="149,107,259,133"/>
+<area shape="rect" id="node5" href="$date_8cpp.html#affced1a8a8f9f0e9dd009af0a22dfe33" title="operator\&lt;\&lt;" alt="" coords="320,81,405,108"/>
+<area shape="rect" id="node9" href="$user_8cpp.html#aae624f64cdd1af3b59c2443cffa82494" title="operator\&gt;\&gt;" alt="" coords="320,132,405,159"/>
+<area shape="rect" id="node6" href="$class_date.html#a284f8985596b83ad9388b464eb6b54bd" title="Date::Year" alt="" coords="458,31,543,57"/>
+<area shape="rect" id="node7" href="$class_date.html#a1c1871e2d6adcb08fd30ffae440b3803" title="Date::Month" alt="" coords="453,81,548,108"/>
+<area shape="rect" id="node8" href="$class_date.html#ad7f2e4e42aadc85322503dbef8484ad5" title="Date::Day" alt="" coords="459,132,542,159"/>
 </map>

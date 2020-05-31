@@ -43,18 +43,8 @@ date.h
 /home/bozhidar/Desktop/Travellers/main.cpp
 iostream
 -
-application.h
-/home/bozhidar/Desktop/Travellers/application.h
-user.h
-/home/bozhidar/Desktop/Travellers/user.h
-date.h
-/home/bozhidar/Desktop/Travellers/date.h
-readFile.h
-/home/bozhidar/Desktop/Travellers/readFile.h
 menus.h
 /home/bozhidar/Desktop/Travellers/menus.h
-fstream
--
 
 /home/bozhidar/Desktop/Travellers/menus.h
 iostream

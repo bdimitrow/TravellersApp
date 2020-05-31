@@ -1,4 +1,8 @@
 <map id="isAlreadyFriend" name="isAlreadyFriend">
-<area shape="rect" id="node2" href="$application_8h.html#a92aba65fab778922f928e9d9bf6475d6" title="addFriend" alt="" coords="165,5,244,32"/>
-<area shape="rect" id="node3" href="$menus_8h.html#a1f5d479249cf7405f3ef126b1e042d2b" title="menuLogged" alt="" coords="292,5,388,32"/>
+<area shape="rect" id="node2" href="$application_8h.html#a92aba65fab778922f928e9d9bf6475d6" title="addFriend" alt="" coords="165,81,244,108"/>
+<area shape="rect" id="node3" href="$menus_8h.html#a1f5d479249cf7405f3ef126b1e042d2b" title="menuLogged" alt="" coords="292,81,388,108"/>
+<area shape="rect" id="node4" href="$menus_8h.html#af76b7b46958dabf5e4ee9a492f0ec3fa" title="login" alt="" coords="436,56,485,83"/>
+<area shape="rect" id="node5" href="$menus_8h.html#a2a0e843767aeea4f433a28b9c54f573a" title="menu" alt="" coords="533,56,588,83"/>
+<area shape="rect" id="node6" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="654,5,705,32"/>
+<area shape="rect" id="node7" href="$menus_8h.html#a714c83c6898e18f73621626df5bb59c3" title="registration" alt="" coords="636,56,723,83"/>
 </map>
